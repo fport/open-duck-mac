@@ -1,0 +1,72 @@
+{
+ "onnx": "ckpt_060364800.onnx",
+ "secs": 5.0,
+ "n": 9,
+ "fell": 0,
+ "mean_dx_m": 0.1425,
+ "seeds": [
+  {
+   "seed": 0,
+   "dist_m": 0.3077,
+   "dx_m": 0.3049,
+   "fell_t": null,
+   "final_trunk_z": 0.1608
+  },
+  {
+   "seed": 1,
+   "dist_m": 0.1229,
+   "dx_m": 0.1228,
+   "fell_t": null,
+   "final_trunk_z": 0.1562
+  },
+  {
+   "seed": 2,
+   "dist_m": 0.0789,
+   "dx_m": 0.0693,
+   "fell_t": null,
+   "final_trunk_z": 0.1562
+  },
+  {
+   "seed": 3,
+   "dist_m": 0.0499,
+   "dx_m": 0.0433,
+   "fell_t": null,
+   "final_trunk_z": 0.1554
+  },
+  {
+   "seed": 4,
+   "dist_m": 0.2876,
+   "dx_m": 0.2875,
+   "fell_t": null,
+   "final_trunk_z": 0.1556
+  },
+  {
+   "seed": 5,
+   "dist_m": 0.1165,
+   "dx_m": 0.1127,
+   "fell_t": null,
+   "final_trunk_z": 0.154
+  },
+  {
+   "seed": 6,
+   "dist_m": 0.0351,
+   "dx_m": 0.0316,
+   "fell_t": null,
+   "final_trunk_z": 0.1554
+  },
+  {
+   "seed": 7,
+   "dist_m": 0.2204,
+   "dx_m": 0.22,
+   "fell_t": null,
+   "final_trunk_z": 0.1567
+  },
+  {
+   "seed": 8,
+   "dist_m": 0.0905,
+   "dx_m": 0.0904,
+   "fell_t": null,
+   "final_trunk_z": 0.1559
+  }
+ ]
+}

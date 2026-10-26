@@ -1,0 +1,15 @@
+# environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# training outputs (keep results/ which is curated by hand)
+runs/
+ckpt/
+*.npz
+*.pkl
+*.mp4
+external/
+
+.DS_Store

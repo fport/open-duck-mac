@@ -1,0 +1,34 @@
+{
+ "stochastic": false,
+ "seed": 0,
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "vx": 0.15,
+ "secs": 5.0,
+ "onnx": "BEST_WALK_ONNX.onnx",
+ "dist_m": 0.5913,
+ "dx_m": 0.5845,
+ "final_trunk_z": 0.166,
+ "min_trunk_z": 0.1558,
+ "fell_t": null,
+ "floor_collision_on_t": null,
+ "foot_steps": [
+  8,
+  8
+ ],
+ "foot_z_range": [
+  [
+   0.0012689268519813987,
+   0.01786790784290055
+  ],
+  [
+   0.0022263209003945544,
+   0.017889337254571938
+  ]
+ ],
+ "foot_z0": [
+  -0.01068170250530047,
+  -0.010820002961185834
+ ]
+}

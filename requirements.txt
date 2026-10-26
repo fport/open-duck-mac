@@ -1,0 +1,18 @@
+# Direct dependencies, pinned to the versions of the 2026-10-24 run (Python 3.12, Apple Silicon, CPU only).
+# requirements-lock.txt has the complete frozen environment.
+jax==0.6.2
+jaxlib==0.6.2
+mujoco==3.3.3
+mujoco-mjx==3.3.3
+brax==0.12.4
+playground==0.0.5          # MuJoCo Playground (import name: mujoco_playground)
+flax==0.11.2
+optax==0.2.8
+orbax-checkpoint==0.12.8
+ml-collections==1.1.0
+numpy==2.5.4
+onnx==1.23.2
+onnxruntime==1.31.0
+imageio==2.38.1
+imageio-ffmpeg==0.6.0
+matplotlib==3.11.2
