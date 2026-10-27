@@ -36,7 +36,7 @@ export default defineConfig({
           translations: { en: "Experiments" },
           items: [
             { label: "1. Yürümeyi öğrenmek", translations: { en: "1. Learning to walk" }, slug: "part-1-walking" },
-            { label: "2. Ödül hilesi", translations: { en: "2. Reward hacking" }, slug: "part-2-reward-hacking" },
+            { label: "2. Reward hacking", translations: { en: "2. Reward hacking" }, slug: "part-2-reward-hacking" },
             { label: "3. Simülasyon yalan söyler", translations: { en: "3. Sim2real" }, slug: "part-3-sim2real" },
             { label: "Sen ne yapabilirsin?", translations: { en: "What can you try?" }, slug: "experiments" },
           ],

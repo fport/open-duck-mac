@@ -51,14 +51,14 @@ Betiklere ilk argüman olarak Open_Duck_Playground klasörünü verdiğinden emi
 <details>
 <summary>Ördek saatlerdir yürümüyor, bir şey mi bozuk?</summary>
 
-Büyük olasılıkla hayır. Bizimki 11 dakikada ayakta durmayı öğrendi, sonra ~3 saat yerinde saydı ve ancak 68,4 M adımda ayaklarını kaldırdı. Bölüm ödülü ve taklit terimi artıyorsa öğreniyor demektir.
+Büyük olasılıkla hayır. Bizimki 11 dakikada ayakta durmayı öğrendi, sonra ~3 saat yerinde saydı ve ancak 68,4 M adımda ayaklarını kaldırdı. Episode reward'ı ve imitation terimi artıyorsa öğreniyor demektir.
 
 </details>
 
 <details>
 <summary>Eğitimi durdurup devam edebilir miyim?</summary>
 
-`train_mac.py`'de devam seçeneği yok. `reward_hacking/train_hile.py`'deki `--restore <ckpt.pkl>` bir checkpoint'ten devam eder (politika ve gözlem normalizasyonu; değer ağı sıfırdan).
+`train_mac.py`'de devam seçeneği yok. `reward_hacking/train_hile.py`'deki `--restore <ckpt.pkl>` bir checkpoint'ten devam eder (policy ve observation normalization; value network sıfırdan).
 
 </details>
 
@@ -79,7 +79,7 @@ Değerlendirme C MuJoCo'da, eğitim MJX'te; farklı JAX/MuJoCo sürümleri ya da
 </details>
 
 <details>
-<summary>Bu politikayı gerçek bir Open Duck Mini'de çalıştırabilir miyim?</summary>
+<summary>Bu policy'yi gerçek bir Open Duck Mini'de çalıştırabilir miyim?</summary>
 
 ONNX'ler upstream arayüzünde, ama biz donanımda denemedik. Simdeki motorun gerçeğinden güçlü olduğunu unutma: [3. bölüm](/open-duck-mac/part-3-sim2real/).
 

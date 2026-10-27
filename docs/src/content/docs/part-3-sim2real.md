@@ -17,7 +17,7 @@ Yani simdeki motor gerçeğinden **%70–75 daha güçlü**. Resmî eğitim zemi
 
 ## Deney 1: yeniden eğitmeden, farklı dünyalar
 
-Eğitilmiş politikaları hiç değiştirmeden, yalnız dünyayı değiştirip ölçtük. Deterministik test, 5 sn, düz zemin, itme yok, 0,15 m/s.
+Eğitilmiş policy'leri hiç değiştirmeden, yalnız dünyayı değiştirip ölçtük. Deterministik test, 5 sn, düz zemin, itme yok, 0,15 m/s.
 
 | Dünya | Bizim 72,4 M | 9 gürültülü (bizim) | Hazır `BEST_WALK_ONNX` |
 |---|---|---|---|
@@ -30,14 +30,14 @@ Eğitilmiş politikaları hiç değiştirmeden, yalnız dünyayı değiştirip �
 | Tork 1,6 N·m | 9,8 cm | – | 27,3 cm · 8+0 adım |
 | Tork 1,4 N·m | 5,8 cm | – | 19,5 cm · 7+0 adım |
 
-![Aynı politikanın dört motor gücünde 5 saniyelik ileri mesafesi: 3,23 N·m'de 28,8 cm, 2,5'te 25,3, gerçek servo değeri 1,86'da 13,9, 1,4'te 5,8 cm](../../assets/torque-distance.tr.png)
+![Aynı policy'nin dört motor gücünde 5 saniyelik ileri mesafesi: 3,23 N·m'de 28,8 cm, 2,5'te 25,3, gerçek servo değeri 1,86'da 13,9, 1,4'te 5,8 cm](../../assets/torque-distance.tr.png)
 
 Ne görüyoruz?
 
-- Eğitimde zaten değiştirilen şeyler (sürtünme, kütle) politikayı neredeyse hiç etkilemiyor. Kütle ×1,2 eğitim aralığının (×0,9–1,1) dışında olduğu hâlde bile.
+- Eğitimde zaten değiştirilen şeyler (sürtünme, kütle) policy'yi neredeyse hiç etkilemiyor. Kütle ×1,2 eğitim aralığının (×0,9–1,1) dışında olduğu hâlde bile.
 - Eğitimde hiç değiştirilmeyen tork sınırı mesafeyi yarıya indiriyor.
 - Hiçbir ördek devrilmiyor; zayıf motor düşürmüyor, yavaşlatıyor. soyeon24 de aynı şeyi bildiriyor.
-- Hazır politika 1,6 N·m'de sağ ayağıyla artık adım atamıyor (8+0).
+- Hazır policy 1,6 N·m'de sağ ayağıyla artık adım atamıyor (8+0).
 
 Tekrar üretmek için [`scripts/sim2real/eval_world.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/sim2real/eval_world.py), `eval_checkpoint.py`'nin dünyayı ortam değişkenleriyle değiştiren kopyası:
 
@@ -53,12 +53,12 @@ Seçilen dünya çıktı JSON'unda `"world"` alanına yazılır.
 
 ## Deney 2: zayıf motorla yeniden eğitim (sürüyor)
 
-Üç koşu, hepsi 68,4 M'den sıcak başlangıç, 10 M adım; ödüller, fizik ve resmî randomization aynı, tek fark tork sınırı:
+Üç koşu, hepsi 68,4 M'den warm start, 10 M step; reward'lar, fizik ve resmî randomization aynı, tek fark tork sınırı:
 
 | Koşu | Tork sınırı | Neden |
 |---|---|---|
 | `tork186` | her eklem sabit 1,86 N·m | simi gerçek servoya eşitle |
-| `tork_rand` | her bölümde, her eklem için U(1,40, 1,90) N·m | domain randomization: tek bir değere ezber yapmasın |
+| `tork_rand` | her episode'da, her eklem için U(1,40, 1,90) N·m | domain randomization: tek bir değere ezber yapmasın |
 | `kontrol323` | resmî 3,23 N·m | adil kıyas: düzelme yalnız "daha fazla eğitim"den mi geliyor? |
 
 Hepsi sonra Deney 1'deki dünyalarda ölçülecek.

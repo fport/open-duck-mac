@@ -63,11 +63,11 @@ mkdir -p "$(.venv/bin/python -c 'import importlib.util, os; print(os.path.dirnam
 .venv/bin/python -I scripts/smoke_pmap.py external/Open_Duck_Playground --devices 6 --envs_per_dev 256
 ```
 
-İlki ortamın derlenip adım attığını gösterir. İkincisi işlemciyi D sanal cihaza böler ve saniyedeki adım sayısını yazar. `--devices`'ı 4, 6, 8 deneyip en hızlı olanı seç, birkaç çekirdeği boş bırak. Bizim makinede: 1 cihaz × 1.024 ortam = 2.368 adım/sn; 6 × 256 = 4.621 adım/sn.
+İlki ortamın derlenip adım attığını gösterir. İkincisi işlemciyi D sanal cihaza böler ve saniyedeki adım sayısını yazar. `--devices`'ı 4, 6, 8 deneyip en hızlı olanı seç, birkaç çekirdeği boş bırak. Bizim makinede: 1 cihaz × 1.024 environment = 2.368 adım/sn; 6 × 256 = 4.621 adım/sn.
 
-## 5. Eğitmeden önce dene: hazır politikalarımız
+## 5. Eğitmeden önce dene: hazır policy'lerimiz
 
-Eğitim saatler sürer. Önce bizim eğittiğimiz politikayı ölç:
+Eğitim saatler sürer. Önce bizim eğittiğimiz policy'yi ölç:
 
 ```bash
 .venv/bin/python -I scripts/eval_checkpoint.py external/Open_Duck_Playground \
