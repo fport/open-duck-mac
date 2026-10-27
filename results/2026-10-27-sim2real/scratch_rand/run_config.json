@@ -1,0 +1,31 @@
+{
+ "action_repeat": 1,
+ "batch_size": 48,
+ "clipping_epsilon": 0.2,
+ "discounting": 0.97,
+ "entropy_cost": 0.005,
+ "episode_length": 1000,
+ "learning_rate": 0.0003,
+ "max_grad_norm": 1.0,
+ "normalize_observations": true,
+ "num_envs": 1536,
+ "num_evals": 19,
+ "num_minibatches": 32,
+ "num_resets_per_eval": 1,
+ "num_timesteps": 72000000,
+ "num_updates_per_batch": 4,
+ "reward_scaling": 1.0,
+ "unroll_length": 20,
+ "run_evals": false,
+ "log_training_metrics": true,
+ "training_metrics_steps": 1000000,
+ "seed": 0,
+ "network_factory": "policy_hidden_layer_sizes: &id001 !!python/tuple\n- 512\n- 256\n- 128\npolicy_obs_key: state\nvalue_hidden_layer_sizes: *id001\nvalue_obs_key: privileged_state\n",
+ "devices": 6,
+ "force_limit": [
+  1.4,
+  1.9
+ ],
+ "restore": null,
+ "start": "2026-10-27 12:21:43"
+}

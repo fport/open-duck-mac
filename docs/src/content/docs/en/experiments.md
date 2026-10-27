@@ -38,7 +38,7 @@ Add a line to `VARIANTS` as in [part 2](/open-duck-mac/en/part-2-reward-hacking/
 
 ### 6. Train with a weak motor · 1–2 h
 
-The experiment of [part 3](/open-duck-mac/en/part-3-sim2real/): lower the torque limit to the real servo's, or randomize it. The training script will be added to the repository when that part is finished.
+The experiment of [part 3](/open-duck-mac/en/part-3-sim2real/): lower the torque limit to the catalog rating, or randomize it, with `scripts/sim2real/train_sim2real.py --force 1.86` or `--force_rand 1.40 1.90`. For us 72 M steps were not enough; try another seed or a fixed 1.86.
 
 ### 7. Rough terrain · a few hours
 
@@ -56,4 +56,4 @@ Besides walking, Disney's BDX robot learns short moves like "happy dance", "jump
 
 ### 10. Move it to a real robot
 
-Our ONNX files have the upstream interface (`obs` 1×101 → `continuous_actions`), so they should run with [Open_Duck_Mini_Runtime](https://github.com/apirrone/Open_Duck_Mini_Runtime). We have not tried hardware. Do experiment 6 first: a policy trained at 3.23 N·m in simulation will most likely be slow on the real servo.
+Our ONNX files have the upstream interface (`obs` 1×101 → `continuous_actions`), so they should run with [Open_Duck_Mini_Runtime](https://github.com/apirrone/Open_Duck_Mini_Runtime). We have not tried hardware. Do experiment 6 first: a policy trained at 3.23 N·m in simulation covers half the distance at the 1.86 N·m catalog rating; we don't know which one the real servo is closer to.

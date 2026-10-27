@@ -70,7 +70,7 @@ Sources: [microduck_velocity_env_cfg.py](https://github.com/pollen-robotics/micr
 Two decisions are especially worth learning from:
 
 1. **They dropped the imitation reward.** Open Duck Mini v2 learns by imitating a reference gait; Microduck learns from task rewards only. Keyframe imitation was tried for the forward roll and dropped: given waypoints, the policy "camped" at them. A pose task gives one target from the start; finding the path is RL's job.
-2. **The motor model carries reality.** The repository says most of the sim2real gap at this scale comes from the actuator, so the motor is modelled down to its voltage law instead of as an ideal controller. It is the same lesson as our [part 3](/open-duck-mac/en/part-3-sim2real/): Open Duck's simulated motor is 70–75 % stronger than the real servo, and that difference alone halves the distance.
+2. **The motor model carries reality.** The repository says most of the sim2real gap at this scale comes from the actuator, so the motor is modelled down to its voltage law instead of as an ideal controller. It is the same lesson as our [part 3](/open-duck-mac/en/part-3-sim2real/): Open Duck's simulated motor limit is ~70 % above the catalog rating, and lowering it to the catalog value alone halves the distance.
 
 ## How it differs from Open Duck Mini v2
 

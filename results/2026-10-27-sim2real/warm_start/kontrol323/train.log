@@ -1,0 +1,37 @@
+xml: external/Open_Duck_Playground/playground/open_duck_mini_v2/xmls/scene_flat_terrain.xml
+actuators: ['left_hip_yaw', 'left_hip_roll', 'left_hip_pitch', 'left_knee', 'left_ankle', 'neck_pitch', 'head_pitch', 'head_yaw', 'head_roll', 'right_hip_yaw', 'right_hip_roll', 'right_hip_pitch', 'right_knee', 'right_ankle']
+joints: ['floating_base', 'left_hip_yaw', 'left_hip_roll', 'left_hip_pitch', 'left_knee', 'left_ankle', 'neck_pitch', 'head_pitch', 'head_yaw', 'head_roll', 'right_hip_yaw', 'right_hip_roll', 'right_hip_pitch', 'right_knee', 'right_ankle']
+backlash joints: []
+actuator joints ids: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+actuator joints dict: {'left_hip_yaw': 1, 'left_hip_roll': 2, 'left_hip_pitch': 3, 'left_knee': 4, 'left_ankle': 5, 'neck_pitch': 6, 'head_pitch': 7, 'head_yaw': 8, 'head_roll': 9, 'right_hip_yaw': 10, 'right_hip_roll': 11, 'right_hip_pitch': 12, 'right_knee': 13, 'right_ankle': 14}
+floating qpos addr: 0 qvel addr: 0
+[Poly ref data] Processing ...
+[Poly ref data] Done processing
+PPO params: {'action_repeat': 1, 'batch_size': 40, 'clipping_epsilon': 0.2, 'discounting': 0.97, 'entropy_cost': 0.005, 'episode_length': 1000, 'learning_rate': 0.0003, 'max_grad_norm': 1.0, 'normalize_observations': True, 'num_envs': 1280, 'num_evals': 5, 'num_minibatches': 32, 'num_resets_per_eval': 1, 'num_timesteps': 10000000, 'num_updates_per_batch': 4, 'reward_scaling': 1.0, 'unroll_length': 20, 'run_evals': False, 'log_training_metrics': True, 'training_metrics_steps': 1000000, 'seed': 0} devices: 5
+.venv/lib/python3.12/site-packages/jax/_src/interpreters/xla.py:119: RuntimeWarning: overflow encountered in cast
+  return np.asarray(x, dtypes.canonicalize_dtype(x.dtype))
+xml: external/Open_Duck_Playground/playground/open_duck_mini_v2/xmls/scene_flat_terrain.xml
+actuators: ['left_hip_yaw', 'left_hip_roll', 'left_hip_pitch', 'left_knee', 'left_ankle', 'neck_pitch', 'head_pitch', 'head_yaw', 'head_roll', 'right_hip_yaw', 'right_hip_roll', 'right_hip_pitch', 'right_knee', 'right_ankle']
+joints: ['floating_base', 'left_hip_yaw', 'left_hip_roll', 'left_hip_pitch', 'left_knee', 'left_ankle', 'neck_pitch', 'head_pitch', 'head_yaw', 'head_roll', 'right_hip_yaw', 'right_hip_roll', 'right_hip_pitch', 'right_knee', 'right_ankle']
+backlash joints: []
+actuator joints ids: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+actuator joints dict: {'left_hip_yaw': 1, 'left_hip_roll': 2, 'left_hip_pitch': 3, 'left_knee': 4, 'left_ankle': 5, 'neck_pitch': 6, 'head_pitch': 7, 'head_yaw': 8, 'head_roll': 9, 'right_hip_yaw': 10, 'right_hip_roll': 11, 'right_hip_pitch': 12, 'right_knee': 13, 'right_ankle': 14}
+floating qpos addr: 0 qvel addr: 0
+[Poly ref data] Processing ...
+[Poly ref data] Done processing
+[   0.3 min] CHECKPOINT ckpt_000000000 episodes=0
+[   8.0 min] steps=1,003,520 episodes=5,734 R=36.10 len=86
+[  16.9 min] steps=2,007,040 episodes=11,939 R=53.28 len=124
+[  19.8 min] CHECKPOINT ckpt_002508800 episodes=14,970
+[  22.5 min] steps=3,010,560 episodes=17,728 R=43.57 len=103
+[  29.1 min] steps=4,019,200 episodes=23,429 R=43.75 len=97
+[  36.0 min] CHECKPOINT ckpt_005017600 episodes=28,768
+[  36.1 min] steps=5,022,720 episodes=28,768 R=83.70 len=187
+[  41.4 min] steps=6,026,240 episodes=34,477 R=61.03 len=144
+[  46.2 min] steps=7,029,760 episodes=40,345 R=55.63 len=129
+[  46.2 min] steps=7,029,760 episodes=40,345 R=57.46 len=129
+[  48.5 min] CHECKPOINT ckpt_007526400 episodes=43,128
+[  52.4 min] steps=8,038,400 episodes=46,054 R=52.08 len=121
+[  60.9 min] steps=9,041,920 episodes=51,656 R=42.54 len=98
+[  73.9 min] CHECKPOINT ckpt_010035200 episodes=57,313
+DONE in 1.23 h, episodes=57,313

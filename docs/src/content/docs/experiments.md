@@ -38,7 +38,7 @@ Eğitim yok, yalnız ölçüm. [`eval_world.py`](/open-duck-mac/part-3-sim2real/
 
 ### 6. Zayıf motorla eğit · 1–2 sa
 
-[3. bölümdeki](/open-duck-mac/part-3-sim2real/) deney: tork sınırını gerçek servoya indir ya da rastgele yap. Eğitim betiği bölüm tamamlanınca depoya eklenecek.
+[3. bölümdeki](/open-duck-mac/part-3-sim2real/) deney: tork sınırını katalog değerine indir ya da rastgele yap, `scripts/sim2real/train_sim2real.py --force 1.86` veya `--force_rand 1.40 1.90`. Bizde 72 M step yetmedi; farklı bir tohumla ya da sabit 1,86 ile dene.
 
 ### 7. Engebeli zemin · birkaç saat
 
@@ -56,4 +56,4 @@ Disney'in BDX robotu yürümenin yanında "mutlu dans", "zıplama", "öfke nöbe
 
 ### 10. Gerçek robota taşı
 
-ONNX'lerimiz upstream arayüzünde (`obs` 1×101 → `continuous_actions`), yani [Open_Duck_Mini_Runtime](https://github.com/apirrone/Open_Duck_Mini_Runtime) ile çalışması beklenir. Biz donanımda denemedik. Önce 6. deneyi yap: simde 3,23 N·m ile eğitilmiş policy gerçek servoda büyük olasılıkla yavaş kalır.
+ONNX'lerimiz upstream arayüzünde (`obs` 1×101 → `continuous_actions`), yani [Open_Duck_Mini_Runtime](https://github.com/apirrone/Open_Duck_Mini_Runtime) ile çalışması beklenir. Biz donanımda denemedik. Önce 6. deneyi yap: simde 3,23 N·m ile eğitilmiş policy katalog değeri 1,86 N·m'de yarı mesafe gidiyor; gerçek servonun hangisine yakın olduğunu bilmiyoruz.

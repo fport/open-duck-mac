@@ -1,6 +1,6 @@
-"""[sim2real copy of ../eval_checkpoint.py: the world can be changed via environment variables, applied to the
+"""[sim2real copy of ../eval_checkpoint.py: the world can be changed via env vars, applied to the
 loaded model before the rollout: FORCE=<N·m> (all joints), FORCE_RAND=<lo>,<hi> (per joint, drawn with WSEED),
-FLOOR_FRIC=<mu>, MASS_SCALE=<x> (all bodies). Recorded in the json as "world".]
+FLOOR_FRIC=<mu>, MASS_SCALE=<x> (all bodies), START_LYING=1 (start on the belly). Recorded in the json as "world".]
 
 Roll out an ONNX policy for Open Duck Mini v2 in plain MuJoCo (CPU) and measure it; optionally render a video.
 
@@ -128,6 +128,8 @@ if os.environ.get("FORCE_RAND"):
     model.actuator_forcerange[:, 0] = -lim; model.actuator_forcerange[:, 1] = lim; WORLD["force_per_joint"] = lim.round(3).tolist()
 if os.environ.get("FLOOR_FRIC"):
     model.geom_friction[model.geom("floor").id, 0] = float(os.environ["FLOOR_FRIC"]); WORLD["floor_friction"] = float(os.environ["FLOOR_FRIC"])
+if os.environ.get("START_LYING"):  # start lying on the belly (trunk pitched +90° about y), let it settle
+    data.qpos[3:7] = [0.7071068, 0, 0.7071068, 0]; data.qpos[2] = 0.09; WORLD["start"] = "lying"
 if os.environ.get("MASS_SCALE"):
     model.body_mass[1:] *= float(os.environ["MASS_SCALE"]); WORLD["mass_scale"] = float(os.environ["MASS_SCALE"])
 fps = 30
@@ -179,9 +181,11 @@ robot_geoms = [g for g in range(model.ngeom) if model.geom_bodyid[g] != 0 and mo
                and model.geom_conaffinity[g] == 0 and model.geom_type[g] == mujoco.mjtGeom.mjGEOM_MESH]
 collide_on_t = None
 foot_up = [False, False]; foot_steps = [0, 0]; foot_zr = [[9, -9], [9, -9]]
+TQ = []  # |actuator torque| per physics step, N·m
 for f in range(n_frames):
     for _ in range(steps_per_frame):
         mujoco.mj_step(model, data); counter += 1
+        TQ.append(np.abs(data.actuator_force).copy())
         if counter % m.decimation == 0:  # 50 Hz policy, same order of operations as MjInfer.run()
             m.imitation_i = (m.imitation_i + m.phase_frequency_factor) % m.PRM.nb_steps_in_period
             ph = m.imitation_i / m.PRM.nb_steps_in_period * 2 * np.pi
@@ -224,6 +228,14 @@ summary = {"stochastic": a.stochastic, "seed": a.seed, "fps": fps, "width": W, "
            "onnx": os.path.basename(onnx_path), "dist_m": round(dist, 4), "dx_m": round(float(data.qpos[0] - start_xy[0]), 4),
            "final_trunk_z": round(float(data.qpos[2]), 4), "min_trunk_z": round(min_z, 4), "fell_t": fell_t,
            "floor_collision_on_t": collide_on_t, "foot_steps": foot_steps, "foot_z_range": foot_zr, "foot_z0": FOOT_Z0}
+TQ = np.array(TQ)[int(len(TQ) * 10 / n_frames):]  # skip the settling third of a second, like the step counter
+summary["torque"] = {"joints": [model.actuator(i).name for i in range(model.nu)], "peak": TQ.max(0).round(3).tolist(),
+                     "frac_over_1_86": (TQ > 1.86).mean(0).round(4).tolist(), "frac_any_over_1_86": round(float((TQ > 1.86).any(1).mean()), 4),
+                     "frac_over_2_5": (TQ > 2.5).mean(0).round(4).tolist(),
+                     "frac_at_ceiling": (TQ >= model.actuator_forcerange[:, 1] - 1e-3).mean(0).round(4).tolist()}
+KNEES = [model.actuator(n).id for n in ("left_knee", "right_knee")]
+TQ_SERIES = {"dt": float(model.opt.timestep), "t0": round(10 / fps, 4), "left_knee": TQ[:, KNEES[0]].round(3).tolist(),
+             "right_knee": TQ[:, KNEES[1]].round(3).tolist()}  # written to the .json only, not stdout
 with open(out.replace(".mp4", ".json"), "w") as fh:
-    json.dump(summary | {"world": WORLD, "frames": frames}, fh)
+    json.dump(summary | {"world": WORLD, "frames": frames, "torque_series": TQ_SERIES}, fh)
 print(json.dumps(summary | {"world": WORLD}))

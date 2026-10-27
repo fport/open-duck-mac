@@ -81,7 +81,7 @@ Değerlendirme C MuJoCo'da, eğitim MJX'te; farklı JAX/MuJoCo sürümleri ya da
 <details>
 <summary>Bu policy'yi gerçek bir Open Duck Mini'de çalıştırabilir miyim?</summary>
 
-ONNX'ler upstream arayüzünde, ama biz donanımda denemedik. Simdeki motorun gerçeğinden güçlü olduğunu unutma: [3. bölüm](/open-duck-mac/part-3-sim2real/).
+ONNX'ler upstream arayüzünde, ama biz donanımda denemedik. Simdeki motor sınırı servonun katalog değerinin ~%70 üstünde: [3. bölüm](/open-duck-mac/part-3-sim2real/).
 
 </details>
 

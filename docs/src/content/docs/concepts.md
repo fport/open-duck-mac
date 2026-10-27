@@ -57,14 +57,14 @@ Tek ördekle bu çok yavaş olurdu. Bu yüzden aynı anda **1.536 ördek** (6 sa
 
 ## Domain randomization
 
-Simülasyon gerçeğin kusursuz kopyası değil. Policy tek bir mükemmel dünyaya ezber yapmasın diye, her episode'da dünya biraz değiştirilir; buna domain randomization (alan rastgeleleştirme) denir. Resmî eğitimde değişenler (`playground/common/randomize.py`):
+Simülasyon gerçeğin kusursuz kopyası değil. Policy tek bir mükemmel dünyaya ezber yapmasın diye, her paralel ortamın dünyası eğitim başında biraz farklı çekilir; buna domain randomization (alan rastgeleleştirme) denir. Resmî eğitimde değişenler (`playground/common/randomize.py`):
 
-- zemin sürtünmesi: 0,5–1,0
+- zemin sürtünmesi: 0,5–1,0 (kodda var ama yanlış geom'a yazılıyor, zemin 0,6'da kalıyor: [3. bölüm](/open-duck-mac/part-3-sim2real/))
 - tüm parçaların kütlesi: ×0,9–1,1; gövdeye ±0,1 kg
 - gövdenin ağırlık merkezi: ±5 cm
 - motor sertliği (kp): ×0,9–1,1; eklem sürtünmesi ×0,9–1,1
 - eklemlerin sıfır noktası: ±0,03 rad
-- ayrıca: action ve IMU gecikmesi (0–3 step), observation noise (gözlem gürültüsü), rastgele itmeler
+- ayrıca: action ve IMU gecikmesi (0–2 step, her adımda), observation noise (gözlem gürültüsü), rastgele itmeler
 
 **Değiştirilmeyen** önemli bir şey var: motorun verebileceği en büyük tork. [3. bölüm](/open-duck-mac/part-3-sim2real/) tam bunu inceliyor.
 

@@ -37,7 +37,7 @@ export default defineConfig({
           items: [
             { label: "1. Yürümeyi öğrenmek", translations: { en: "1. Learning to walk" }, slug: "part-1-walking" },
             { label: "2. Reward hacking", translations: { en: "2. Reward hacking" }, slug: "part-2-reward-hacking" },
-            { label: "3. Simülasyon yalan söyler", translations: { en: "3. Sim2real" }, slug: "part-3-sim2real" },
+            { label: "3. Kutudaki motor gücü", translations: { en: "3. The motor on the box" }, slug: "part-3-sim2real" },
             { label: "Sen ne yapabilirsin?", translations: { en: "What can you try?" }, slug: "experiments" },
           ],
         },

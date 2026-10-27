@@ -81,7 +81,7 @@ Evaluation runs in C MuJoCo and training in MJX; different JAX/MuJoCo versions o
 <details>
 <summary>Can I run this policy on a real Open Duck Mini?</summary>
 
-The ONNX files have the upstream interface, but we have not tried hardware. Remember that the simulated motor is stronger than the real one: [part 3](/open-duck-mac/en/part-3-sim2real/).
+The ONNX files have the upstream interface, but we have not tried hardware. The simulated motor limit is ~70 % above the servo's catalog rating: [part 3](/open-duck-mac/en/part-3-sim2real/).
 
 </details>
 

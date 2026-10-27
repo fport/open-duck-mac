@@ -57,14 +57,14 @@ With one duck this would be very slow, so we simulate **1,536 ducks** at once (6
 
 ## Domain randomization
 
-The simulator is not a perfect copy of reality. So that the policy does not memorise one perfect world, the world is changed a little in every episode. In the official training (`playground/common/randomize.py`):
+The simulator is not a perfect copy of reality. So that the policy does not memorise one perfect world, each parallel environment gets a slightly different world, drawn at the start of training. In the official training (`playground/common/randomize.py`):
 
-- floor friction: 0.5–1.0
+- floor friction: 0.5–1.0 (in the code, but written to the wrong geom, so the floor stays at 0.6: [part 3](/open-duck-mac/en/part-3-sim2real/))
 - mass of every part: ×0.9–1.1; ±0.1 kg on the trunk
 - trunk centre of mass: ±5 cm
 - motor stiffness (kp): ×0.9–1.1; joint friction ×0.9–1.1
 - joint zero offsets: ±0.03 rad
-- also: action and IMU delay (0–3 steps), observation noise, random pushes
+- also: action and IMU delay (0–2 steps, every step), observation noise, random pushes
 
 One important thing is **not** randomized: the maximum torque a motor can produce. [Part 3](/open-duck-mac/en/part-3-sim2real/) is about exactly that.
 

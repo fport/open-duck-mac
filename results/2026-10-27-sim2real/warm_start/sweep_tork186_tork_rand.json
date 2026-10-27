@@ -1,0 +1,3218 @@
+{
+ "t186__base": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0303,
+  "dx_m": 0.0253,
+  "final_trunk_z": 0.1575,
+  "min_trunk_z": 0.1549,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002631600953453876,
+    0.0032637146278808107
+   ],
+   [
+    0.003836841057515035,
+    0.004204636879956938
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "t186__base__s0": {
+  "stochastic": true,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0245,
+  "dx_m": 0.023,
+  "final_trunk_z": 0.1573,
+  "min_trunk_z": 0.1544,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0024241109303125355,
+    0.0038787282569720943
+   ],
+   [
+    0.0033379944239248296,
+    0.004219171390701722
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "t186__base__s1": {
+  "stochastic": true,
+  "seed": 1,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0292,
+  "dx_m": 0.0264,
+  "final_trunk_z": 0.1583,
+  "min_trunk_z": 0.155,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025751212217682493,
+    0.0030193275455398447
+   ],
+   [
+    0.003640177161706601,
+    0.004244300479422154
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "t186__base__s2": {
+  "stochastic": true,
+  "seed": 2,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0424,
+  "dx_m": 0.0389,
+  "final_trunk_z": 0.1572,
+  "min_trunk_z": 0.1558,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002326594330239823,
+    0.006554611200096372
+   ],
+   [
+    0.0032135825485171826,
+    0.004612144638865862
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "t186__base__s3": {
+  "stochastic": true,
+  "seed": 3,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.03,
+  "dx_m": 0.0274,
+  "final_trunk_z": 0.1573,
+  "min_trunk_z": 0.1541,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002355779613834312,
+    0.00726669805007274
+   ],
+   [
+    0.0030683882073655883,
+    0.004731824034928306
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "t186__base__s4": {
+  "stochastic": true,
+  "seed": 4,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0257,
+  "dx_m": 0.0235,
+  "final_trunk_z": 0.1579,
+  "min_trunk_z": 0.1536,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0024087896171022527,
+    0.004795624761544708
+   ],
+   [
+    0.0036558058340460317,
+    0.004841580797526439
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "t186__base__s5": {
+  "stochastic": true,
+  "seed": 5,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0384,
+  "dx_m": 0.0382,
+  "final_trunk_z": 0.1567,
+  "min_trunk_z": 0.1556,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002351062514022083,
+    0.0064103850842982535
+   ],
+   [
+    0.0026367984109026826,
+    0.004496606099276108
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "t186__base__s6": {
+  "stochastic": true,
+  "seed": 6,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0365,
+  "dx_m": 0.0358,
+  "final_trunk_z": 0.1575,
+  "min_trunk_z": 0.1561,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0024750684047520344,
+    0.004354258884559689
+   ],
+   [
+    0.0022302251360852288,
+    0.00951577283433263
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "t186__base__s7": {
+  "stochastic": true,
+  "seed": 7,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.027,
+  "dx_m": 0.0242,
+  "final_trunk_z": 0.1581,
+  "min_trunk_z": 0.1553,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0024859203510227273,
+    0.0036139955714288435
+   ],
+   [
+    0.0037762598214077583,
+    0.005801237021671839
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "t186__base__s8": {
+  "stochastic": true,
+  "seed": 8,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0294,
+  "dx_m": 0.029,
+  "final_trunk_z": 0.1577,
+  "min_trunk_z": 0.1544,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025281186800323666,
+    0.004931002615524517
+   ],
+   [
+    0.002916172562689487,
+    0.00515879647322124
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "t186__fric050": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.03,
+  "dx_m": 0.0247,
+  "final_trunk_z": 0.1575,
+  "min_trunk_z": 0.155,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026635485016331464,
+    0.003447071691568687
+   ],
+   [
+    0.0038541388162009124,
+    0.004244931229761835
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "t186__fric050__s0": {
+  "stochastic": true,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0217,
+  "dx_m": 0.0205,
+  "final_trunk_z": 0.1573,
+  "min_trunk_z": 0.1534,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026261491689000688,
+    0.005620580867264906
+   ],
+   [
+    0.0031727108651161406,
+    0.004267579904171724
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "t186__fric050__s1": {
+  "stochastic": true,
+  "seed": 1,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0279,
+  "dx_m": 0.0252,
+  "final_trunk_z": 0.1583,
+  "min_trunk_z": 0.155,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025557031881438402,
+    0.0030263926343851166
+   ],
+   [
+    0.003547600421223353,
+    0.004284346292711419
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "t186__fric050__s2": {
+  "stochastic": true,
+  "seed": 2,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0318,
+  "dx_m": 0.028,
+  "final_trunk_z": 0.1573,
+  "min_trunk_z": 0.1557,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0024764625173982896,
+    0.003299965536805602
+   ],
+   [
+    0.0034046280876061027,
+    0.0042790068472155565
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "t186__fric050__s3": {
+  "stochastic": true,
+  "seed": 3,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0281,
+  "dx_m": 0.0257,
+  "final_trunk_z": 0.1574,
+  "min_trunk_z": 0.154,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002535573799803556,
+    0.004130291498064036
+   ],
+   [
+    0.0033173123621780057,
+    0.004270754181116422
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "t186__fric050__s4": {
+  "stochastic": true,
+  "seed": 4,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0256,
+  "dx_m": 0.0234,
+  "final_trunk_z": 0.158,
+  "min_trunk_z": 0.1535,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0024971546457398033,
+    0.005365820924227167
+   ],
+   [
+    0.0036862074501746306,
+    0.0053692410111352215
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "t186__fric050__s5": {
+  "stochastic": true,
+  "seed": 5,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0376,
+  "dx_m": 0.037,
+  "final_trunk_z": 0.1568,
+  "min_trunk_z": 0.1559,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002560975703411808,
+    0.0043033560083251265
+   ],
+   [
+    0.002829783185744901,
+    0.00554580118478256
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "t186__fric050__s6": {
+  "stochastic": true,
+  "seed": 6,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0333,
+  "dx_m": 0.0307,
+  "final_trunk_z": 0.1576,
+  "min_trunk_z": 0.1563,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002656785067978361,
+    0.00466072728262671
+   ],
+   [
+    0.0032963456970304117,
+    0.00855850327884377
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "t186__fric050__s7": {
+  "stochastic": true,
+  "seed": 7,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0256,
+  "dx_m": 0.0233,
+  "final_trunk_z": 0.1582,
+  "min_trunk_z": 0.1553,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0024235352953957817,
+    0.004581744872867541
+   ],
+   [
+    0.003598917454786278,
+    0.005710188136291441
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "t186__fric050__s8": {
+  "stochastic": true,
+  "seed": 8,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0378,
+  "dx_m": 0.0332,
+  "final_trunk_z": 0.1578,
+  "min_trunk_z": 0.155,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026147504390761495,
+    0.005016513420377608
+   ],
+   [
+    0.0032551619684581257,
+    0.0057617204022868684
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "t186__mass110": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0307,
+  "dx_m": 0.0256,
+  "final_trunk_z": 0.1565,
+  "min_trunk_z": 0.154,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026322520474488242,
+    0.003070069291095663
+   ],
+   [
+    0.0038192461124385776,
+    0.004179948186216281
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "t186__mass110__s0": {
+  "stochastic": true,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0242,
+  "dx_m": 0.0229,
+  "final_trunk_z": 0.1563,
+  "min_trunk_z": 0.1532,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002473522196087645,
+    0.0037845521598038473
+   ],
+   [
+    0.0033952839577932603,
+    0.004193092419886517
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "t186__mass110__s1": {
+  "stochastic": true,
+  "seed": 1,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0285,
+  "dx_m": 0.0262,
+  "final_trunk_z": 0.1574,
+  "min_trunk_z": 0.1537,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002543679980208789,
+    0.002980495744566228
+   ],
+   [
+    0.0032687552612254075,
+    0.004213867295287339
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "t186__mass110__s2": {
+  "stochastic": true,
+  "seed": 2,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0356,
+  "dx_m": 0.0321,
+  "final_trunk_z": 0.1562,
+  "min_trunk_z": 0.1543,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002530331512221533,
+    0.0034861807811131934
+   ],
+   [
+    0.0033705177925863125,
+    0.004207293786059024
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "t186__mass110__s3": {
+  "stochastic": true,
+  "seed": 3,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0296,
+  "dx_m": 0.027,
+  "final_trunk_z": 0.1565,
+  "min_trunk_z": 0.1538,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002392291010452005,
+    0.0034052156287430746
+   ],
+   [
+    0.0034634106717029225,
+    0.004197080390208087
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "t186__mass110__s4": {
+  "stochastic": true,
+  "seed": 4,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0262,
+  "dx_m": 0.0245,
+  "final_trunk_z": 0.157,
+  "min_trunk_z": 0.1527,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002342257521302467,
+    0.0042784842763971195
+   ],
+   [
+    0.00366928552553529,
+    0.004389588451523804
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "t186__mass110__s5": {
+  "stochastic": true,
+  "seed": 5,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0314,
+  "dx_m": 0.0314,
+  "final_trunk_z": 0.1558,
+  "min_trunk_z": 0.1544,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002496241447476323,
+    0.004777682838555071
+   ],
+   [
+    0.0030469775618373746,
+    0.004268310263887132
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "t186__mass110__s6": {
+  "stochastic": true,
+  "seed": 6,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0377,
+  "dx_m": 0.0341,
+  "final_trunk_z": 0.1566,
+  "min_trunk_z": 0.1552,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0024491668733731126,
+    0.005850096276645088
+   ],
+   [
+    0.0025022378936740766,
+    0.008953525547710547
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "t186__mass110__s7": {
+  "stochastic": true,
+  "seed": 7,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0279,
+  "dx_m": 0.0251,
+  "final_trunk_z": 0.1572,
+  "min_trunk_z": 0.1544,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025067287308150263,
+    0.003269508288798177
+   ],
+   [
+    0.0037110604548325,
+    0.005342320859916025
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "t186__mass110__s8": {
+  "stochastic": true,
+  "seed": 8,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.032,
+  "dx_m": 0.0317,
+  "final_trunk_z": 0.1568,
+  "min_trunk_z": 0.1542,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025047313847960453,
+    0.00544552316328277
+   ],
+   [
+    0.0030680083498852567,
+    0.004523169380390421
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "t186__mass120": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0309,
+  "dx_m": 0.0263,
+  "final_trunk_z": 0.1555,
+  "min_trunk_z": 0.153,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026147281802156724,
+    0.0029639941832792713
+   ],
+   [
+    0.0038265420517973256,
+    0.004153185605622445
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.2
+  }
+ },
+ "t186__f250": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.03,
+  "dx_m": 0.0251,
+  "final_trunk_z": 0.1575,
+  "min_trunk_z": 0.1549,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002629303629832186,
+    0.0032965874961746605
+   ],
+   [
+    0.0038311838677111063,
+    0.004204662281925252
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 2.5
+  }
+ },
+ "t186__f186": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0288,
+  "dx_m": 0.0245,
+  "final_trunk_z": 0.1574,
+  "min_trunk_z": 0.1549,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026070317902124954,
+    0.002933074286383973
+   ],
+   [
+    0.003848541543172594,
+    0.004200628241912703
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "t186__f186__s0": {
+  "stochastic": true,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0246,
+  "dx_m": 0.023,
+  "final_trunk_z": 0.1573,
+  "min_trunk_z": 0.1547,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025096237864314502,
+    0.003541422649826022
+   ],
+   [
+    0.0035216747960362324,
+    0.004219275683060859
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "t186__f186__s1": {
+  "stochastic": true,
+  "seed": 1,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0276,
+  "dx_m": 0.0247,
+  "final_trunk_z": 0.1583,
+  "min_trunk_z": 0.1551,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002545318648411947,
+    0.003016428113599437
+   ],
+   [
+    0.0033169461856027566,
+    0.004239501525443501
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "t186__f186__s2": {
+  "stochastic": true,
+  "seed": 2,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0356,
+  "dx_m": 0.0321,
+  "final_trunk_z": 0.1572,
+  "min_trunk_z": 0.1555,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025412488931663008,
+    0.0032950142157507287
+   ],
+   [
+    0.0033266376393962308,
+    0.004232620451831044
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "t186__f186__s3": {
+  "stochastic": true,
+  "seed": 3,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0335,
+  "dx_m": 0.0311,
+  "final_trunk_z": 0.1573,
+  "min_trunk_z": 0.1518,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0024766968499166445,
+    0.009113034723596043
+   ],
+   [
+    0.002925801622684132,
+    0.005006916644974074
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "t186__f186__s4": {
+  "stochastic": true,
+  "seed": 4,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0257,
+  "dx_m": 0.0238,
+  "final_trunk_z": 0.1579,
+  "min_trunk_z": 0.1538,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0023740345899412457,
+    0.004672103877930427
+   ],
+   [
+    0.003660043435489327,
+    0.004716861759877913
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "t186__f186__s5": {
+  "stochastic": true,
+  "seed": 5,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0276,
+  "dx_m": 0.0272,
+  "final_trunk_z": 0.1567,
+  "min_trunk_z": 0.1553,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.00260037642325104,
+    0.005501843315469185
+   ],
+   [
+    0.0033009283733506575,
+    0.0042735056335820865
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "t186__f186__s6": {
+  "stochastic": true,
+  "seed": 6,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0306,
+  "dx_m": 0.0286,
+  "final_trunk_z": 0.1575,
+  "min_trunk_z": 0.156,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002605126439460363,
+    0.00495687239762084
+   ],
+   [
+    0.0029794952149296144,
+    0.007936445689074152
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "t186__f186__s7": {
+  "stochastic": true,
+  "seed": 7,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0271,
+  "dx_m": 0.0243,
+  "final_trunk_z": 0.1581,
+  "min_trunk_z": 0.1556,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002524670367621905,
+    0.0032477873695388113
+   ],
+   [
+    0.0037544371210993036,
+    0.005761649562960623
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "t186__f186__s8": {
+  "stochastic": true,
+  "seed": 8,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0272,
+  "dx_m": 0.0269,
+  "final_trunk_z": 0.1577,
+  "min_trunk_z": 0.1534,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0023210598478715858,
+    0.004362386530760376
+   ],
+   [
+    0.0032913338192051,
+    0.005751281265912525
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "t186__f160": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0285,
+  "dx_m": 0.0243,
+  "final_trunk_z": 0.1574,
+  "min_trunk_z": 0.1548,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002598544949683576,
+    0.0029289170376268145
+   ],
+   [
+    0.003823541529095552,
+    0.004200037733269893
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.6
+  }
+ },
+ "t186__f140": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0291,
+  "dx_m": 0.0244,
+  "final_trunk_z": 0.1574,
+  "min_trunk_z": 0.1548,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002611453143348083,
+    0.0031344829068749164
+   ],
+   [
+    0.0038189532674040155,
+    0.004202410171790905
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.4
+  }
+ },
+ "trand__base": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0366,
+  "dx_m": 0.0342,
+  "final_trunk_z": 0.1567,
+  "min_trunk_z": 0.1538,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0027415263247095173,
+    0.004449594617539902
+   ],
+   [
+    0.0031800758977936286,
+    0.004231043118840004
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "trand__base__s0": {
+  "stochastic": true,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0366,
+  "dx_m": 0.0344,
+  "final_trunk_z": 0.1563,
+  "min_trunk_z": 0.1538,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026524741860170092,
+    0.006390990026492287
+   ],
+   [
+    0.0034753222742170686,
+    0.005004477450907589
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "trand__base__s1": {
+  "stochastic": true,
+  "seed": 1,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0339,
+  "dx_m": 0.0318,
+  "final_trunk_z": 0.1581,
+  "min_trunk_z": 0.1534,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026737909287672806,
+    0.004980853406298863
+   ],
+   [
+    0.003136132065893478,
+    0.004562795339615497
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "trand__base__s2": {
+  "stochastic": true,
+  "seed": 2,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0407,
+  "dx_m": 0.0376,
+  "final_trunk_z": 0.1568,
+  "min_trunk_z": 0.1534,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026205929983297432,
+    0.005850011869610282
+   ],
+   [
+    0.003158970808400767,
+    0.005636659074794478
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "trand__base__s3": {
+  "stochastic": true,
+  "seed": 3,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0299,
+  "dx_m": 0.0286,
+  "final_trunk_z": 0.1563,
+  "min_trunk_z": 0.152,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025780907406087253,
+    0.006444309446984348
+   ],
+   [
+    0.0037069461920158572,
+    0.0047659437658112355
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "trand__base__s4": {
+  "stochastic": true,
+  "seed": 4,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0609,
+  "dx_m": 0.0601,
+  "final_trunk_z": 0.1571,
+  "min_trunk_z": 0.1516,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0024824643529694074,
+    0.00859430992654827
+   ],
+   [
+    0.002582316772324747,
+    0.006027493402133398
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "trand__base__s5": {
+  "stochastic": true,
+  "seed": 5,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0634,
+  "dx_m": 0.0625,
+  "final_trunk_z": 0.1584,
+  "min_trunk_z": 0.1522,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002405745161468145,
+    0.006929435844548949
+   ],
+   [
+    0.002727577353691883,
+    0.008090773203887278
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "trand__base__s6": {
+  "stochastic": true,
+  "seed": 6,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.057,
+  "dx_m": 0.0567,
+  "final_trunk_z": 0.1556,
+  "min_trunk_z": 0.1547,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002354623224349185,
+    0.005145951391686804
+   ],
+   [
+    0.0027614705113364127,
+    0.004926210515189627
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "trand__base__s7": {
+  "stochastic": true,
+  "seed": 7,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0679,
+  "dx_m": 0.067,
+  "final_trunk_z": 0.1581,
+  "min_trunk_z": 0.1534,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002167185166010402,
+    0.006989147174620465
+   ],
+   [
+    0.0025242102767413788,
+    0.009300431938404234
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "trand__base__s8": {
+  "stochastic": true,
+  "seed": 8,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0316,
+  "dx_m": 0.0315,
+  "final_trunk_z": 0.1568,
+  "min_trunk_z": 0.1543,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002630576857579413,
+    0.0069710097342899
+   ],
+   [
+    0.0030933427163831323,
+    0.00503263966801034
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {}
+ },
+ "trand__fric050": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0364,
+  "dx_m": 0.0353,
+  "final_trunk_z": 0.1567,
+  "min_trunk_z": 0.1536,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026020932934735716,
+    0.003967498198335938
+   ],
+   [
+    0.003066853270414241,
+    0.004206784977749491
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "trand__fric050__s0": {
+  "stochastic": true,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0323,
+  "dx_m": 0.0298,
+  "final_trunk_z": 0.1564,
+  "min_trunk_z": 0.1538,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002641013310613359,
+    0.005331311794912051
+   ],
+   [
+    0.0029611468431636617,
+    0.004551901603317476
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "trand__fric050__s1": {
+  "stochastic": true,
+  "seed": 1,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0362,
+  "dx_m": 0.0328,
+  "final_trunk_z": 0.1581,
+  "min_trunk_z": 0.1535,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002713103067254627,
+    0.00613467240969294
+   ],
+   [
+    0.0031600381919181172,
+    0.005124251896376504
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "trand__fric050__s2": {
+  "stochastic": true,
+  "seed": 2,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0699,
+  "dx_m": 0.0593,
+  "final_trunk_z": 0.1569,
+  "min_trunk_z": 0.1542,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002230742773648778,
+    0.007253822060024354
+   ],
+   [
+    0.0028916718039083897,
+    0.0050620981055051265
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "trand__fric050__s3": {
+  "stochastic": true,
+  "seed": 3,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0281,
+  "dx_m": 0.0276,
+  "final_trunk_z": 0.1562,
+  "min_trunk_z": 0.1525,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002634427416926065,
+    0.006293701114656124
+   ],
+   [
+    0.0038026036243207426,
+    0.004425363068380962
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "trand__fric050__s4": {
+  "stochastic": true,
+  "seed": 4,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0743,
+  "dx_m": 0.0739,
+  "final_trunk_z": 0.1576,
+  "min_trunk_z": 0.1529,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002171247344712933,
+    0.00805041793404928
+   ],
+   [
+    0.0025144004345519777,
+    0.0062751647245526815
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "trand__fric050__s5": {
+  "stochastic": true,
+  "seed": 5,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0571,
+  "dx_m": 0.0527,
+  "final_trunk_z": 0.1583,
+  "min_trunk_z": 0.1519,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.00235338067610643,
+    0.005491450221127944
+   ],
+   [
+    0.0026968838554670624,
+    0.008175671487456106
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "trand__fric050__s6": {
+  "stochastic": true,
+  "seed": 6,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0433,
+  "dx_m": 0.0414,
+  "final_trunk_z": 0.1559,
+  "min_trunk_z": 0.1521,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025046559465311258,
+    0.006517551529854976
+   ],
+   [
+    0.0028541260020103418,
+    0.006020417695987511
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "trand__fric050__s7": {
+  "stochastic": true,
+  "seed": 7,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0952,
+  "dx_m": 0.09,
+  "final_trunk_z": 0.1582,
+  "min_trunk_z": 0.1537,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002024414211094998,
+    0.0075132784832131275
+   ],
+   [
+    0.00269106565354104,
+    0.006728625326683307
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "trand__fric050__s8": {
+  "stochastic": true,
+  "seed": 8,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.039,
+  "dx_m": 0.0386,
+  "final_trunk_z": 0.1567,
+  "min_trunk_z": 0.1545,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025793628814821043,
+    0.005803750875837545
+   ],
+   [
+    0.003302472850718337,
+    0.004331685450462371
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "floor_friction": 0.5
+  }
+ },
+ "trand__mass110": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0307,
+  "dx_m": 0.0292,
+  "final_trunk_z": 0.1557,
+  "min_trunk_z": 0.1518,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002664662175279664,
+    0.003349186552903345
+   ],
+   [
+    0.003352742929031545,
+    0.004059619231789949
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "trand__mass110__s0": {
+  "stochastic": true,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0326,
+  "dx_m": 0.0314,
+  "final_trunk_z": 0.1555,
+  "min_trunk_z": 0.1511,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026000332938955484,
+    0.005032603061536231
+   ],
+   [
+    0.0033404942030486953,
+    0.00418439493866489
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "trand__mass110__s1": {
+  "stochastic": true,
+  "seed": 1,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0382,
+  "dx_m": 0.0345,
+  "final_trunk_z": 0.1573,
+  "min_trunk_z": 0.1528,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002610293444061683,
+    0.005654917391159073
+   ],
+   [
+    0.00302695336378752,
+    0.004563131965759096
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "trand__mass110__s2": {
+  "stochastic": true,
+  "seed": 2,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0757,
+  "dx_m": 0.0671,
+  "final_trunk_z": 0.1559,
+  "min_trunk_z": 0.1532,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0027095174741470843,
+    0.006649794534852031
+   ],
+   [
+    0.00275606291382436,
+    0.005162853681515547
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "trand__mass110__s3": {
+  "stochastic": true,
+  "seed": 3,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0311,
+  "dx_m": 0.0301,
+  "final_trunk_z": 0.1549,
+  "min_trunk_z": 0.1507,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002489177364772187,
+    0.0060608555215695414
+   ],
+   [
+    0.0035489496893929898,
+    0.005078109139757557
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "trand__mass110__s4": {
+  "stochastic": true,
+  "seed": 4,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0817,
+  "dx_m": 0.0817,
+  "final_trunk_z": 0.1563,
+  "min_trunk_z": 0.1517,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002014155289175888,
+    0.008489831957102678
+   ],
+   [
+    0.002724183274329918,
+    0.007313117835103418
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "trand__mass110__s5": {
+  "stochastic": true,
+  "seed": 5,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0598,
+  "dx_m": 0.0593,
+  "final_trunk_z": 0.1547,
+  "min_trunk_z": 0.1526,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025179653504786015,
+    0.005134737843775709
+   ],
+   [
+    0.00262262560220302,
+    0.008190296190347723
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "trand__mass110__s6": {
+  "stochastic": true,
+  "seed": 6,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0524,
+  "dx_m": 0.0523,
+  "final_trunk_z": 0.1548,
+  "min_trunk_z": 0.1536,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002493815527441476,
+    0.005115542758226399
+   ],
+   [
+    0.0028607468064844044,
+    0.005038562942982085
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "trand__mass110__s7": {
+  "stochastic": true,
+  "seed": 7,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0956,
+  "dx_m": 0.0939,
+  "final_trunk_z": 0.157,
+  "min_trunk_z": 0.1521,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0020430213791546026,
+    0.007835365122515245
+   ],
+   [
+    0.0024087470909324588,
+    0.008228768354947798
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "trand__mass110__s8": {
+  "stochastic": true,
+  "seed": 8,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0328,
+  "dx_m": 0.0327,
+  "final_trunk_z": 0.1558,
+  "min_trunk_z": 0.153,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.00264029316532971,
+    0.006455320016017417
+   ],
+   [
+    0.0030455411381782316,
+    0.0045078718544088806
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.1
+  }
+ },
+ "trand__mass120": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0329,
+  "dx_m": 0.0308,
+  "final_trunk_z": 0.1547,
+  "min_trunk_z": 0.1508,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002644710855934332,
+    0.0034352780131048297
+   ],
+   [
+    0.0034151632727742187,
+    0.004041885116512552
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "mass_scale": 1.2
+  }
+ },
+ "trand__f250": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0389,
+  "dx_m": 0.0374,
+  "final_trunk_z": 0.1567,
+  "min_trunk_z": 0.154,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026155016158378105,
+    0.006089566452194946
+   ],
+   [
+    0.003001071433438668,
+    0.0046093150317472464
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 2.5
+  }
+ },
+ "trand__f186": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0379,
+  "dx_m": 0.0365,
+  "final_trunk_z": 0.1567,
+  "min_trunk_z": 0.1543,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.00235436771756755,
+    0.006767523733255086
+   ],
+   [
+    0.0031047447812430073,
+    0.004220192186495449
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "trand__f186__s0": {
+  "stochastic": true,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0365,
+  "dx_m": 0.0333,
+  "final_trunk_z": 0.1563,
+  "min_trunk_z": 0.1537,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.002615400884220326,
+    0.005186637164619777
+   ],
+   [
+    0.003322112630732302,
+    0.004218305586496968
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "trand__f186__s1": {
+  "stochastic": true,
+  "seed": 1,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0275,
+  "dx_m": 0.0268,
+  "final_trunk_z": 0.1581,
+  "min_trunk_z": 0.1525,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026164360963729233,
+    0.0044867590136722785
+   ],
+   [
+    0.003297063315201576,
+    0.004186961489443017
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "trand__f186__s2": {
+  "stochastic": true,
+  "seed": 2,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0495,
+  "dx_m": 0.0458,
+  "final_trunk_z": 0.1568,
+  "min_trunk_z": 0.1541,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026590001119575837,
+    0.005137067636323565
+   ],
+   [
+    0.002996260518307592,
+    0.004426900927288188
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "trand__f186__s3": {
+  "stochastic": true,
+  "seed": 3,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0277,
+  "dx_m": 0.027,
+  "final_trunk_z": 0.156,
+  "min_trunk_z": 0.1524,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025234468937301788,
+    0.006189233815201284
+   ],
+   [
+    0.0036378912503662597,
+    0.004355323743594264
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "trand__f186__s4": {
+  "stochastic": true,
+  "seed": 4,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0336,
+  "dx_m": 0.0315,
+  "final_trunk_z": 0.1572,
+  "min_trunk_z": 0.153,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026538116422563304,
+    0.007900671823162897
+   ],
+   [
+    0.0028378176809339545,
+    0.005247711216002211
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "trand__f186__s5": {
+  "stochastic": true,
+  "seed": 5,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.063,
+  "dx_m": 0.0629,
+  "final_trunk_z": 0.1604,
+  "min_trunk_z": 0.1542,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0021716514423783945,
+    0.006069159796498379
+   ],
+   [
+    0.0029193071989018077,
+    0.007703661322039118
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "trand__f186__s6": {
+  "stochastic": true,
+  "seed": 6,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0481,
+  "dx_m": 0.0392,
+  "final_trunk_z": 0.1558,
+  "min_trunk_z": 0.1508,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0020198958121852018,
+    0.005172756344283068
+   ],
+   [
+    0.0029126599280773005,
+    0.004411837359846148
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "trand__f186__s7": {
+  "stochastic": true,
+  "seed": 7,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.039,
+  "dx_m": 0.0355,
+  "final_trunk_z": 0.1582,
+  "min_trunk_z": 0.1523,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.00266342270365081,
+    0.0064351619592006165
+   ],
+   [
+    0.002870461303225366,
+    0.007383531691231279
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "trand__f186__s8": {
+  "stochastic": true,
+  "seed": 8,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0309,
+  "dx_m": 0.0308,
+  "final_trunk_z": 0.1568,
+  "min_trunk_z": 0.1541,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025389455976657163,
+    0.007202471673164117
+   ],
+   [
+    0.003183955786050352,
+    0.005013689518080372
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.86
+  }
+ },
+ "trand__f160": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0293,
+  "dx_m": 0.0281,
+  "final_trunk_z": 0.1566,
+  "min_trunk_z": 0.1523,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0026668192191542095,
+    0.004039432186507104
+   ],
+   [
+    0.0033399657537917724,
+    0.004077353571884601
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.6
+  }
+ },
+ "trand__f140": {
+  "stochastic": false,
+  "seed": 0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "vx": 0.15,
+  "secs": 5.0,
+  "onnx": "ckpt_010035200.onnx",
+  "dist_m": 0.0294,
+  "dx_m": 0.028,
+  "final_trunk_z": 0.1565,
+  "min_trunk_z": 0.1519,
+  "fell_t": null,
+  "floor_collision_on_t": null,
+  "foot_steps": [
+   0,
+   0
+  ],
+  "foot_z_range": [
+   [
+    0.0025308483854349847,
+    0.004375910236635028
+   ],
+   [
+    0.0032439210498955984,
+    0.004076272921862731
+   ]
+  ],
+  "foot_z0": [
+   -0.01068170250530047,
+   -0.010820002961185834
+  ],
+  "world": {
+   "force": 1.4
+  }
+ }
+}

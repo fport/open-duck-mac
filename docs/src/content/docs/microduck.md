@@ -70,7 +70,7 @@ Kaynak: [microduck_velocity_env_cfg.py](https://github.com/pollen-robotics/micro
 İki karar öğrenen biri için özellikle değerli:
 
 1. **Imitation reward'ı bırakmışlar.** Open Duck Mini v2 bir reference motion'ı taklit ederek öğreniyordu. Microduck yalnız görev reward'larıyla (task reward) öğreniyor. Takla görevinde anahtar kare taklidi denenmiş ve bırakılmış: ara noktalar verilince policy o noktalarda "takılıp kalıyormuş". Bir poz görevi en baştan tek bir hedef veriyor; yolu bulmak RL'in işi.
-2. **Gerçekliği motor modeli taşıyor.** Depo, bu ölçekte sim2real farkının büyük kısmının motordan geldiğini söylüyor; motor ideal bir denetleyici yerine voltaj yasasına kadar modelleniyor. Bu, bizim [3. bölümde](/open-duck-mac/part-3-sim2real/) gördüğümüzle aynı ders: Open Duck'ın simdeki motoru gerçek servodan %70–75 güçlü ve tek bu fark mesafeyi yarıya indiriyor.
+2. **Gerçekliği motor modeli taşıyor.** Depo, bu ölçekte sim2real farkının büyük kısmının motordan geldiğini söylüyor; motor ideal bir denetleyici yerine voltaj yasasına kadar modelleniyor. Bu, bizim [3. bölümde](/open-duck-mac/part-3-sim2real/) gördüğümüzle aynı ders: Open Duck'ın simdeki motor sınırı katalog değerinin ~%70 üstünde ve sınırı kataloğa indirmek tek başına mesafeyi yarıya indiriyor.
 
 ## Open Duck Mini v2 ile farkı
 
