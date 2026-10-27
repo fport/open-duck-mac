@@ -1,0 +1,70 @@
+---
+title: open-duck-mac
+description: We teach Open Duck Mini v2 to walk from scratch on a MacBook, CPU only. Then we break it and measure why it breaks.
+template: splash
+hero:
+  tagline: We teach Open Duck Mini v2 to walk from scratch on a MacBook, CPU only. Then we break it and measure why it breaks.
+  image:
+    file: ../../../assets/hero-duck.jpg
+    alt: "Open Duck Mini v2 in MuJoCo lifting its feet at 68.4 M steps"
+  actions:
+    - text: Start the setup
+      link: /open-duck-mac/en/setup/
+      icon: right-arrow
+    - text: GitHub
+      link: https://github.com/fport/open-duck-mac
+      icon: github
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from "@astrojs/starlight/components";
+
+This site is the full version of the experiments behind our short videos. Every script, log and measurement is in the repository, so you don't have to take our word for anything: run it again on your own Mac.
+
+## Results in brief
+
+<CardGrid>
+  <Card title="72.4 M steps in 3.57 h" icon="rocket">
+    Apple M5 MacBook, 6 cores, 1,536 parallel ducks. The Mac's GPU cannot run this physics, so everything runs on the CPU.
+  </Card>
+  <Card title="First step at 68.4 M" icon="star">
+    Stood up in ~11 minutes, sat on a plateau for ~3 hours, then lifted its feet: 29.8 cm in 5 s.
+  </Card>
+  <Card title="Break the reward, get a hack" icon="warning">
+    "Be fast" → crawling on its belly at 14.9 min. "Don't waste energy" → frozen at 7.5 min. "Lift your feet" → lying down, feet in the air, at 30 min.
+  </Card>
+  <Card title="Half the distance on a real motor" icon="setting">
+    The simulated motor is 70–75 % stronger than the real servo. At the real limit the same policy covers half the distance.
+  </Card>
+</CardGrid>
+
+:::caution[Honest limits]
+Everything is simulation; there is no real robot. Each experiment is one seed, one run. The official recipe is 150 M steps on an NVIDIA GPU; we stopped at 48 %. Details at the end of each part.
+:::
+
+## What's here
+
+<CardGrid>
+  <LinkCard title="Setup" description="Every command from an empty Mac to your first training run." href="/open-duck-mac/en/setup/" />
+  <LinkCard title="Concepts" description="Reinforcement learning, PPO, rewards, domain randomization, without the maths." href="/open-duck-mac/en/concepts/" />
+  <LinkCard title="1. Learning to walk" description="3.6 hours, 72.4 M steps, 1,536 parallel ducks." href="/open-duck-mac/en/part-1-walking/" />
+  <LinkCard title="2. Reward hacking" description="We only changed the reward; the duck found crawling, freezing, lying down." href="/open-duck-mac/en/part-2-reward-hacking/" />
+  <LinkCard title="3. Sim2real" description="The simulated motor is stronger than the real servo. What happens? (in progress)" href="/open-duck-mac/en/part-3-sim2real/" />
+  <LinkCard title="What can you try?" description="Ideas for your own experiments, with difficulty and time estimates." href="/open-duck-mac/en/experiments/" />
+</CardGrid>
+
+## Videos
+
+The videos are in Turkish.
+
+| Episode | Topic | YouTube |
+|---|---|---|
+| Duck 1 | I didn't buy the viral duck, I trained its sibling on my Mac | [Shorts](https://youtube.com/shorts/gfCUTIHldt0) |
+| Duck 2 | I told the duck "be fast"; it learned to crawl on its belly | 28 October 2026 |
+| Duck 3+ | The simulator lies (sim2real) | in progress |
+
+Channel: [youtube.com/@getporti](https://www.youtube.com/@getporti)
+
+## Credits
+
+The robot, model, environment and rewards are **Open Duck Mini**'s: [Antoine Pirrone](https://github.com/apirrone) and contributors ([Open_Duck_Mini](https://github.com/apirrone/Open_Duck_Mini), [Open_Duck_Playground](https://github.com/apirrone/Open_Duck_Playground)). Simulation by [MuJoCo / MJX](https://github.com/google-deepmind/mujoco), [MuJoCo Playground](https://github.com/google-deepmind/mujoco_playground) and [Brax](https://github.com/google/brax). If you build on this, credit Open Duck Mini first.

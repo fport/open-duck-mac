@@ -1,4 +1,6 @@
-# Setup: from an empty Mac to your first training run
+---
+title: 'Setup: from an empty Mac to your first training run'
+---
 
 This page takes you from an Apple Silicon Mac with nothing installed to the duck's first training run. We only ran this on macOS. Linux CPUs should work too, but we have not tested them.
 
@@ -11,8 +13,9 @@ This page takes you from an Apple Silicon Mac with nothing installed to the duck
 | Time | ~15 min of setup. The full training run took 3.6 h on our machine; first results show up after 10–15 minutes. |
 | Knowledge | Being able to paste commands into a terminal is enough. Python helps but is not required. |
 
-!!! info "Why not the GPU?"
-    The Mac's GPU (Metal) cannot run this physics: `jax-metal` does not support the `cholesky` operation MJX needs (`failed to legalize operation 'mhlo.cholesky'`). That is missing software support, not a hardware limit, so everything runs on the CPU. Details: [1. Learning to walk](part-1-walking.md#why-cpu).
+:::note[Why not the GPU?]
+The Mac's GPU (Metal) cannot run this physics: `jax-metal` does not support the `cholesky` operation MJX needs (`failed to legalize operation 'mhlo.cholesky'`). That is missing software support, not a hardware limit, so everything runs on the CPU. Details: [1. Learning to walk](/open-duck-mac/en/part-1-walking/#why-cpu).
+:::
 
 ## 1. Basic tools
 
@@ -91,8 +94,9 @@ nice -n 10 .venv/bin/python -I scripts/train_mac.py external/Open_Duck_Playgroun
 
 After every chunk (~9 min) you get a `.onnx` and `.pkl` in `runs/<name>/ckpt/`, a line in `checkpoints.csv` and, with `--render_script`, a 5 s video + measurements in the background. Drop `--render_script` if the CPU is busy.
 
-!!! tip "Keep using your computer"
-    `nice -n 10` gives training a low priority, so your browser and editor stay responsive. Closing the lid puts the Mac to sleep and pauses training; for long runs you can prefix the command with `caffeinate -i`.
+:::tip[Keep using your computer]
+`nice -n 10` gives training a low priority, so your browser and editor stay responsive. Closing the lid puts the Mac to sleep and pauses training; for long runs you can prefix the command with `caffeinate -i`.
+:::
 
 ## 7. Plot and logs
 
@@ -100,6 +104,6 @@ After every chunk (~9 min) you get a `.onnx` and `.pkl` in `runs/<name>/ckpt/`, 
 .venv/bin/python scripts/make_log.py runs/my-run
 ```
 
-This writes `train_log.csv`, `ckpt_summary.json` and `reward_curve.png`. [Concepts](concepts.md) and [part 1](part-1-walking.md) explain how to read them.
+This writes `train_log.csv`, `ckpt_summary.json` and `reward_curve.png`. [Concepts](/open-duck-mac/en/concepts/) and [part 1](/open-duck-mac/en/part-1-walking/) explain how to read them.
 
-If something goes wrong: [Troubleshooting & FAQ](faq.md).
+If something goes wrong: [Troubleshooting & FAQ](/open-duck-mac/en/faq/).

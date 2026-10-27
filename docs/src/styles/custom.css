@@ -1,0 +1,13 @@
+/* getporti palette: amber accent, deep navy */
+:root {
+  --sl-color-accent-low: #3a2a05;
+  --sl-color-accent: #ffaf00;
+  --sl-color-accent-high: #ffe2a3;
+}
+:root[data-theme="light"] {
+  --sl-color-accent-low: #ffe9bd;
+  --sl-color-accent: #a86a00;
+  --sl-color-accent-high: #4a2f00;
+}
+.sl-markdown-content img { border-radius: 0.5rem; }
+.sl-markdown-content sub { display: block; margin-top: 0.4rem; color: var(--sl-color-gray-3); line-height: 1.4; }

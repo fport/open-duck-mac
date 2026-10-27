@@ -1,7 +1,10 @@
-# 3. The simulator lies (sim2real)
+---
+title: '3. The simulator lies (sim2real)'
+---
 
-!!! info "In progress"
-    The measurement part of this chapter is done; the retraining runs (27 October 2026) are still going. This page will be updated with their results and scripts.
+:::note[In progress]
+The measurement part of this chapter is done; the retraining runs (27 October 2026) are still going. This page will be updated with their results and scripts.
+:::
 
 ## The question
 
@@ -10,9 +13,9 @@ Is the simulated duck the same as the real one? In the Open Duck model every joi
 - a community project ([soyeon24/open-duck-mini-v2-build](https://github.com/soyeon24/open-duck-mini-v2-build)) reports that the servo stalls at **~1.86 N·m**;
 - retailers list a peak (stall) torque of **19.5 kg·cm ≈ 1.91 N·m** ([Core Electronics](https://core-electronics.com.au/feetech-sts3215-smart-servo.html), [RobotShop](https://www.robotshop.com/products/magnetic-encoding-servo-sts3215-74v-19kgcm)); sources disagree on the voltage it applies to.
 
-So the simulated motor is **70–75 % stronger** than the real one. The official training randomizes floor friction, mass, motor stiffness and delays ([Concepts](concepts.md#domain-randomization)) but **not the torque limit**.
+So the simulated motor is **70–75 % stronger** than the real one. The official training randomizes floor friction, mass, motor stiffness and delays ([Concepts](/open-duck-mac/en/concepts/#domain-randomization)) but **not the torque limit**.
 
-## Experiment 1: no retraining, different worlds { #experiment-1 }
+## Experiment 1: no retraining, different worlds
 
 We took the trained policies unchanged and only changed the world. Deterministic test, 5 s, flat floor, no pushes, 0.15 m/s.
 
@@ -26,6 +29,8 @@ We took the trained policies unchanged and only changed the world. Deterministic
 | **Torque 1.86 N·m** | **13.9 cm (−52 %)** | 0/9, mean 9.2 cm | **40.2 cm (−31 %)** · 8+5 steps |
 | Torque 1.6 N·m | 9.8 cm | – | 27.3 cm · 8+0 steps |
 | Torque 1.4 N·m | 5.8 cm | – | 19.5 cm · 7+0 steps |
+
+![Forward distance over 5 seconds of the same policy at four motor strengths: 28.8 cm at 3.23 N·m, 25.3 at 2.5, 13.9 at the real servo's 1.86, 5.8 cm at 1.4](../../../assets/torque-distance.en.png)
 
 What we see:
 

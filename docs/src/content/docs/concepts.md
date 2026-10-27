@@ -1,4 +1,6 @@
-# Kavramlar: matematiksiz
+---
+title: 'Kavramlar: matematiksiz'
+---
 
 Bu sayfa videolarda geçen terimleri, depodaki dosyalarla eşleştirerek anlatır. Sırayla okursan sonraki bölümlerdeki her tablo anlam kazanır.
 
@@ -30,13 +32,17 @@ Open Duck'ın yürüme ortamında ödül şu 7 parçadan oluşur (`joystick.py`,
 | `action_rate` | −0,5 | Ani, titrek hareket (ceza) |
 | `stand_still` | −0,2 | Komut "dur" iken kıpırdamak (ceza) |
 
-[2. bölümde](part-2-reward-hacking.md) bu ağırlıkları bozunca ne olduğunu görüyoruz.
+[2. bölümde](/open-duck-mac/part-2-reward-hacking/) bu ağırlıkları bozunca ne olduğunu görüyoruz.
 
 ## Taklit ödülü
 
 Sıfırdan "ileri git" ödülüyle ördek çok garip yollar bulabilir. Open Duck bunu Disney'in BDX makalesindeki fikirle çözer: bir **referans yürüyüş** üretilir (parametrik bir yürüyüş motoru, `polynomial_coefficients.pkl`) ve ördeğin eklemleri bu referansa ne kadar benzerse o kadar puan alır. Ördek yine kendisi öğrenir; referans yalnızca "neye benzemesi gerektiğini" söyler.
 
 ## PPO ve paralel ördekler
+
+![1.536 hücreli mozaik: her hücrede bir ördek; turuncu yanan hücrede ördek düşmüş ve baştan başlıyor](../../assets/parallel-ducks.jpg)
+
+<sub>Temsilî: 0 adımdaki politikanın 9 gürültülü kaydı 1.536 hücrede tekrar ediliyor. Turuncu = ördek düştü, bölüm bitti, baştan başlıyor.</sub>
 
 **PPO** (Proximal Policy Optimization) politikayı güncelleyen algoritma. Kabaca: ördekleri bir süre oynat, hangi hareketlerin beklenenden fazla puan getirdiğine bak, politikayı o yöne **küçük** bir adımla it, tekrarla. "Küçük" kısmı önemli; büyük adımlar öğrenileni bozar.
 
@@ -60,7 +66,7 @@ Simülasyon gerçeğin kusursuz kopyası değil. Politika tek bir mükemmel dün
 - eklemlerin sıfır noktası: ±0,03 rad
 - ayrıca: aksiyon ve IMU gecikmesi (0–3 adım), gözlem gürültüsü, rastgele itmeler
 
-**Değiştirilmeyen** önemli bir şey var: motorun verebileceği en büyük tork. [3. bölüm](part-3-sim2real.md) tam bunu inceliyor.
+**Değiştirilmeyen** önemli bir şey var: motorun verebileceği en büyük tork. [3. bölüm](/open-duck-mac/part-3-sim2real/) tam bunu inceliyor.
 
 ## Checkpoint, ONNX, sıcak başlangıç
 

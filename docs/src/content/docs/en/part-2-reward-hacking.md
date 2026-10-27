@@ -1,9 +1,12 @@
-# 2. Reward hacking
+---
+title: '2. Reward hacking'
+---
 
-![Three ducks after reward hacking: crawling on its belly ("be fast"), frozen in place ("don't waste energy"), lying down with its feet in the air ("lift your feet")](assets/reward-hacking.jpg)
+![Three ducks after reward hacking: crawling on its belly ("be fast"), frozen in place ("don't waste energy"), lying down with its feet in the air ("lift your feet")](../../../assets/reward-hacking.jpg)
 
-!!! abstract "Summary"
-    Starting from our 68.4 M checkpoint we changed **only the reward weights** (and, in one variant, the fall rule) and let PPO keep training. No motion, pose or trajectory is scripted anywhere: every behaviour below is what PPO found. The robot learns what you **score**, not what you **want**.
+:::note[Summary]
+Starting from our 68.4 M checkpoint we changed **only the reward weights** (and, in one variant, the fall rule) and let PPO keep training. No motion, pose or trajectory is scripted anywhere: every behaviour below is what PPO found. The robot learns what you **score**, not what you **want**.
+:::
 
 The reward file is [`scripts/reward_hacking/hile_env.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/hile_env.py) (`VARIANTS`). It subclasses the unchanged upstream `Joystick` environment and adds two terms: raw forward speed (`fwd_vel`) and upstream's unused `reward_feet_air_time`. Warm start: policy and observation normalisation restored from 68.4 M, value network from scratch.
 
@@ -30,12 +33,13 @@ That is our reading of the formula, not an ablation: we did not run the experime
 
 In the upstream model only the two foot soles collide with the floor; a falling trunk passes through it (harmless in training, where a fall ends the episode). For these runs [`make_hile_repo.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/make_hile_repo.py) makes a **copy** of Open_Duck_Playground and adds massless, invisible boxes on the trunk, head and four leg parts that collide only with the floor (mass and inertia are asserted unchanged).
 
-!!! note
-    Crawling and lying down are only possible because of these boxes. Upstream itself is not modified.
+:::note
+Crawling and lying down are only possible because of these boxes. Upstream itself is not modified.
+:::
 
 ## Run it
 
-After [Setup](setup.md):
+After [Setup](/open-duck-mac/en/setup/):
 
 ```bash
 .venv/bin/python -I scripts/reward_hacking/make_hile_repo.py external/Open_Duck_Playground external/Playground_hile
@@ -48,8 +52,9 @@ nice -n 10 .venv/bin/python -I scripts/reward_hacking/train_hile.py external/Pla
 
 [`render_ckpt_hile.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/render_ckpt_hile.py) and [`render_grid_hile.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/render_grid_hile.py) are the evaluators used for the numbers above: training physics, no render-only collision, extra measurements (torque², feet-in-air fraction, maximum tilt).
 
-!!! warning "Pickles"
-    `ckpt_068413440.pkl` is a Python pickle of the Brax parameters. Only load pickles you trust.
+:::caution[Pickles]
+`ckpt_068413440.pkl` is a Python pickle of the Brax parameters. Only load pickles you trust.
+:::
 
 ## Write your own reward
 
@@ -60,7 +65,7 @@ Add an entry to `VARIANTS` in `hile_env.py`:
               note="my experiment: smoother, more imitation"),
 ```
 
-Any weight you leave out keeps its official value (`BASE`). Then run `train_hile.py --variant kibar`. 20–40 minutes is usually enough to see what PPO makes of it. More ideas: [What can you try?](experiments.md)
+Any weight you leave out keeps its official value (`BASE`). Then run `train_hile.py --variant kibar`. 20–40 minutes is usually enough to see what PPO makes of it. More ideas: [What can you try?](/open-duck-mac/en/experiments/)
 
 ## Data
 

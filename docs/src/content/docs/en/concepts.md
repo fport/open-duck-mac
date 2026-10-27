@@ -1,4 +1,6 @@
-# Concepts, without the maths
+---
+title: 'Concepts, without the maths'
+---
 
 This page explains the terms used in the videos and maps each one to a file in the repository. Read it in order and every table in the later parts will make sense.
 
@@ -30,13 +32,17 @@ In Open Duck's walking environment the reward has these 7 parts (`joystick.py`, 
 | `action_rate` | −0.5 | Sudden, jittery motion (penalty) |
 | `stand_still` | −0.2 | Moving when told to stand (penalty) |
 
-In [part 2](part-2-reward-hacking.md) we break these weights and watch what happens.
+In [part 2](/open-duck-mac/en/part-2-reward-hacking/) we break these weights and watch what happens.
 
 ## Imitation reward
 
 With only a "go forward" reward, the duck can find very strange solutions. Open Duck uses the idea from Disney's BDX paper: a **reference gait** is generated (a parametric walk engine, `polynomial_coefficients.pkl`) and the duck earns points the closer its joints follow it. The duck still learns by itself; the reference only says what walking should look like.
 
 ## PPO and parallel ducks
+
+![1,536-tile mosaic: one duck per tile; an orange tile is a duck that fell and restarts](../../../assets/parallel-ducks.jpg)
+
+<sub>Representative: 9 noisy recordings of the step-0 policy repeated across 1,536 tiles. Orange = the duck fell, the episode ended, it restarts.</sub>
 
 **PPO** (Proximal Policy Optimization) is the algorithm that updates the policy. Roughly: let the ducks act for a while, see which actions earned more than expected, nudge the policy that way with a **small** step, repeat. The "small" part matters: big steps destroy what was learned.
 
@@ -60,7 +66,7 @@ The simulator is not a perfect copy of reality. So that the policy does not memo
 - joint zero offsets: ±0.03 rad
 - also: action and IMU delay (0–3 steps), observation noise, random pushes
 
-One important thing is **not** randomized: the maximum torque a motor can produce. [Part 3](part-3-sim2real.md) is about exactly that.
+One important thing is **not** randomized: the maximum torque a motor can produce. [Part 3](/open-duck-mac/en/part-3-sim2real/) is about exactly that.
 
 ## Checkpoints, ONNX, warm start
 

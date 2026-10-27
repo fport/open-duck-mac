@@ -15,5 +15,7 @@ external/
 
 .DS_Store
 
-# mkdocs build output
-site/
+# docs site (Astro)
+docs/node_modules/
+docs/dist/
+docs/.astro/

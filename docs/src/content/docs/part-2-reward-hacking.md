@@ -1,9 +1,12 @@
-# 2. Ödül hilesi
+---
+title: '2. Ödül hilesi'
+---
 
-![Ödül hilesinden sonra üç ördek: yüzüstü sürünen ("hızlı ol"), olduğu yerde donan ("enerji harcama"), yere yatıp ayaklarını havaya diken ("ayaklarını kaldır")](assets/reward-hacking.jpg)
+![Ödül hilesinden sonra üç ördek: yüzüstü sürünen ("hızlı ol"), olduğu yerde donan ("enerji harcama"), yere yatıp ayaklarını havaya diken ("ayaklarını kaldır")](../../assets/reward-hacking.jpg)
 
-!!! abstract "Özet"
-    68,4 M checkpoint'inden devam edip **yalnız ödül ağırlıklarını** (bir varyantta da düşme kuralını) değiştirdik ve PPO'nun eğitime devam etmesine izin verdik. Hiçbir yerde hareket, poz ya da yörünge yazılmadı: aşağıdaki her davranışı PPO kendisi buldu. Robot **istediğini** değil, **puanladığını** öğrenir.
+:::note[Özet]
+68,4 M checkpoint'inden devam edip **yalnız ödül ağırlıklarını** (bir varyantta da düşme kuralını) değiştirdik ve PPO'nun eğitime devam etmesine izin verdik. Hiçbir yerde hareket, poz ya da yörünge yazılmadı: aşağıdaki her davranışı PPO kendisi buldu. Robot **istediğini** değil, **puanladığını** öğrenir.
+:::
 
 Ödül dosyası: [`scripts/reward_hacking/hile_env.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/hile_env.py) (`VARIANTS`). Değiştirilmemiş upstream `Joystick` ortamından türetilir ve iki terim ekler: ham ileri hız (`fwd_vel`) ve upstream'de olup kullanılmayan `reward_feet_air_time`. Sıcak başlangıç: politika ve gözlem normalizasyonu 68,4 M'den, değer ağı sıfırdan.
 
@@ -26,16 +29,17 @@ Upstream'deki `reward_feet_air_time` formülü `(havada_kalma − 0,1) × ilk_te
 
 Bu bizim formülü okuma biçimimiz, ablasyon değil: sebebi ayıracak deneyi yapmadık.
 
-## Çarpışma kutuları { #carpisma-kutulari }
+## Çarpışma kutuları
 
 Upstream modelde zemine yalnız iki ayak tabanı çarpar; düşen gövde zeminin içinden geçer (eğitimde zararsız, çünkü düşüş bölümü bitirir). Bu koşular için [`make_hile_repo.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/make_hile_repo.py), Open_Duck_Playground'un bir **kopyasını** çıkarır ve gövdeye, kafaya ve dört bacak parçasına yalnız zeminle çarpışan, kütlesiz, görünmez kutular ekler (kütle ve eylemsizliğin değişmediği assert ile kontrol edilir).
 
-!!! note
-    Sürünme ve yatma ancak bu kutular sayesinde mümkün. Upstream'in kendisi değiştirilmez.
+:::note
+Sürünme ve yatma ancak bu kutular sayesinde mümkün. Upstream'in kendisi değiştirilmez.
+:::
 
 ## Çalıştır
 
-[Kurulum](setup.md)'dan sonra:
+[Kurulum](/open-duck-mac/setup/)'dan sonra:
 
 ```bash
 .venv/bin/python -I scripts/reward_hacking/make_hile_repo.py external/Open_Duck_Playground external/Playground_hile
@@ -48,10 +52,11 @@ nice -n 10 .venv/bin/python -I scripts/reward_hacking/train_hile.py external/Pla
 
 [`render_ckpt_hile.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/render_ckpt_hile.py) ve [`render_grid_hile.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/render_grid_hile.py) yukarıdaki sayıları üreten değerlendiriciler: eğitimle aynı fizik, video için ek çarpışma yok, ek ölçümler (tork², havadaki ayak oranı, en büyük eğim).
 
-!!! warning "Pickle dosyaları"
-    `ckpt_068413440.pkl`, Brax parametrelerinin Python pickle'ı. Yalnız güvendiğin pickle'ları yükle.
+:::caution[Pickle dosyaları]
+`ckpt_068413440.pkl`, Brax parametrelerinin Python pickle'ı. Yalnız güvendiğin pickle'ları yükle.
+:::
 
-## Kendi ödülünü yaz { #kendi-odulunu-yaz }
+## Kendi ödülünü yaz
 
 `hile_env.py`'deki `VARIANTS`'a bir satır ekle:
 
@@ -60,7 +65,7 @@ nice -n 10 .venv/bin/python -I scripts/reward_hacking/train_hile.py external/Pla
               note="benim deneyim: daha yumuşak, daha çok taklit"),
 ```
 
-Yazmadığın her ağırlık resmî değerinde kalır (`BASE`). Sonra `train_hile.py --variant kibar`. PPO'nun ne yaptığını görmek için genelde 20–40 dakika yeter. Başka fikirler: [Sen ne yapabilirsin?](experiments.md)
+Yazmadığın her ağırlık resmî değerinde kalır (`BASE`). Sonra `train_hile.py --variant kibar`. PPO'nun ne yaptığını görmek için genelde 20–40 dakika yeter. Başka fikirler: [Sen ne yapabilirsin?](/open-duck-mac/experiments/)
 
 ## Veri
 

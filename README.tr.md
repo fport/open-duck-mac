@@ -80,7 +80,7 @@ scripts/reward_hacking/  2. bölüm: ödül dosyası (hile_env.py), eğitim beti
 scripts/sim2real/        3. bölüm: eval_world.py (tork, sürtünme, kütle değiştir)
 results/2026-10-24/      1. bölüm: loglar, checkpoint tablosu, her ölçüm, ONNX politikaları, sıcak başlangıç parametreleri
 results/2026-10-24-reward-hacking/   2. bölüm: dört varyantın her logu ve ölçümü
-docs/                    doküman sitesi (MkDocs, Türkçe + İngilizce)
+docs/                    doküman sitesi (Astro Starlight, Türkçe + İngilizce)
 ```
 
 ## Teşekkür ve lisans

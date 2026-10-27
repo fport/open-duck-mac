@@ -78,7 +78,7 @@ scripts/reward_hacking/  part 2: reward file (hile_env.py), trainer, collision-b
 scripts/sim2real/        part 3: eval_world.py (change torque, friction, mass)
 results/2026-10-24/      part 1: logs, checkpoints table, every rollout measurement, ONNX policies, warm-start params
 results/2026-10-24-reward-hacking/   part 2: every log and measurement of the four variants
-docs/                    the documentation site (MkDocs, Turkish + English)
+docs/                    the documentation site (Astro Starlight, Turkish + English)
 ```
 
 ## Credits and licence

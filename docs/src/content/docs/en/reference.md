@@ -1,4 +1,6 @@
-# Scripts and files
+---
+title: 'Scripts and files'
+---
 
 Every script prints its usage with `--help`.
 

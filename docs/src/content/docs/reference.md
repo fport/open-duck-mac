@@ -1,4 +1,6 @@
-# Betikler ve dosyalar
+---
+title: 'Betikler ve dosyalar'
+---
 
 Her betik `--help` ile kullanımını yazar.
 

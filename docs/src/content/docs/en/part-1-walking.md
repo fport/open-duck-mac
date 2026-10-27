@@ -1,7 +1,10 @@
-# 1. Learning to walk
+---
+title: '1. Learning to walk'
+---
 
-!!! abstract "Summary"
-    Open Duck Mini v2 trained with the official environment and rewards, **unchanged**. One run, seed 0, 24 October 2026, on an Apple M5 MacBook (10 CPU cores, 6 used; the machine was rendering other videos at the same time). 72.4 M steps in 3.57 h. The duck learned to stand in 11 minutes and to step at 68.4 M steps.
+:::note[Summary]
+Open Duck Mini v2 trained with the official environment and rewards, **unchanged**. One run, seed 0, 24 October 2026, on an Apple M5 MacBook (10 CPU cores, 6 used; the machine was rendering other videos at the same time). 72.4 M steps in 3.57 h. The duck learned to stand in 11 minutes and to step at 68.4 M steps.
+:::
 
 ## The run
 
@@ -17,6 +20,10 @@
 
 ## What the policy did
 
+![Three stills: the policy on the 3-hour plateau, the policy taking its first steps at 68.4 M, and the pretrained BEST_WALK_ONNX](../../../assets/walk-stages.jpg)
+
+<sub>From left: the duck standing on the plateau · the first checkpoint that lifts its feet, 68.4 M · the pretrained `BEST_WALK_ONNX` (not ours). Still frames; the difference shows in motion.</sub>
+
 Measured with [`eval_checkpoint.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/eval_checkpoint.py): flat floor, no pushes, forward command 0.15 m/s, 5 s, deterministic policy. The "9 noisy ducks" column samples actions with the exploration noise, as in training ([`eval_grid.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/eval_grid.py)).
 
 | Checkpoint | Wall-clock | Forward distance in 5 s | Feet | 9 noisy ducks |
@@ -30,7 +37,7 @@ Measured with [`eval_checkpoint.py`](https://github.com/fport/open-duck-mac/blob
 
 In short: within about **11 minutes** it learned to stay on its feet, then sat on that plateau for **about 3 hours**, and only between 64.4 M and 68.4 M steps did it start lifting its feet. At 72.4 M it covers half the distance of the pretrained policy in the same test. A 0.15 m/s command would be 75 cm in 5 s, so even the pretrained policy is below the target here.
 
-![Episode return, episode length and imitation reward vs environment steps](assets/reward_curve.png)
+![Episode return, episode length and imitation reward vs environment steps](../../../assets/reward_curve.png)
 
 Mean episode return went from 17.5 (first 1 M steps) to 78.3 (mean of the last 10 M), episode length from 1.2 s to 3.5 s (limit 20 s). The clearest learning signal is the imitation term: −127 → +168.
 
@@ -44,7 +51,7 @@ One JAX CPU device with multi-threaded XLA reached 2,368 env steps/s (1,024 envs
 
 ## Reproduce it
 
-Step 6 of [Setup](setup.md) is the exact command of our run. Brax rounds the step count up to whole PPO iterations, so 72,000,000 ends at 72,437,760.
+Step 6 of [Setup](/open-duck-mac/en/setup/) is the exact command of our run. Brax rounds the step count up to whole PPO iterations, so 72,000,000 ends at 72,437,760.
 
 ```bash
 # Measure your checkpoint or ours

@@ -1,15 +1,22 @@
-# Sen ne yapabilirsin?
+---
+title: 'Sen ne yapabilirsin?'
+---
+
+![Sarı bir halkanın içinde birbirini iten beş Open Duck Mini; bazıları devrilmiş](../../assets/duck-arena.jpg)
+
+<sub>Aynı sahnede beş ördek, her biri hazır `BEST_WALK_ONNX` ile bağımsız yürüyor ve birbirini itiyor. Gerçek MuJoCo fiziği, yazılmış hareket yok.</sub>
 
 Kendi Mac'inde deneyebileceğin fikirler, kolaydan zora. Süreler bizim M5'teki hıza (≈5.600 adım/sn) göre kaba tahmin. "Denedik" yazmayanları biz de denemedik; sonucunu bilmiyoruz.
 
-!!! tip "Bir deneyi paylaşmak istersen"
-    Sonucunu bir issue ya da pull request olarak aç: komut, seed, süre ve `run.json` / ölçüm JSON'u yeter. Videolarda kullanırsak adınla anarız.
+:::tip[Bir deneyi paylaşmak istersen]
+Sonucunu bir issue ya da pull request olarak aç: komut, seed, süre ve `run.json` / ölçüm JSON'u yeter. Videolarda kullanırsak adınla anarız.
+:::
 
 ## Kolay (dakikalar – 1 saat)
 
 ### 1. Dünyayı boz, politikayı ölç · 5 dk · denedik
 
-Eğitim yok, yalnız ölçüm. [`eval_world.py`](part-3-sim2real.md#deney-1) ile tork, sürtünme ya da kütleyi değiştir. Soru: ördek hangi değişikliğe en duyarlı? Kütle ×1,5'te ne olur? Sürtünme 0,2'de?
+Eğitim yok, yalnız ölçüm. [`eval_world.py`](/open-duck-mac/part-3-sim2real/#deney-1-yeniden-eğitmeden-farklı-dünyalar) ile tork, sürtünme ya da kütleyi değiştir. Soru: ördek hangi değişikliğe en duyarlı? Kütle ×1,5'te ne olur? Sürtünme 0,2'de?
 
 ### 2. Farklı hızda yürüt · 5 dk
 
@@ -17,7 +24,7 @@ Eğitim yok, yalnız ölçüm. [`eval_world.py`](part-3-sim2real.md#deney-1) ile
 
 ### 3. Kendi ödülünü yaz · 20–40 dk · denedik
 
-[2. bölümdeki](part-2-reward-hacking.md#kendi-odulunu-yaz) gibi `VARIANTS`'a bir satır ekle. Fikirler: "sessiz ol" (`action_rate` −5), "taklidi unut" (`imitation` 0, gerisi resmî), "geri git" (`fwd_vel` −10). Ördeğin bulduğu hileyi tahmin et, sonra bak.
+[2. bölümdeki](/open-duck-mac/part-2-reward-hacking/#kendi-ödülünü-yaz) gibi `VARIANTS`'a bir satır ekle. Fikirler: "sessiz ol" (`action_rate` −5), "taklidi unut" (`imitation` 0, gerisi resmî), "geri git" (`fwd_vel` −10). Ördeğin bulduğu hileyi tahmin et, sonra bak.
 
 ### 4. Başka bir seed · 30 dk (10 M) – 3,6 sa (72 M)
 
@@ -31,7 +38,7 @@ Eğitim yok, yalnız ölçüm. [`eval_world.py`](part-3-sim2real.md#deney-1) ile
 
 ### 6. Zayıf motorla eğit · 1–2 sa
 
-[3. bölümdeki](part-3-sim2real.md) deney: tork sınırını gerçek servoya indir ya da rastgele yap. Eğitim betiği bölüm tamamlanınca depoya eklenecek.
+[3. bölümdeki](/open-duck-mac/part-3-sim2real/) deney: tork sınırını gerçek servoya indir ya da rastgele yap. Eğitim betiği bölüm tamamlanınca depoya eklenecek.
 
 ### 7. Engebeli zemin · birkaç saat
 
@@ -41,7 +48,7 @@ Open_Duck_Playground'da `rough_terrain_backlash` görevi var (sabit commit'te ya
 
 ### 8. Düşünce kalkmayı öğret
 
-Hugging Face'in Microduck'ı düşünce kalkabiliyor; Open Duck ortamında kalkma görevi yok. Gerekenler: yerde başlayan bölümler, gövde yüksekliği ödülü ve zeminle çarpışan gövde (2. bölümdeki [çarpışma kutuları](part-2-reward-hacking.md#carpisma-kutulari) hazır). soyeon24'ün açık döngü denemesi çömelmede kalmış (15 cm duruşun 10,6 cm'si). Kalkmak yürümekten zor.
+Hugging Face'in Microduck'ı düşünce kalkabiliyor; Open Duck ortamında kalkma görevi yok. Gerekenler: yerde başlayan bölümler, gövde yüksekliği ödülü ve zeminle çarpışan gövde (2. bölümdeki [çarpışma kutuları](/open-duck-mac/part-2-reward-hacking/#çarpışma-kutuları) hazır). soyeon24'ün açık döngü denemesi çömelmede kalmış (15 cm duruşun 10,6 cm'si). Kalkmak yürümekten zor.
 
 ### 9. Bir gösteri hareketi öğret (Disney tarzı)
 

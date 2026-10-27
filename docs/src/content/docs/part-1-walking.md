@@ -1,7 +1,10 @@
-# 1. Yürümeyi öğrenmek
+---
+title: '1. Yürümeyi öğrenmek'
+---
 
-!!! abstract "Özet"
-    Open Duck Mini v2, resmî ortam ve ödüllerle, **değiştirilmeden** eğitildi. Tek koşu, seed 0, 24 Ekim 2026, Apple M5 MacBook (10 çekirdek, 6'sı kullanıldı; makine aynı anda başka videolar da işliyordu). 3,57 saatte 72,4 M adım. Ördek 11 dakikada ayakta durmayı, 68,4 M adımda adım atmayı öğrendi.
+:::note[Özet]
+Open Duck Mini v2, resmî ortam ve ödüllerle, **değiştirilmeden** eğitildi. Tek koşu, seed 0, 24 Ekim 2026, Apple M5 MacBook (10 çekirdek, 6'sı kullanıldı; makine aynı anda başka videolar da işliyordu). 3,57 saatte 72,4 M adım. Ördek 11 dakikada ayakta durmayı, 68,4 M adımda adım atmayı öğrendi.
+:::
 
 ## Koşu
 
@@ -17,6 +20,10 @@
 
 ## Ördek ne yaptı?
 
+![Üç kare: 3 saatlik platodaki politika, 68,4 M adımda ilk adımlarını atan politika ve hazır BEST_WALK_ONNX](../../assets/walk-stages.jpg)
+
+<sub>Soldan: platoda ayakta duran ördek · 68,4 M'de ayağını kaldıran ilk checkpoint · hazır `BEST_WALK_ONNX` (bizim değil). Durağan kareler; fark hareket hâlinde görünüyor.</sub>
+
 [`eval_checkpoint.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/eval_checkpoint.py) ile ölçüldü: düz zemin, itme yok, ileri komut 0,15 m/s, 5 sn, deterministik politika. "9 gürültülü ördek" sütunu eğitimdeki gibi keşif gürültüsüyle örnekler ([`eval_grid.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/eval_grid.py)).
 
 | Checkpoint | Saat | 5 sn'de ileri mesafe | Ayaklar | 9 gürültülü ördek |
@@ -30,7 +37,7 @@
 
 Kısaca: ~**11 dakikada** ayakta durmayı öğrendi, sonra ~**3 saat** bu düzlükte kaldı, ancak 64,4 M ile 68,4 M arasında ayaklarını kaldırmaya başladı. 72,4 M'de aynı testte hazır politikanın yarısı kadar yol alıyor. 0,15 m/s'lik komut 5 sn'de 75 cm demek; yani hazır politika da burada hedefin altında.
 
-![Bölüm ödülü, bölüm uzunluğu ve taklit ödülünün adım sayısına göre değişimi](assets/reward_curve.png)
+![Bölüm ödülü, bölüm uzunluğu ve taklit ödülünün adım sayısına göre değişimi](../../assets/reward_curve.png)
 
 Ortalama bölüm ödülü 17,5'ten (ilk 1 M adım) 78,3'e (son 10 M'nin ortalaması), bölüm uzunluğu 1,2 sn'den 3,5 sn'ye çıktı (sınır 20 sn). En net öğrenme sinyali taklit terimi: −127 → +168.
 
@@ -44,7 +51,7 @@ Ortalama bölüm ödülü 17,5'ten (ilk 1 M adım) 78,3'e (son 10 M'nin ortalama
 
 ## Tekrar üret
 
-[Kurulum](setup.md) sayfasındaki 6. adım bizim koşumuzun birebir komutu. Brax adım sayısını tam PPO iterasyonuna yuvarlar; 72.000.000 hedefi 72.437.760'ta biter.
+[Kurulum](/open-duck-mac/setup/) sayfasındaki 6. adım bizim koşumuzun birebir komutu. Brax adım sayısını tam PPO iterasyonuna yuvarlar; 72.000.000 hedefi 72.437.760'ta biter.
 
 ```bash
 # Kendi checkpoint'ini ya da bizimkini ölç

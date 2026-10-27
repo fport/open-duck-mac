@@ -1,0 +1,68 @@
+---
+title: open-duck-mac
+description: Open Duck Mini v2'ye bir MacBook'ta, sıfırdan, yalnız işlemciyle yürümeyi öğretiyoruz. Sonra onu bozup neden bozulduğunu ölçüyoruz.
+template: splash
+hero:
+  tagline: Open Duck Mini v2'ye bir MacBook'ta, sıfırdan, yalnız işlemciyle yürümeyi öğretiyoruz. Sonra onu bozup neden bozulduğunu ölçüyoruz.
+  image:
+    file: ../../assets/hero-duck.jpg
+    alt: "MuJoCo’da 68,4 M adımda ayağını kaldıran Open Duck Mini v2"
+  actions:
+    - text: Kuruluma başla
+      link: /open-duck-mac/setup/
+      icon: right-arrow
+    - text: GitHub
+      link: https://github.com/fport/open-duck-mac
+      icon: github
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from "@astrojs/starlight/components";
+
+Bu site, kısa videolarımızın arkasındaki deneylerin tam hâli. Her deneyin betiği, logu ve ölçümü depoda. Hiçbir şeyi bize güvenerek kabul etmen gerekmiyor; kendi Mac'inde tekrar çalıştırabilirsin.
+
+## Kısaca sonuçlar
+
+<CardGrid>
+  <Card title="3,57 saatte 72,4 M adım" icon="rocket">
+    Apple M5 MacBook, 6 çekirdek, 1.536 paralel ördek. Mac'in GPU'su bu fiziği çalıştıramadığı için her şey işlemcide.
+  </Card>
+  <Card title="68,4 M adımda ilk adım" icon="star">
+    ~11 dakikada ayakta durdu, ~3 saat yerinde saydı, sonra ayaklarını kaldırdı: 5 sn'de 29,8 cm.
+  </Card>
+  <Card title="Ödül bozulunca hile" icon="warning">
+    "Hızlı ol" → 14,9 dk'da yüzüstü sürünme. "Enerji harcama" → 7,5 dk'da donma. "Ayaklarını kaldır" → 30 dk'da yatıp ayaklar havada.
+  </Card>
+  <Card title="Gerçek motorla yarı yol" icon="setting">
+    Simdeki motor gerçek servodan %70–75 güçlü. Gerçek sınırda aynı politika yarı mesafe gidiyor.
+  </Card>
+</CardGrid>
+
+:::caution[Dürüst sınırlar]
+Her şey simülasyon; gerçek robot yok. Her deney tek seed, tek koşu. Resmî tarif NVIDIA GPU'da 150 M adım; biz %48'inde durduk. Ayrıntılar her bölümün sonunda.
+:::
+
+## Bu sitede ne var?
+
+<CardGrid>
+  <LinkCard title="Kurulum" description="Boş bir Mac'ten ilk eğitim koşusuna kadar her komut." href="/open-duck-mac/setup/" />
+  <LinkCard title="Kavramlar" description="Pekiştirmeli öğrenme, PPO, ödül, domain randomization. Matematik bilmeden." href="/open-duck-mac/concepts/" />
+  <LinkCard title="1. Yürümeyi öğrenmek" description="3,6 saat, 72,4 M adım, 1.536 paralel ördek." href="/open-duck-mac/part-1-walking/" />
+  <LinkCard title="2. Ödül hilesi" description="Yalnız ödülü değiştirdik; ördek sürünmeyi, donmayı, yatmayı buldu." href="/open-duck-mac/part-2-reward-hacking/" />
+  <LinkCard title="3. Simülasyon yalan söyler" description="Simdeki motor gerçek servodan güçlü. Ne oluyor? (devam ediyor)" href="/open-duck-mac/part-3-sim2real/" />
+  <LinkCard title="Sen ne yapabilirsin?" description="Zorluk ve süre tahminiyle kendi deneylerin için fikirler." href="/open-duck-mac/experiments/" />
+</CardGrid>
+
+## Videolar
+
+| Bölüm | Konu | YouTube |
+|---|---|---|
+| Ördek 1 | Viral ördeği almadım, kardeşini Mac'imde eğittim | [Shorts](https://youtube.com/shorts/gfCUTIHldt0) |
+| Ördek 2 | Ördeğe "hızlı ol" dedim, yüzüstü sürünmeyi buldu | 28 Ekim 2026 |
+| Ördek 3+ | Simülasyon yalan söyler (sim2real) | hazırlanıyor |
+
+Kanal: [youtube.com/@getporti](https://www.youtube.com/@getporti)
+
+## Teşekkür
+
+Robot, model, ortam ve ödüller **Open Duck Mini** projesinin: [Antoine Pirrone](https://github.com/apirrone) ve katkıcılar ([Open_Duck_Mini](https://github.com/apirrone/Open_Duck_Mini), [Open_Duck_Playground](https://github.com/apirrone/Open_Duck_Playground)). Simülasyon [MuJoCo / MJX](https://github.com/google-deepmind/mujoco), [MuJoCo Playground](https://github.com/google-deepmind/mujoco_playground) ve [Brax](https://github.com/google/brax). Bunun üzerine bir şey kurarsan önce Open Duck Mini'yi an.

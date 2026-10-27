@@ -1,4 +1,6 @@
-# Kurulum: boş bir Mac'ten ilk eğitime
+---
+title: "Kurulum: boş bir Mac'ten ilk eğitime"
+---
 
 Bu sayfa, hiçbir şey kurulu olmayan bir Apple Silicon Mac'ten başlayıp ördeğin ilk eğitim koşusuna kadar her adımı anlatır. Biz yalnız macOS'ta denedik. Linux işlemcilerde de çalışması beklenir ama test etmedik.
 
@@ -11,8 +13,9 @@ Bu sayfa, hiçbir şey kurulu olmayan bir Apple Silicon Mac'ten başlayıp örde
 | Zaman | Kurulum ~15 dk. Tam eğitim bizim makinede 3,6 saat; ilk sonuçlar 10–15 dakikada görünür. |
 | Bilgi | Terminalde komut yapıştırabilmek yeter. Python bilmek işini kolaylaştırır ama şart değil. |
 
-!!! info "Neden GPU değil?"
-    Mac'in GPU'su (Metal) bu fiziği çalıştıramıyor: `jax-metal`, MJX'in ihtiyaç duyduğu `cholesky` işlemini desteklemiyor (`failed to legalize operation 'mhlo.cholesky'`). Bu bir donanım sınırı değil, eksik yazılım desteği. Bu yüzden her şey işlemcide. Ayrıntı: [1. Yürümeyi öğrenmek](part-1-walking.md#neden-cpu).
+:::note[Neden GPU değil?]
+Mac'in GPU'su (Metal) bu fiziği çalıştıramıyor: `jax-metal`, MJX'in ihtiyaç duyduğu `cholesky` işlemini desteklemiyor (`failed to legalize operation 'mhlo.cholesky'`). Bu bir donanım sınırı değil, eksik yazılım desteği. Bu yüzden her şey işlemcide. Ayrıntı: [1. Yürümeyi öğrenmek](/open-duck-mac/part-1-walking/#neden-cpu).
+:::
 
 ## 1. Temel araçlar
 
@@ -38,7 +41,7 @@ git -C external/Open_Duck_Playground checkout b9be205ac64488c23504ca42e5ec790337
 
 `b9be205` (5 Ağustos 2025, "fix onnx export") bizim eğittiğimiz commit. Sonuçları birebir tekrar etmek istiyorsan bu commit'te kal. `external/` klasörü `.gitignore`'da; depoya girmez.
 
-## 3. Python ortamı { #3-python-ortami }
+## 3. Python ortamı
 
 ```bash
 uv venv --python 3.12 .venv
@@ -91,8 +94,9 @@ nice -n 10 .venv/bin/python -I scripts/train_mac.py external/Open_Duck_Playgroun
 
 Her parçanın (~9 dk) sonunda `runs/<ad>/ckpt/` altına bir `.onnx` ve `.pkl`, `checkpoints.csv`'ye bir satır ve (`--render_script` ile) arka planda 5 sn'lik bir video + ölçüm gelir. İşlemci yetmiyorsa `--render_script`'i çıkar.
 
-!!! tip "Bilgisayarı kullanmaya devam et"
-    `nice -n 10` eğitime düşük öncelik verir; tarayıcı ve editör akıcı kalır. Kapakı kapatmak uykuya sokar ve eğitimi durdurur; uzun koşularda `caffeinate -i` ile çalıştırabilirsin.
+:::tip[Bilgisayarı kullanmaya devam et]
+`nice -n 10` eğitime düşük öncelik verir; tarayıcı ve editör akıcı kalır. Kapakı kapatmak uykuya sokar ve eğitimi durdurur; uzun koşularda `caffeinate -i` ile çalıştırabilirsin.
+:::
 
 ## 7. Grafik ve log
 
@@ -100,6 +104,6 @@ Her parçanın (~9 dk) sonunda `runs/<ad>/ckpt/` altına bir `.onnx` ve `.pkl`, 
 .venv/bin/python scripts/make_log.py runs/my-run
 ```
 
-`train_log.csv`, `ckpt_summary.json` ve `reward_curve.png` üretir. Neyi okuyacağını [Kavramlar](concepts.md) ve [1. bölüm](part-1-walking.md) anlatıyor.
+`train_log.csv`, `ckpt_summary.json` ve `reward_curve.png` üretir. Neyi okuyacağını [Kavramlar](/open-duck-mac/concepts/) ve [1. bölüm](/open-duck-mac/part-1-walking/) anlatıyor.
 
-Bir şey ters gittiyse: [Sorunlar ve SSS](faq.md).
+Bir şey ters gittiyse: [Sorunlar ve SSS](/open-duck-mac/faq/).
