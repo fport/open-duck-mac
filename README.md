@@ -8,7 +8,7 @@
 
 This repository contains the scripts and the logs behind a short video: [Open Duck Mini v2](https://github.com/apirrone/Open_Duck_Mini) learning to walk with PPO in [Open_Duck_Playground](https://github.com/apirrone/Open_Duck_Playground), on an Apple Silicon Mac with JAX on the CPU, MJX physics and Brax PPO. The environment, rewards and robot model are Antoine Pirrone's, **unchanged**. What is ours is a small Mac runner, a TensorFlow-free ONNX exporter, a rollout evaluator and the numbers of one real run.
 
-[Run it](#run-it) · [Results](#results-of-our-run) · [What this is not](#what-this-is-not) · [Credits](#credits-and-licence) · [Türkçe özet](#türkçe-özet)
+[Run it](#run-it) · [Results](#results-of-our-run) · [Reward hacking](#part-2-reward-hacking) · [What this is not](#what-this-is-not) · [Credits](#credits-and-licence) · [Türkçe özet](#türkçe-özet)
 
 ## Results of our run
 
@@ -126,6 +126,38 @@ Every script prints its usage with `--help`.
 
 Our M5 (10 cores, 6 devices × 256 envs) averaged 5,636 steps/s while other jobs were running, so 72 M steps took 3.6 h and 150 M would take about 7.5 h. Chunks ran at 1,924 – 7,358 steps/s depending on the load, so an idle machine should be faster. The first compile takes a few minutes. Fewer cores means proportionally longer; run `smoke_pmap.py` to estimate (training also spends time on the PPO update, so expect less than the smoke-test number).
 
+## Part 2: reward hacking
+
+The second video breaks the reward on purpose. Starting from our 68.4 M checkpoint (warm start: policy and observation normalisation restored, value network from scratch), we changed **only the reward weights** and, in one variant, the fall rule, and let PPO keep training. No motion, pose or trajectory is scripted anywhere: every behaviour below is what PPO found. The reward file is [`scripts/reward_hacking/hile_env.py`](scripts/reward_hacking/hile_env.py) (`VARIANTS`); it subclasses the unchanged upstream `Joystick` env and adds two terms: raw forward speed (`fwd_vel`) and upstream's unused `reward_feet_air_time`.
+
+One run per variant, seed 0, 24 October 2026, same Mac, 5 CPU devices × 256 envs, fixed command 0.15 m/s forward. Distances are the deterministic 5 s test; "9 noisy ducks" samples with exploration noise.
+
+| Variant (the "instruction") | Weights changed | Time to the hack | What PPO found |
+|---|---|---|---|
+| `hizli` — "be fast" | raw forward speed 25 (= upstream speed weight 2.5 × 10); imitation, alive, energy, smoothness 0 | **14.85 min** (first checkpoint, 3.0 M steps) | Drops onto its belly and crawls: 49 cm at 14.9 min, 54.6 cm at 9.0 M steps (2.1× the 25.8 cm start), feet off the floor 87 % of the time, 0 steps. 9 noisy ducks: 8 crawl forward, 1 tips over backwards. |
+| `hizli_serbest` — same, falling allowed | as `hizli`, episode does not end on a fall | 26 min run | Same crawl (54.0 cm): the 90° fall rule was not what kept it upright. |
+| `enerji` — "don't waste energy" | torque² penalty −1.0 (upstream −0.001, ×1000), action rate −5 (×10), speed tracking ×0.1, imitation 0 | **7.50 min** (first checkpoint) | Freezes: 2.5 cm in 5 s, 0 steps, torque² −85 %, joint travel −93 %. |
+| `ayak` — "lift your feet" | `feet_air_time` 3000, speed tracking 0, imitation 0 | **30.3 min** | At 10.7 min it takes 13 real steps (one deterministic test; 5 of 9 noisy ducks fall). At 30.3 min it lies down and holds its feet 6–11 cm in the air, never touching the floor. 9 noisy ducks: all 9 lie down (4 forward, 5 backwards). |
+
+Why `ayak` lies down: upstream's `reward_feet_air_time` is `(air_time − 0.1) × first_contact`, clipped above at 0.4 but **not below**, so a foot that lands after less than 0.1 s in the air is *penalised* (× 3000). A foot that never lands is neither rewarded nor penalised, while `alive` (20) keeps paying. That is our reading of the formula, not an ablation.
+
+**Collision boxes.** In the upstream model only the two foot soles collide with the floor; a falling trunk passes through it (harmless in training, where a fall ends the episode). For these runs [`make_hile_repo.py`](scripts/reward_hacking/make_hile_repo.py) makes a **copy** of Open_Duck_Playground and adds massless, invisible boxes on the trunk, head and four leg parts that collide only with the floor (mass and inertia are asserted unchanged). Crawling and lying down are only possible because of these boxes. Upstream itself is not modified.
+
+**Run it** (after steps 1–2 above):
+
+```bash
+.venv/bin/python -I scripts/reward_hacking/make_hile_repo.py external/Open_Duck_Playground external/Playground_hile
+nice -n 10 .venv/bin/python -I scripts/reward_hacking/train_hile.py external/Playground_hile runs/hizli \
+  --variant hizli --restore results/2026-10-24/params/ckpt_068413440.pkl \
+  --devices 5 --envs_per_dev 256 --num_timesteps 9000000 --num_evals 4 --render_python .venv/bin/python
+```
+
+`--variant` is one of `hizli` (9 M steps in our run), `hizli_serbest` (5 M), `enerji` (4 M), `ayak` (6 M). The patched model's sha256 starts with `d02225da52343b13`, the same as recorded in every `run.json`. [`render_ckpt_hile.py`](scripts/reward_hacking/render_ckpt_hile.py) and [`render_grid_hile.py`](scripts/reward_hacking/render_grid_hile.py) are the evaluators used for the numbers above (training physics, no render-only collision, extra measurements). `ckpt_068413440.pkl` is a Python pickle of the Brax params; only load pickles you trust.
+
+Everything is in [`results/2026-10-24-reward-hacking/`](results/2026-10-24-reward-hacking/): `summary.json`, and per variant `run.json` (weights, timings, source hashes), `train_log.csv`, `train_metrics_ep.jsonl` (every reward term per log step), the ONNX policy at each checkpoint and `sim/*.json` (every rollout measurement, including the 9 noisy seeds). The `run.json` hashes of `hile_env.py` and `train_hile.py` refer to the files as they were during training; since then only comments and docstrings were translated or edited, and `train_hile.py` gained one `sys.path` line to find `scripts/onnx_export.py`.
+
+Limits: one seed and one short run per variant (4–9 M steps), all continuing from a walking policy. Another seed may find a different hack.
+
 ## What this is not
 
 - **Not the official recipe.** Upstream trains 150 M steps with 8,192 envs on an NVIDIA GPU (`jax[cuda12]`). We used 1,536 envs, a smaller batch, no evaluation runs, and stopped at 72.4 M. We do not know how `BEST_WALK_ONNX` was trained.
@@ -146,3 +178,5 @@ If you build on this, credit Open Duck Mini first: it is their robot and their e
 ## Türkçe özet
 
 Bu depo, Open Duck Mini v2'nin bir Apple Silicon Mac'te, yalnızca işlemciyle (JAX CPU + MJX + Brax PPO) sıfırdan yürümeyi öğrenmesini yeniden üretmek için gereken betikleri ve gerçek eğitim kayıtlarını içerir. Ortam, ödüller ve robot modeli Antoine Pirrone'un Open_Duck_Playground deposundan, hiç değiştirilmeden kullanıldı; Mac'in GPU'su (jax-metal) bu fiziği çalıştıramadığı için eğitim tamamen işlemcide yapıldı. Tek koşu, tek seed: 3,57 saatte 72,4 milyon adım; ördek yaklaşık 11 dakikada ayakta durmayı öğrendi, yaklaşık 3 saat yerinde saydı, 68,4 milyonuncu adımdaki kayıtta ilk kez ayaklarını kaldırıp 5 saniyede 29,8 cm ilerledi. Son kayıt (72,4 M) aynı testte 28,8 cm giderken hazır `BEST_WALK_ONNX` modeli 58,5 cm gidiyor; resmî tarif NVIDIA GPU'da 150 milyon adım, biz yaklaşık %48'inde durduk. Her şey simülasyon; gerçek robot yok.
+
+**2. bölüm (ödül hilesi):** Aynı 68,4 M politikasından devam edip yalnız ödül ağırlıklarını değiştirdik; hiçbir hareket elle yazılmadı. "Hızlı ol" (ham hız ağırlığı ×10) çeyrek saatte yüzüstü sürünmeyi buldu (yürümekten ~2 kat hızlı), "enerji harcama" (tork cezası ×1000) 7,5 dakikada donup kaldı, "ayaklarını kaldır" (hava süresi ödülü 3000) yarım saatte yere yatıp ayaklarını havaya dikti. Ödül dosyası `scripts/reward_hacking/hile_env.py`, tüm kayıtlar `results/2026-10-24-reward-hacking/`. Sürünme ve yatma, modelin bir kopyasına eklediğimiz çarpışma kutularıyla mümkün; tek seed, kısa koşular.

@@ -9,6 +9,7 @@ runs/
 ckpt/
 *.npz
 *.pkl
+!results/**/*.pkl
 *.mp4
 external/
 

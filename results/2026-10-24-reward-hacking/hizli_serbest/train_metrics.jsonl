@@ -1,0 +1,5 @@
+{"wall_s": 205.7, "env_steps": 501760}
+{"wall_s": 354.7, "env_steps": 1003520}
+{"wall_s": 548.0, "env_steps": 1689600, "training/sps": 3188.240779231082, "training/walltime": 529.9474277496338, "training/entropy_loss": 0.004869928117841482, "training/policy_loss": -0.03727784380316734, "training/total_loss": 0.003329593688249588, "training/v_loss": 0.0357375293970108}
+{"wall_s": 1062.9, "env_steps": 3379200, "training/sps": 3281.6644181130227, "training/walltime": 1044.808115720749, "training/entropy_loss": -0.009079420007765293, "training/policy_loss": -0.04212671145796776, "training/total_loss": -0.030026188120245934, "training/v_loss": 0.02117995172739029}
+{"wall_s": 1559.4, "env_steps": 5068800, "training/sps": 3404.0401801989315, "training/walltime": 1541.1594836711884, "training/entropy_loss": -0.018475087359547615, "training/policy_loss": -0.0432838574051857, "training/total_loss": -0.05283113196492195, "training/v_loss": 0.008927824907004833}

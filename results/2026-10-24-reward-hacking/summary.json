@@ -1,0 +1,892 @@
+{
+ "ayak": {
+  "note": "ayak havada kalma süresi ağırlığı 3000; hız takibi 0, taklit 0; hayatta kalma 20, enerji resmî",
+  "scales": {
+   "tracking_lin_vel": 0.0,
+   "tracking_ang_vel": 0.0,
+   "torques": -0.001,
+   "action_rate": -0.5,
+   "stand_still": -0.2,
+   "alive": 20.0,
+   "imitation": 0.0,
+   "fwd_vel": 0.0,
+   "feet_air_time": 3000.0
+  },
+  "terminate_on_flip": true,
+  "start": "2026-10-24 13:39:27",
+  "end": "2026-10-24 14:09:46",
+  "elapsed_min": 30.32,
+  "env_steps": 6036480,
+  "episodes": 16672,
+  "first": {
+   "kind": "train",
+   "clock": "13:42:53",
+   "wall_min": 3.43,
+   "env_steps": 501760,
+   "episodes_total": 1749,
+   "reward_mean": 53.477,
+   "ep_len_s": 2.01,
+   "dist_m_per_ep": 0.0088,
+   "fwd_vel_mean": 0.0044,
+   "trunk_z_mean": 0.1645,
+   "fallen_frac": 0.0099,
+   "feet_air_mean": 0.699,
+   "torque_sq_mean": 17.062,
+   "term_cost_action_rate": 121.9826,
+   "term_cost_stand_still": 0.0,
+   "term_cost_torques": 1.7183,
+   "term_reward_alive": 2014.2,
+   "term_reward_feet_air_time": -310.8001
+  },
+  "last": {
+   "kind": "train",
+   "clock": "14:09:37",
+   "wall_min": 30.17,
+   "env_steps": 6036480,
+   "episodes_total": 16631,
+   "reward_mean": 165.68,
+   "ep_len_s": 4.43,
+   "dist_m_per_ep": 0.0985,
+   "fwd_vel_mean": 0.0222,
+   "trunk_z_mean": 0.1345,
+   "fallen_frac": 0.0038,
+   "feet_air_mean": 1.769,
+   "torque_sq_mean": 15.712,
+   "term_cost_action_rate": 400.5757,
+   "term_cost_stand_still": 0.0,
+   "term_cost_torques": 3.4817,
+   "term_reward_alive": 4431.8,
+   "term_reward_feet_air_time": 3877.8
+  },
+  "checkpoints": [
+   {
+    "tag": "ckpt_000000000",
+    "clock": "13:39:48",
+    "wall_min": 0.35,
+    "env_steps_this_run": 0,
+    "env_steps_total_incl_yesterday": 68413440,
+    "episodes_this_run": 0,
+    "single": {
+     "dx_m": 0.2577,
+     "dist_m": 0.2592,
+     "fell_t": null,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.987,
+     "final_trunk_z": 0.1544,
+     "min_trunk_z": 0.1493,
+     "max_trunk_z": 0.1713,
+     "foot_steps": [
+      0,
+      2
+     ],
+     "foot_lift_max_m": [
+      0.009,
+      0.0102
+     ],
+     "both_feet_air_frac": 0.0,
+     "torque_sq_mean": 12.9706,
+     "joint_travel_rad": 49.367
+    },
+    "grid": {
+     "fell": 1,
+     "flipped_90": 1,
+     "mean_dx_m": 0.1344,
+     "max_dx_m": 0.2863,
+     "mean_foot_steps": 3.56,
+     "mean_both_feet_air_frac": 0.104,
+     "mean_torque_sq": 15.128
+    },
+    "video": "sim/ckpt_000000000.mp4",
+    "grid_video": "sim/ckpt_000000000_grid.mp4"
+   },
+   {
+    "tag": "ckpt_002022400",
+    "clock": "13:50:09",
+    "wall_min": 10.7,
+    "env_steps_this_run": 2022400,
+    "env_steps_total_incl_yesterday": 70435840,
+    "episodes_this_run": 8333,
+    "single": {
+     "dx_m": 0.4941,
+     "dist_m": 0.4972,
+     "fell_t": null,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.976,
+     "final_trunk_z": 0.1651,
+     "min_trunk_z": 0.1523,
+     "max_trunk_z": 0.1791,
+     "foot_steps": [
+      7,
+      6
+     ],
+     "foot_lift_max_m": [
+      0.0366,
+      0.0453
+     ],
+     "both_feet_air_frac": 0.0071,
+     "torque_sq_mean": 15.611,
+     "joint_travel_rad": 55.891
+    },
+    "grid": {
+     "fell": 5,
+     "flipped_90": 5,
+     "mean_dx_m": 0.0533,
+     "max_dx_m": 0.4616,
+     "mean_foot_steps": 5.78,
+     "mean_both_feet_air_frac": 0.5214,
+     "mean_torque_sq": 18.022
+    },
+    "video": "sim/ckpt_002022400.mp4",
+    "grid_video": "sim/ckpt_002022400_grid.mp4"
+   },
+   {
+    "tag": "ckpt_004044800",
+    "clock": "14:00:11",
+    "wall_min": 20.74,
+    "env_steps_this_run": 4044800,
+    "env_steps_total_incl_yesterday": 72458240,
+    "episodes_this_run": 12999,
+    "single": {
+     "dx_m": 0.3284,
+     "dist_m": 0.3681,
+     "fell_t": 2.567,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.147,
+     "final_trunk_z": 0.0462,
+     "min_trunk_z": 0.0446,
+     "max_trunk_z": 0.1758,
+     "foot_steps": [
+      1,
+      2
+     ],
+     "foot_lift_max_m": [
+      0.1298,
+      0.095
+     ],
+     "both_feet_air_frac": 0.6643,
+     "torque_sq_mean": 13.3318,
+     "joint_travel_rad": 49.454
+    },
+    "grid": {
+     "fell": 7,
+     "flipped_90": 0,
+     "mean_dx_m": 0.0037,
+     "max_dx_m": 0.4807,
+     "mean_foot_steps": 3.67,
+     "mean_both_feet_air_frac": 0.6976,
+     "mean_torque_sq": 16.212
+    },
+    "video": "sim/ckpt_004044800.mp4",
+    "grid_video": "sim/ckpt_004044800_grid.mp4"
+   },
+   {
+    "tag": "ckpt_006067200",
+    "clock": "14:09:46",
+    "wall_min": 30.32,
+    "env_steps_this_run": 6067200,
+    "env_steps_total_incl_yesterday": 74480640,
+    "episodes_this_run": 16672,
+    "single": {
+     "dx_m": 0.3763,
+     "dist_m": 0.4154,
+     "fell_t": 1.833,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.129,
+     "final_trunk_z": 0.0477,
+     "min_trunk_z": 0.045,
+     "max_trunk_z": 0.1723,
+     "foot_steps": [
+      0,
+      2
+     ],
+     "foot_lift_max_m": [
+      0.1236,
+      0.1094
+     ],
+     "both_feet_air_frac": 0.7857,
+     "torque_sq_mean": 12.9333,
+     "joint_travel_rad": 47.959
+    },
+    "grid": {
+     "fell": 9,
+     "flipped_90": 0,
+     "mean_dx_m": 0.0237,
+     "max_dx_m": 0.377,
+     "mean_foot_steps": 1.78,
+     "mean_both_feet_air_frac": 0.7698,
+     "mean_torque_sq": 16.097
+    },
+    "video": "sim/ckpt_006067200.mp4",
+    "grid_video": "sim/ckpt_006067200_grid.mp4"
+   }
+  ]
+ },
+ "enerji": {
+  "note": "tork² cezası -1 (resmî -0,001 x1000), aksiyon değişimi -5 (x10), hız takibi x0,1, taklit 0",
+  "scales": {
+   "tracking_lin_vel": 0.25,
+   "tracking_ang_vel": 0.6,
+   "torques": -1.0,
+   "action_rate": -5.0,
+   "stand_still": -0.2,
+   "alive": 20.0,
+   "imitation": 0.0,
+   "fwd_vel": 0.0,
+   "feet_air_time": 0.0
+  },
+  "terminate_on_flip": true,
+  "start": "2026-10-24 13:18:38",
+  "end": "2026-10-24 13:39:24",
+  "elapsed_min": 20.78,
+  "env_steps": 4044800,
+  "episodes": 14932,
+  "first": {
+   "kind": "train",
+   "clock": "13:21:59",
+   "wall_min": 3.36,
+   "env_steps": 512000,
+   "episodes_total": 1746,
+   "reward_mean": 7.118,
+   "ep_len_s": 1.87,
+   "dist_m_per_ep": -0.0227,
+   "fwd_vel_mean": -0.0122,
+   "trunk_z_mean": 0.1633,
+   "fallen_frac": 0.0107,
+   "feet_air_mean": 0.566,
+   "torque_sq_mean": 13.93,
+   "term_cost_action_rate": 834.4531,
+   "term_cost_stand_still": 0.0,
+   "term_cost_torques": 1138.4746,
+   "term_reward_alive": 1866.0,
+   "term_reward_tracking_ang_vel": 10.0184,
+   "term_reward_tracking_lin_vel": 4.2572
+  },
+  "last": {
+   "kind": "train",
+   "clock": "13:39:15",
+   "wall_min": 20.62,
+   "env_steps": 4044800,
+   "episodes_total": 14810,
+   "reward_mean": 45.5,
+   "ep_len_s": 3.36,
+   "dist_m_per_ep": 0.0481,
+   "fwd_vel_mean": 0.0143,
+   "trunk_z_mean": 0.1,
+   "fallen_frac": 0.0052,
+   "feet_air_mean": 0.353,
+   "torque_sq_mean": 2.686,
+   "term_cost_action_rate": 229.1212,
+   "term_cost_stand_still": 0.0,
+   "term_cost_torques": 450.8383,
+   "term_reward_alive": 2617.2,
+   "term_reward_tracking_ang_vel": 55.8058,
+   "term_reward_tracking_lin_vel": 3.2756
+  },
+  "checkpoints": [
+   {
+    "tag": "ckpt_000000000",
+    "clock": "13:18:56",
+    "wall_min": 0.3,
+    "env_steps_this_run": 0,
+    "env_steps_total_incl_yesterday": 68413440,
+    "episodes_this_run": 0,
+    "single": {
+     "dx_m": 0.2577,
+     "dist_m": 0.2592,
+     "fell_t": null,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.987,
+     "final_trunk_z": 0.1544,
+     "min_trunk_z": 0.1493,
+     "max_trunk_z": 0.1713,
+     "foot_steps": [
+      0,
+      2
+     ],
+     "foot_lift_max_m": [
+      0.009,
+      0.0102
+     ],
+     "both_feet_air_frac": 0.0,
+     "torque_sq_mean": 12.9706,
+     "joint_travel_rad": 49.367
+    },
+    "grid": {
+     "fell": 1,
+     "flipped_90": 1,
+     "mean_dx_m": 0.1344,
+     "max_dx_m": 0.2863,
+     "mean_foot_steps": 3.56,
+     "mean_both_feet_air_frac": 0.104,
+     "mean_torque_sq": 15.128
+    },
+    "video": "sim/ckpt_000000000.mp4",
+    "grid_video": "sim/ckpt_000000000_grid.mp4"
+   },
+   {
+    "tag": "ckpt_001356800",
+    "clock": "13:26:07",
+    "wall_min": 7.5,
+    "env_steps_this_run": 1356800,
+    "env_steps_total_incl_yesterday": 69770240,
+    "episodes_this_run": 4977,
+    "single": {
+     "dx_m": 0.0254,
+     "dist_m": 0.0274,
+     "fell_t": null,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.991,
+     "final_trunk_z": 0.1559,
+     "min_trunk_z": 0.1529,
+     "max_trunk_z": 0.1678,
+     "foot_steps": [
+      0,
+      0
+     ],
+     "foot_lift_max_m": [
+      0.001,
+      0.0028
+     ],
+     "both_feet_air_frac": 0.0,
+     "torque_sq_mean": 2.0073,
+     "joint_travel_rad": 3.599
+    },
+    "grid": {
+     "fell": 1,
+     "flipped_90": 1,
+     "mean_dx_m": -0.0075,
+     "max_dx_m": 0.0263,
+     "mean_foot_steps": 0.0,
+     "mean_both_feet_air_frac": 0.0905,
+     "mean_torque_sq": 3.58
+    },
+    "video": "sim/ckpt_001356800.mp4",
+    "grid_video": "sim/ckpt_001356800_grid.mp4"
+   },
+   {
+    "tag": "ckpt_002713600",
+    "clock": "13:32:44",
+    "wall_min": 14.11,
+    "env_steps_this_run": 2713600,
+    "env_steps_total_incl_yesterday": 71127040,
+    "episodes_this_run": 9667,
+    "single": {
+     "dx_m": 0.0247,
+     "dist_m": 0.0267,
+     "fell_t": null,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.993,
+     "final_trunk_z": 0.1557,
+     "min_trunk_z": 0.1538,
+     "max_trunk_z": 0.1675,
+     "foot_steps": [
+      0,
+      0
+     ],
+     "foot_lift_max_m": [
+      0.0009,
+      0.0025
+     ],
+     "both_feet_air_frac": 0.0,
+     "torque_sq_mean": 2.0043,
+     "joint_travel_rad": 3.312
+    },
+    "grid": {
+     "fell": 1,
+     "flipped_90": 1,
+     "mean_dx_m": -0.0084,
+     "max_dx_m": 0.0246,
+     "mean_foot_steps": 0.0,
+     "mean_both_feet_air_frac": 0.0984,
+     "mean_torque_sq": 2.303
+    },
+    "video": "sim/ckpt_002713600.mp4",
+    "grid_video": "sim/ckpt_002713600_grid.mp4"
+   },
+   {
+    "tag": "ckpt_004070400",
+    "clock": "13:39:24",
+    "wall_min": 20.77,
+    "env_steps_this_run": 4070400,
+    "env_steps_total_incl_yesterday": 72483840,
+    "episodes_this_run": 14932,
+    "single": {
+     "dx_m": 0.0249,
+     "dist_m": 0.0269,
+     "fell_t": null,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.992,
+     "final_trunk_z": 0.1553,
+     "min_trunk_z": 0.1533,
+     "max_trunk_z": 0.1673,
+     "foot_steps": [
+      0,
+      0
+     ],
+     "foot_lift_max_m": [
+      0.0011,
+      0.0026
+     ],
+     "both_feet_air_frac": 0.0,
+     "torque_sq_mean": 1.9402,
+     "joint_travel_rad": 3.278
+    },
+    "grid": {
+     "fell": 1,
+     "flipped_90": 1,
+     "mean_dx_m": -0.0074,
+     "max_dx_m": 0.0248,
+     "mean_foot_steps": 0.0,
+     "mean_both_feet_air_frac": 0.0952,
+     "mean_torque_sq": 2.121
+    },
+    "video": "sim/ckpt_004070400.mp4",
+    "grid_video": "sim/ckpt_004070400_grid.mp4"
+   }
+  ]
+ },
+ "hizli": {
+  "note": "yalnız ham ileri hız x10 (25); taklit/hayatta kalma/enerji/yumuşaklık 0; devrilince bölüm biter",
+  "scales": {
+   "tracking_lin_vel": 0.0,
+   "tracking_ang_vel": 0.0,
+   "torques": 0.0,
+   "action_rate": 0.0,
+   "stand_still": 0.0,
+   "alive": 0.0,
+   "imitation": 0.0,
+   "fwd_vel": 25.0,
+   "feet_air_time": 0.0
+  },
+  "terminate_on_flip": true,
+  "start": "2026-10-24 11:45:07",
+  "end": "2026-10-24 12:52:32",
+  "elapsed_min": 67.42,
+  "env_steps": 9031680,
+  "episodes": 37234,
+  "first": {
+   "kind": "train",
+   "clock": "11:48:07",
+   "wall_min": 2.99,
+   "env_steps": 501760,
+   "episodes_total": 1746,
+   "reward_mean": 3.605,
+   "ep_len_s": 2.17,
+   "dist_m_per_ep": 0.0212,
+   "fwd_vel_mean": 0.0098,
+   "trunk_z_mean": 0.164,
+   "fallen_frac": 0.0092,
+   "feet_air_mean": 0.656,
+   "torque_sq_mean": 16.75,
+   "term_reward_fwd_vel": 26.4926
+  },
+  "last": {
+   "kind": "train",
+   "clock": "12:52:23",
+   "wall_min": 67.27,
+   "env_steps": 9031680,
+   "episodes_total": 37136,
+   "reward_mean": 8.559,
+   "ep_len_s": 3.06,
+   "dist_m_per_ep": 0.0474,
+   "fwd_vel_mean": 0.0155,
+   "trunk_z_mean": 0.0904,
+   "fallen_frac": 0.0058,
+   "feet_air_mean": 1.113,
+   "torque_sq_mean": 31.163,
+   "term_reward_fwd_vel": 59.2956
+  },
+  "checkpoints": [
+   {
+    "tag": "ckpt_000000000",
+    "clock": "11:45:17",
+    "wall_min": 0.17,
+    "env_steps_this_run": 0,
+    "env_steps_total_incl_yesterday": 68413440,
+    "episodes_this_run": 0,
+    "single": {
+     "dx_m": 0.2577,
+     "dist_m": 0.2592,
+     "fell_t": null,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.987,
+     "final_trunk_z": 0.1544,
+     "min_trunk_z": 0.1493,
+     "max_trunk_z": 0.1713,
+     "foot_steps": [
+      0,
+      2
+     ],
+     "foot_lift_max_m": [
+      0.009,
+      0.0102
+     ],
+     "both_feet_air_frac": 0.0,
+     "torque_sq_mean": 12.9706,
+     "joint_travel_rad": 49.367
+    },
+    "grid": {
+     "fell": 1,
+     "flipped_90": 1,
+     "mean_dx_m": 0.1344,
+     "max_dx_m": 0.2863,
+     "mean_foot_steps": 3.56,
+     "mean_both_feet_air_frac": 0.104,
+     "mean_torque_sq": 15.128
+    },
+    "video": "sim/ckpt_000000000.mp4",
+    "grid_video": "sim/ckpt_000000000_grid.mp4"
+   },
+   {
+    "tag": "ckpt_003020800",
+    "clock": "11:59:58",
+    "wall_min": 14.85,
+    "env_steps_this_run": 3020800,
+    "env_steps_total_incl_yesterday": 71434240,
+    "episodes_this_run": 11920,
+    "single": {
+     "dx_m": 0.4906,
+     "dist_m": 0.526,
+     "fell_t": 1.5,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.093,
+     "final_trunk_z": 0.0589,
+     "min_trunk_z": 0.0448,
+     "max_trunk_z": 0.1715,
+     "foot_steps": [
+      0,
+      1
+     ],
+     "foot_lift_max_m": [
+      0.1235,
+      0.0779
+     ],
+     "both_feet_air_frac": 0.8214,
+     "torque_sq_mean": 18.6033,
+     "joint_travel_rad": 61.216
+    },
+    "grid": {
+     "fell": 9,
+     "flipped_90": 4,
+     "mean_dx_m": 0.1767,
+     "max_dx_m": 0.5417,
+     "mean_foot_steps": 1.33,
+     "mean_both_feet_air_frac": 0.7818,
+     "mean_torque_sq": 21.272
+    },
+    "video": "sim/ckpt_003020800.mp4",
+    "grid_video": "sim/ckpt_003020800_grid.mp4"
+   },
+   {
+    "tag": "ckpt_006041600",
+    "clock": "12:23:25",
+    "wall_min": 38.3,
+    "env_steps_this_run": 6041600,
+    "env_steps_total_incl_yesterday": 74455040,
+    "episodes_this_run": 24659,
+    "single": {
+     "dx_m": 0.6153,
+     "dist_m": 0.6167,
+     "fell_t": 1.1,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.104,
+     "final_trunk_z": 0.0753,
+     "min_trunk_z": 0.0471,
+     "max_trunk_z": 0.166,
+     "foot_steps": [
+      0,
+      0
+     ],
+     "foot_lift_max_m": [
+      0.0894,
+      0.0805
+     ],
+     "both_feet_air_frac": 0.9071,
+     "torque_sq_mean": 25.2977,
+     "joint_travel_rad": 77.435
+    },
+    "grid": {
+     "fell": 9,
+     "flipped_90": 2,
+     "mean_dx_m": 0.2997,
+     "max_dx_m": 0.5444,
+     "mean_foot_steps": 0.56,
+     "mean_both_feet_air_frac": 0.8492,
+     "mean_torque_sq": 26.509
+    },
+    "video": "sim/ckpt_006041600.mp4",
+    "grid_video": "sim/ckpt_006041600_grid.mp4"
+   },
+   {
+    "tag": "ckpt_009062400",
+    "clock": "12:52:32",
+    "wall_min": 67.42,
+    "env_steps_this_run": 9062400,
+    "env_steps_total_incl_yesterday": 77475840,
+    "episodes_this_run": 37234,
+    "single": {
+     "dx_m": 0.5459,
+     "dist_m": 0.5525,
+     "fell_t": 1.1,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.14,
+     "final_trunk_z": 0.074,
+     "min_trunk_z": 0.0498,
+     "max_trunk_z": 0.1636,
+     "foot_steps": [
+      0,
+      0
+     ],
+     "foot_lift_max_m": [
+      0.0886,
+      0.0705
+     ],
+     "both_feet_air_frac": 0.8714,
+     "torque_sq_mean": 29.174,
+     "joint_travel_rad": 82.759
+    },
+    "grid": {
+     "fell": 9,
+     "flipped_90": 1,
+     "mean_dx_m": 0.3529,
+     "max_dx_m": 0.4988,
+     "mean_foot_steps": 0.33,
+     "mean_both_feet_air_frac": 0.8746,
+     "mean_torque_sq": 32.16
+    },
+    "video": "sim/ckpt_009062400.mp4",
+    "grid_video": "sim/ckpt_009062400_grid.mp4"
+   }
+  ]
+ },
+ "hizli_serbest": {
+  "note": "hizli + devrilince bölüm BİTMEZ (yerde yatarken de hız ödülü alır)",
+  "scales": {
+   "tracking_lin_vel": 0.0,
+   "tracking_ang_vel": 0.0,
+   "torques": 0.0,
+   "action_rate": 0.0,
+   "stand_still": 0.0,
+   "alive": 0.0,
+   "imitation": 0.0,
+   "fwd_vel": 25.0,
+   "feet_air_time": 0.0
+  },
+  "terminate_on_flip": false,
+  "start": "2026-10-24 12:52:35",
+  "end": "2026-10-24 13:18:35",
+  "elapsed_min": 25.99,
+  "env_steps": 5017600,
+  "episodes": 3840,
+  "first": {
+   "kind": "train",
+   "clock": "13:00:51",
+   "wall_min": 8.26,
+   "env_steps": 1505280,
+   "episodes_total": 1280,
+   "reward_mean": 19.844,
+   "ep_len_s": 20.0,
+   "dist_m_per_ep": 0.367,
+   "fwd_vel_mean": 0.0184,
+   "trunk_z_mean": 0.1216,
+   "fallen_frac": 0.2361,
+   "feet_air_mean": 1.185,
+   "torque_sq_mean": 17.149,
+   "term_reward_fwd_vel": 458.7653
+  },
+  "last": {
+   "kind": "train",
+   "clock": "13:18:19",
+   "wall_min": 25.72,
+   "env_steps": 5017600,
+   "episodes_total": 3840,
+   "reward_mean": 24.989,
+   "ep_len_s": 20.0,
+   "dist_m_per_ep": 0.3359,
+   "fwd_vel_mean": 0.0168,
+   "trunk_z_mean": 0.1013,
+   "fallen_frac": 0.2929,
+   "feet_air_mean": 1.47,
+   "torque_sq_mean": 25.071,
+   "term_reward_fwd_vel": 419.8918
+  },
+  "checkpoints": [
+   {
+    "tag": "ckpt_000000000",
+    "clock": "12:52:53",
+    "wall_min": 0.3,
+    "env_steps_this_run": 0,
+    "env_steps_total_incl_yesterday": 68413440,
+    "episodes_this_run": 0,
+    "single": {
+     "dx_m": 0.2577,
+     "dist_m": 0.2592,
+     "fell_t": null,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.987,
+     "final_trunk_z": 0.1544,
+     "min_trunk_z": 0.1493,
+     "max_trunk_z": 0.1713,
+     "foot_steps": [
+      0,
+      2
+     ],
+     "foot_lift_max_m": [
+      0.009,
+      0.0102
+     ],
+     "both_feet_air_frac": 0.0,
+     "torque_sq_mean": 12.9706,
+     "joint_travel_rad": 49.367
+    },
+    "grid": {
+     "fell": 1,
+     "flipped_90": 1,
+     "mean_dx_m": 0.1344,
+     "max_dx_m": 0.2863,
+     "mean_foot_steps": 3.56,
+     "mean_both_feet_air_frac": 0.104,
+     "mean_torque_sq": 15.128
+    },
+    "video": "sim/ckpt_000000000.mp4",
+    "grid_video": "sim/ckpt_000000000_grid.mp4"
+   },
+   {
+    "tag": "ckpt_001689600",
+    "clock": "13:01:43",
+    "wall_min": 9.13,
+    "env_steps_this_run": 1689600,
+    "env_steps_total_incl_yesterday": 70103040,
+    "episodes_this_run": 1280,
+    "single": {
+     "dx_m": 0.7125,
+     "dist_m": 0.7367,
+     "fell_t": null,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.973,
+     "final_trunk_z": 0.1563,
+     "min_trunk_z": 0.1424,
+     "max_trunk_z": 0.1696,
+     "foot_steps": [
+      7,
+      8
+     ],
+     "foot_lift_max_m": [
+      0.0194,
+      0.0267
+     ],
+     "both_feet_air_frac": 0.0,
+     "torque_sq_mean": 15.4641,
+     "joint_travel_rad": 53.407
+    },
+    "grid": {
+     "fell": 4,
+     "flipped_90": 4,
+     "mean_dx_m": 0.1917,
+     "max_dx_m": 0.5538,
+     "mean_foot_steps": 8.56,
+     "mean_both_feet_air_frac": 0.3389,
+     "mean_torque_sq": 19.994
+    },
+    "video": "sim/ckpt_001689600.mp4",
+    "grid_video": "sim/ckpt_001689600_grid.mp4"
+   },
+   {
+    "tag": "ckpt_003379200",
+    "clock": "13:10:18",
+    "wall_min": 17.71,
+    "env_steps_this_run": 3379200,
+    "env_steps_total_incl_yesterday": 71792640,
+    "episodes_this_run": 2560,
+    "single": {
+     "dx_m": 0.5306,
+     "dist_m": 0.5362,
+     "fell_t": 1.533,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.099,
+     "final_trunk_z": 0.0614,
+     "min_trunk_z": 0.0435,
+     "max_trunk_z": 0.1683,
+     "foot_steps": [
+      0,
+      1
+     ],
+     "foot_lift_max_m": [
+      0.1228,
+      0.0916
+     ],
+     "both_feet_air_frac": 0.8143,
+     "torque_sq_mean": 18.3764,
+     "joint_travel_rad": 60.034
+    },
+    "grid": {
+     "fell": 9,
+     "flipped_90": 3,
+     "mean_dx_m": 0.2093,
+     "max_dx_m": 0.4678,
+     "mean_foot_steps": 2.89,
+     "mean_both_feet_air_frac": 0.6246,
+     "mean_torque_sq": 23.147
+    },
+    "video": "sim/ckpt_003379200.mp4",
+    "grid_video": "sim/ckpt_003379200_grid.mp4"
+   },
+   {
+    "tag": "ckpt_005068800",
+    "clock": "13:18:35",
+    "wall_min": 25.99,
+    "env_steps_this_run": 5068800,
+    "env_steps_total_incl_yesterday": 73482240,
+    "episodes_this_run": 3840,
+    "single": {
+     "dx_m": 0.5402,
+     "dist_m": 0.5409,
+     "fell_t": 1.367,
+     "flip_t": null,
+     "flipped_s": 0.0,
+     "min_upz": 0.107,
+     "final_trunk_z": 0.0647,
+     "min_trunk_z": 0.0427,
+     "max_trunk_z": 0.1679,
+     "foot_steps": [
+      0,
+      1
+     ],
+     "foot_lift_max_m": [
+      0.117,
+      0.0842
+     ],
+     "both_feet_air_frac": 0.8714,
+     "torque_sq_mean": 23.5856,
+     "joint_travel_rad": 71.453
+    },
+    "grid": {
+     "fell": 9,
+     "flipped_90": 2,
+     "mean_dx_m": 0.2381,
+     "max_dx_m": 0.4894,
+     "mean_foot_steps": 1.67,
+     "mean_both_feet_air_frac": 0.7421,
+     "mean_torque_sq": 26.542
+    },
+    "video": "sim/ckpt_005068800.mp4",
+    "grid_video": "sim/ckpt_005068800_grid.mp4"
+   }
+  ]
+ }
+}
