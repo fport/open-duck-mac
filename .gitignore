@@ -14,3 +14,6 @@ ckpt/
 external/
 
 .DS_Store
+
+# mkdocs build output
+site/

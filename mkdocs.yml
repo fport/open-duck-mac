@@ -1,0 +1,101 @@
+site_name: open-duck-mac
+site_description: Open Duck Mini v2'yi bir Mac'te, sıfırdan, yalnız işlemciyle yürümeyi öğretmek · Teach Open Duck Mini v2 to walk from scratch on a Mac, CPU only
+site_url: https://fport.github.io/open-duck-mac/
+repo_url: https://github.com/fport/open-duck-mac
+repo_name: fport/open-duck-mac
+edit_uri: edit/main/docs/
+copyright: Kod ve sonuçlar Apache-2.0 · Robot ve ortam Open Duck Mini (Antoine Pirrone ve katkıcılar)
+
+theme:
+  name: material
+  language: tr
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Koyu tema
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Açık tema
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - content.code.copy
+    - content.action.edit
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: tr
+          default: true
+          name: Türkçe
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_description: Teach Open Duck Mini v2 to walk from scratch on a Mac, CPU only
+          nav_translations:
+            Başla: Start
+            Ana sayfa: Home
+            Kurulum: Setup
+            Kavramlar: Concepts
+            Deneyler: Experiments
+            "1. Yürümeyi öğrenmek": "1. Learning to walk"
+            "2. Ödül hilesi": "2. Reward hacking"
+            "3. Simülasyon yalan söyler": "3. Sim2real"
+            Sen ne yapabilirsin?: What can you try?
+            Başvuru: Reference
+            Sorunlar ve SSS: Troubleshooting & FAQ
+            Betikler ve dosyalar: Scripts and files
+
+nav:
+  - Başla:
+      - Ana sayfa: index.md
+      - Kurulum: setup.md
+      - Kavramlar: concepts.md
+  - Deneyler:
+      - "1. Yürümeyi öğrenmek": part-1-walking.md
+      - "2. Ödül hilesi": part-2-reward-hacking.md
+      - "3. Simülasyon yalan söyler": part-3-sim2real.md
+      - Sen ne yapabilirsin?: experiments.md
+  - Başvuru:
+      - Sorunlar ve SSS: faq.md
+      - Betikler ve dosyalar: reference.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@getporti
+    - icon: fontawesome/brands/github
+      link: https://github.com/fport/open-duck-mac
