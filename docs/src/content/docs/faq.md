@@ -88,6 +88,6 @@ ONNX'ler upstream arayüzünde, ama biz donanımda denemedik. Simdeki motorun ge
 <details>
 <summary>Microduck ile aynı şey mi?</summary>
 
-Hayır. Microduck, Hugging Face / Pollen Robotics'in ayrı ürünü. Bu depo Open Duck Mini v2 kullanıyor.
+Hayır. Microduck, Hugging Face'e ait Pollen Robotics'in ayrı ürünü; bu depo Open Duck Mini v2 kullanıyor. Farklar ve Mac'te neler yapılabileceği: [Microduck](/open-duck-mac/microduck/).
 
 </details>

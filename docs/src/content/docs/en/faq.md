@@ -88,6 +88,6 @@ The ONNX files have the upstream interface, but we have not tried hardware. Reme
 <details>
 <summary>Is this the same as Microduck?</summary>
 
-No. Microduck is a separate product by Hugging Face / Pollen Robotics. This repository uses Open Duck Mini v2.
+No. Microduck is a separate product by Pollen Robotics (part of Hugging Face); this repository uses Open Duck Mini v2. Differences and what you can do on a Mac: [Microduck](/open-duck-mac/en/microduck/).
 
 </details>

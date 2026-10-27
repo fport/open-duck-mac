@@ -42,6 +42,13 @@ export default defineConfig({
           ],
         },
         {
+          label: "Ekosistem",
+          translations: { en: "Ecosystem" },
+          items: [
+            { label: "Microduck", translations: { en: "Microduck" }, slug: "microduck" },
+          ],
+        },
+        {
           label: "Başvuru",
           translations: { en: "Reference" },
           items: [
