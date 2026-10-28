@@ -8,6 +8,7 @@ Her betik `--help` ile kullanımını yazar.
 
 | Betik | Ne yapar? |
 |---|---|
+| [`duck`](https://github.com/fport/open-duck-mac/blob/main/duck), [`duck.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/duck.py) | Komut satırı: `setup`, `doctor`, `try`, `eval`, `train`, `watch`; aşağıdaki betikleri çağırır, yalnız Python standart kütüphanesini kullanır ([5 dakikada dene](/open-duck-mac/quickstart/)) |
 | [`train_mac.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/train_mac.py) | Değiştirilmemiş `joystick.py` environment'ında (düz zemin) Brax PPO; `BerkeleyHumanoidJoystickFlatTerrain` hyperparameter'ları; sanal CPU cihazları üzerinde pmap; her checkpoint'te log, ONNX ve parametreler |
 | [`onnx_export.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/onnx_export.py) | Brax parametreleri → ONNX, yalnız `onnx` paketiyle (TensorFlow/tf2onnx gerekmez); gürültülü örnekleme için `loc_out`/`scale` çıktıları da var |
 | [`smoke.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/smoke.py), [`smoke_pmap.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/smoke_pmap.py) | Environment derleniyor ve adım atıyor mu, tek cihazda ve D cihazda ne kadar hızlı |
@@ -18,6 +19,8 @@ Her betik `--help` ile kullanımını yazar.
 | [`reward_hacking/train_hile.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/train_hile.py) | Reward varyantlarıyla eğitim, `--restore` ile warm start |
 | [`reward_hacking/make_hile_repo.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/make_hile_repo.py) | Open_Duck_Playground kopyasına zeminle çarpışan kütlesiz kutular ekler |
 | [`reward_hacking/render_ckpt_hile.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/render_ckpt_hile.py), [`render_grid_hile.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/render_grid_hile.py) | 2. bölümün değerlendiricileri (eğitim fiziği, ek ölçümler) |
+| [`sim2real/gait.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/sim2real/gait.py) | Bir ölçüm JSON'undan: ördek yürüyor mu (ayak salınımı, kalkış, sol-sağ sırası) |
+| [`sim2real/watch_ckpts.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/sim2real/watch_ckpts.py) | Bir eğitimin her yeni checkpoint'ini dener ve yürüyüp yürümediğini tabloya yazar (`--force`, `--once`) |
 | [`sim2real/eval_world.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/sim2real/eval_world.py) | `eval_checkpoint.py` + dünyayı değiştiren ortam değişkenleri (`FORCE`, `FORCE_RAND`, `FLOOR_FRIC`, `MASS_SCALE`) |
 
 ## Sonuç klasörleri

@@ -1,0 +1,9 @@
+#!/bin/sh
+# open-duck-mac command line (scripts/duck.py). Usage: ./duck help
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+if [ -x "$ROOT/.venv/bin/python" ]; then exec "$ROOT/.venv/bin/python" -I "$ROOT/scripts/duck.py" "$@"; fi
+if python3 -c 'import sys; sys.exit(sys.version_info < (3, 9))' >/dev/null 2>&1; then exec python3 -I "$ROOT/scripts/duck.py" "$@"; fi
+if command -v uv >/dev/null 2>&1; then exec uv run --quiet --no-project --python 3.12 python -I "$ROOT/scripts/duck.py" "$@"; fi
+echo "Needs Python 3.9+ or uv. Install uv, open a new terminal, try again:"
+echo "  curl -LsSf https://astral.sh/uv/install.sh | sh"
+exit 1

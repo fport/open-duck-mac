@@ -51,6 +51,21 @@ Her biri tek seed, tek koşu; yalnız simülasyon, gerçek robot yok. Mac'in GPU
 
 ## Hızlı başlangıç
 
+`git` ve [`uv`](https://docs.astral.sh/uv/) kurulu bir Apple Silicon Mac'te:
+
+```bash
+git clone https://github.com/fport/open-duck-mac.git && cd open-duck-mac
+./duck setup                              # sabit commit'te simülasyon, Python ortamı, duman testi, en hızlı işlemci düzeni
+./duck try                                # yürüyen ördeğimizin videosu ve ölçümü (birkaç saniye)
+./duck eval duck1 --force 1.86 --no-video # aynı ördek, kutudaki motor gücüyle: yarı yol
+./duck train --preset quick --detach      # kendi ördeğin, 10 M adım (~30 dk); sonra: ./duck watch
+```
+
+`./duck doctor` kurulumu kontrol eder ve eksik olanın çözümünü yazar. Adım adım: **[5 dakikada dene](https://fport.github.io/open-duck-mac/quickstart/)**. Depoyu [Claude Code](https://claude.com/claude-code)'da açınca [`open-duck-lab`](.claude/skills/open-duck-lab/SKILL.md) skill'i yüklenir; kurmasını ve deneyleri çalıştırmasını ondan isteyebilirsin.
+
+<details>
+<summary><code>./duck</code> olmadan aynısı</summary>
+
 ```bash
 git clone https://github.com/fport/open-duck-mac.git && cd open-duck-mac
 git clone https://github.com/apirrone/Open_Duck_Playground.git external/Open_Duck_Playground
@@ -70,11 +85,15 @@ nice -n 10 .venv/bin/python -I scripts/train_mac.py external/Open_Duck_Playgroun
   --render_script scripts/eval_checkpoint.py
 ```
 
+</details>
+
 Adım adım kurulum, sorun giderme ve tüm seçenekler: **[doküman](https://fport.github.io/open-duck-mac/setup/)**.
 
 ## Depo
 
 ```
+duck, scripts/duck.py   komut satırı: setup, doctor, try, eval, train, watch
+.claude/skills/          open-duck-lab: bu depo için Claude Code skill'i
 scripts/                 train_mac.py, onnx_export.py, eval_checkpoint.py, eval_grid.py, make_log.py, smoke*.py
 scripts/reward_hacking/  2. bölüm: reward dosyası (hile_env.py), eğitim betiği, çarpışma kutusu yaması, değerlendiriciler
 scripts/sim2real/        3. bölüm: eval_world.py (tork, sürtünme, kütle değiştir; torku kaydet), sweep.py, train_sim2real.py, watch_ckpts.py, gait.py (yürüyor mu, duruyor mu?)

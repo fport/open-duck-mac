@@ -8,6 +8,7 @@ Every script prints its usage with `--help`.
 
 | Script | What it does |
 |---|---|
+| [`duck`](https://github.com/fport/open-duck-mac/blob/main/duck), [`duck.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/duck.py) | Command line: `setup`, `doctor`, `try`, `eval`, `train`, `watch`; calls the scripts below, standard library only ([Try it in 5 minutes](/open-duck-mac/en/quickstart/)) |
 | [`train_mac.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/train_mac.py) | Brax PPO on the unchanged `joystick.py` env (flat terrain), `BerkeleyHumanoidJoystickFlatTerrain` hyperparameters, pmap over virtual CPU devices; logs, ONNX + params per checkpoint |
 | [`onnx_export.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/onnx_export.py) | Brax policy params → ONNX with plain `onnx` (no TensorFlow/tf2onnx); also outputs `loc_out`/`scale` for noisy sampling |
 | [`smoke.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/smoke.py), [`smoke_pmap.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/smoke_pmap.py) | Does the env compile and step, and how fast, on one device or D devices |
@@ -18,6 +19,8 @@ Every script prints its usage with `--help`.
 | [`reward_hacking/train_hile.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/train_hile.py) | Training with reward variants, warm start with `--restore` |
 | [`reward_hacking/make_hile_repo.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/make_hile_repo.py) | Adds massless floor-colliding boxes to a copy of Open_Duck_Playground |
 | [`reward_hacking/render_ckpt_hile.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/render_ckpt_hile.py), [`render_grid_hile.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/reward_hacking/render_grid_hile.py) | Part 2's evaluators (training physics, extra measurements) |
+| [`sim2real/gait.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/sim2real/gait.py) | From a measurement JSON: does the duck walk (foot oscillation, lift, left/right alternation) |
+| [`sim2real/watch_ckpts.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/sim2real/watch_ckpts.py) | Tries every new checkpoint of a training and logs whether it walks (`--force`, `--once`) |
 | [`sim2real/eval_world.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/sim2real/eval_world.py) | `eval_checkpoint.py` + environment variables that change the world (`FORCE`, `FORCE_RAND`, `FLOOR_FRIC`, `MASS_SCALE`) |
 
 ## Result folders

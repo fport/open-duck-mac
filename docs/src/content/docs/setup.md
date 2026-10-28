@@ -2,6 +2,10 @@
 title: "Kurulum: boş bir Mac'ten ilk eğitime"
 ---
 
+:::tip[Kısa yol]
+Aşağıdaki her adımı `./duck setup` tek komutla yapar: [5 dakikada dene](/open-duck-mac/quickstart/). Bu sayfa, o komutun ne yaptığını adım adım anlatır.
+:::
+
 Bu sayfa, hiçbir şey kurulu olmayan bir Apple Silicon Mac'ten başlayıp ördeğin ilk eğitim koşusuna kadar her adımı anlatır. Biz yalnız macOS'ta denedik. Linux işlemcilerde de çalışması beklenir ama test etmedik.
 
 ## Neye ihtiyacın var?

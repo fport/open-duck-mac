@@ -2,6 +2,10 @@
 title: 'Setup: from an empty Mac to your first training run'
 ---
 
+:::tip[Short path]
+`./duck setup` does every step below in one command: [Try it in 5 minutes](/open-duck-mac/en/quickstart/). This page explains what that command does, step by step.
+:::
+
 This page takes you from an Apple Silicon Mac with nothing installed to the duck's first training run. We only ran this on macOS. Linux CPUs should work too, but we have not tested them.
 
 ## What you need

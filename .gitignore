@@ -19,3 +19,7 @@ external/
 docs/node_modules/
 docs/dist/
 docs/.astro/
+
+# duck CLI
+.duck.json
+out/

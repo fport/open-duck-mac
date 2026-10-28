@@ -17,7 +17,7 @@ English · [Türkçe](README.tr.md)
 [![YouTube @getporti](https://img.shields.io/badge/YouTube-@getporti-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@getporti)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-05071A)](LICENSE)
 
-[Docs](https://fport.github.io/open-duck-mac/en/) · [Setup](https://fport.github.io/open-duck-mac/en/setup/) · [Concepts](https://fport.github.io/open-duck-mac/en/concepts/) · [Experiments](https://fport.github.io/open-duck-mac/en/part-1-walking/) · [What can you try?](https://fport.github.io/open-duck-mac/en/experiments/) · [Videos](https://www.youtube.com/@getporti)
+[Docs](https://fport.github.io/open-duck-mac/en/) · [Try it in 5 minutes](https://fport.github.io/open-duck-mac/en/quickstart/) · [Setup](https://fport.github.io/open-duck-mac/en/setup/) · [Concepts](https://fport.github.io/open-duck-mac/en/concepts/) · [Experiments](https://fport.github.io/open-duck-mac/en/part-1-walking/) · [What can you try?](https://fport.github.io/open-duck-mac/en/experiments/) · [Videos](https://www.youtube.com/@getporti)
 
 </div>
 
@@ -49,6 +49,21 @@ One seed, one run each, simulation only, no real robot. The Mac's GPU cannot run
 
 ## Quick start
 
+Apple Silicon Mac, with `git` and [`uv`](https://docs.astral.sh/uv/) installed:
+
+```bash
+git clone https://github.com/fport/open-duck-mac.git && cd open-duck-mac
+./duck setup                              # pinned simulation, Python env, smoke test, fastest CPU layout
+./duck try                                # video + numbers of our walking duck (a few seconds)
+./duck eval duck1 --force 1.86 --no-video # the same duck with the motor on the box: half the distance
+./duck train --preset quick --detach      # your own duck, 10 M steps (~30 min); then: ./duck watch
+```
+
+`./duck doctor` checks the install and prints the fix for anything missing. Walkthrough: **[Try it in 5 minutes](https://fport.github.io/open-duck-mac/en/quickstart/)**. Opening the repo in [Claude Code](https://claude.com/claude-code) loads the [`open-duck-lab`](.claude/skills/open-duck-lab/SKILL.md) skill, so you can just ask it to install and run experiments.
+
+<details>
+<summary>The same without <code>./duck</code></summary>
+
 ```bash
 git clone https://github.com/fport/open-duck-mac.git && cd open-duck-mac
 git clone https://github.com/apirrone/Open_Duck_Playground.git external/Open_Duck_Playground
@@ -68,11 +83,15 @@ nice -n 10 .venv/bin/python -I scripts/train_mac.py external/Open_Duck_Playgroun
   --render_script scripts/eval_checkpoint.py
 ```
 
+</details>
+
 Step-by-step setup, troubleshooting and every option: **[documentation](https://fport.github.io/open-duck-mac/en/setup/)**.
 
 ## Repository
 
 ```
+duck, scripts/duck.py   the command line: setup, doctor, try, eval, train, watch
+.claude/skills/          open-duck-lab: Claude Code skill for this repo
 scripts/                 train_mac.py, onnx_export.py, eval_checkpoint.py, eval_grid.py, make_log.py, smoke*.py
 scripts/reward_hacking/  part 2: reward file (hile_env.py), trainer, collision-box patch, evaluators
 scripts/sim2real/        part 3: eval_world.py (change torque, friction, mass; log torque), sweep.py, train_sim2real.py, watch_ckpts.py, gait.py (walking or standing?)

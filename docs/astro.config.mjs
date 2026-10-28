@@ -27,6 +27,7 @@ export default defineConfig({
           translations: { en: "Start" },
           items: [
             { label: "Ana sayfa", translations: { en: "Home" }, link: "/" },
+            { label: "5 dakikada dene", translations: { en: "Try it in 5 minutes" }, slug: "quickstart" },
             { label: "Kurulum", translations: { en: "Setup" }, slug: "setup" },
             { label: "Kavramlar", translations: { en: "Concepts" }, slug: "concepts" },
           ],
