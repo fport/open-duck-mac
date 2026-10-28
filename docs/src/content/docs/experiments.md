@@ -38,7 +38,7 @@ Eğitim yok, yalnız ölçüm. [`eval_world.py`](/open-duck-mac/part-3-sim2real/
 
 ### 6. Zayıf motorla eğit · 1–2 sa
 
-[3. bölümdeki](/open-duck-mac/part-3-sim2real/) deney: tork sınırını katalog değerine indir ya da rastgele yap, `scripts/sim2real/train_sim2real.py --force 1.86` veya `--force_rand 1.40 1.90`. Bizde 72 M step yetmedi; farklı bir tohumla ya da sabit 1,86 ile dene.
+[3. bölümdeki](/open-duck-mac/part-3-sim2real/) deney: tork sınırını katalog değerine indir ya da rastgele yap, `scripts/sim2real/train_sim2real.py --force 1.86` veya `--force_rand 1.40 1.90`. Bizde 72 M step yetmedi, 88,8 M'de yürüdü ve 170 M'den sonra unuttu. Farklı bir tohumla ya da sabit 1,86 ile dene; checkpoint'leri `watch_ckpts.py` ile izle.
 
 ### 7. Engebeli zemin · birkaç saat
 

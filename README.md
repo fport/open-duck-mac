@@ -35,7 +35,7 @@ Short videos in Turkish on [YouTube @getporti](https://www.youtube.com/@getporti
 |---|---|---|
 | Duck 1 | [I didn't buy the viral duck, I trained its sibling on my Mac](https://youtube.com/shorts/gfCUTIHldt0) | [1. Learning to walk](https://fport.github.io/open-duck-mac/en/part-1-walking/) |
 | Duck 2 | "I told the duck: be fast. It learned to crawl." (28 Oct 2026) | [2. Reward hacking](https://fport.github.io/open-duck-mac/en/part-2-reward-hacking/) |
-| Duck 3 | coming: the motor on the box | [3. Sim2real](https://fport.github.io/open-duck-mac/en/part-3-sim2real/) (in progress) |
+| Duck 3 | coming: the motor on the box | [3. Sim2real](https://fport.github.io/open-duck-mac/en/part-3-sim2real/) |
 
 ## Results
 
@@ -43,7 +43,7 @@ Short videos in Turkish on [YouTube @getporti](https://www.youtube.com/@getporti
 |---|---|
 | Learning to walk | **72.4 M steps in 3.57 h** on an M5 MacBook (6 CPU cores, 1,536 parallel ducks). Stood up in ~11 min, plateaued ~3 h, first lifted its feet at **68.4 M** steps: 29.8 cm in 5 s (pretrained policy: 58.5 cm). |
 | Reward hacking | Same policy, only the reward changed. "Be fast" → crawls on its belly (14.9 min). "Don't waste energy" → freezes (7.5 min). "Lift your feet" → lies down with its feet in the air (30 min). |
-| Sim2real | The simulated motor limit (±3.23 N·m, from the Open Duck motor model) is ~70 % above the STS3215 catalog rating (19 kg·cm ≈ 1.86 N·m). At the catalog limit the same policy covers **half the distance**; its knees use more than 1.86 N·m 37–39 % of the time. Trained from scratch with the motor randomized around the catalog value, it did **not walk by 72 M steps**; the run continues. |
+| Sim2real | The simulated motor limit (±3.23 N·m, from the Open Duck motor model) is ~70 % above the STS3215 catalog rating (19 kg·cm ≈ 1.86 N·m). At the catalog limit the same policy covers **half the distance**; its knees use more than 1.86 N·m 37–39 % of the time. Trained from scratch with the motor randomized around the catalog value, it did not walk by 72 M steps; continued, it **walked at 88.8 M** (34.8 cm at 1.86 N·m, 2.5× the old policy) and **forgot after 170 M**, while the mean training reward did not drop. |
 
 One seed, one run each, simulation only, no real robot. The Mac's GPU cannot run MJX (`jax-metal` lacks `cholesky`), so everything runs on the CPU; splitting it into 6 single-threaded virtual devices doubles the speed.
 
@@ -75,10 +75,10 @@ Step-by-step setup, troubleshooting and every option: **[documentation](https://
 ```
 scripts/                 train_mac.py, onnx_export.py, eval_checkpoint.py, eval_grid.py, make_log.py, smoke*.py
 scripts/reward_hacking/  part 2: reward file (hile_env.py), trainer, collision-box patch, evaluators
-scripts/sim2real/        part 3: eval_world.py (change torque, friction, mass; log torque), sweep.py, train_sim2real.py, watch_ckpts.py
+scripts/sim2real/        part 3: eval_world.py (change torque, friction, mass; log torque), sweep.py, train_sim2real.py, watch_ckpts.py, gait.py (walking or standing?)
 results/2026-10-24/      part 1: logs, checkpoints table, every rollout measurement, ONNX policies, warm-start params
 results/2026-10-24-reward-hacking/   part 2: every log and measurement of the four variants
-results/2026-10-27-sim2real/         part 3: sweeps, torque logs, warm-start and from-scratch runs
+results/2026-10-27-sim2real/         part 3: sweeps, torque logs, warm-start, from-scratch and continued (301 M) runs
 docs/                    the documentation site (Astro Starlight, Turkish + English)
 ```
 

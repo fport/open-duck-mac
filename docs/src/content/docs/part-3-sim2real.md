@@ -2,10 +2,6 @@
 title: '3. Kutudaki motor gücü (sim2real)'
 ---
 
-:::note[Devam ediyor]
-Deney 1 ve 2 bitti. Deney 3'ün ilk 72 M step'i bitti; aynı koşu 27 Ekim 2026'dan beri ~300 M step'e doğru devam ediyor. Sonuç gelince bu sayfa güncellenecek.
-:::
-
 ## Soru
 
 Open Duck modelinde her eklem en fazla **±3,23 N·m** tork verebiliyor (`open_duck_mini_v2.xml:49`, `sts3215` sınıfı, `forcerange`). Bu değer uydurma değil: Open Duck ekibi motor modelini gerçek STS3215 (7,4 V) servosundan [BAM](https://github.com/Rhoban/bam) ile çıkarıyor ve `forcerange`'i de oradan alıyor ([Open_Duck_Mini docs/sim2real.md](https://github.com/apirrone/Open_Duck_Mini/blob/v2/docs/sim2real.md)).
@@ -104,13 +100,13 @@ Sonuç (4,7 saat, Mac CPU): **72 M step'te yürüyüş yok.**
 
 ![İki eğitimin reward eğrisi: motor 3,23 sabit koşu 80 civarına çıkıyor ve 68,4 M'de ilk adımları atıyor, motor gücü rastgele koşu 50 civarında düz kalıyor](../../assets/reward-curves.tr.png)
 
-Ders: domain randomization zayıf motora karşı bilinen çözüm, ama zayıf motorla yürümek daha zor bir problem ve aynı bütçe yetmedi. soyeon24 motoru 1,86'ya **sabitleyip** 300 M step'te yürüyüş buldu (0,130 m/s; kendi çatalı, yalnız sim). Aynı 1,40–1,90 aralığıyla rastgele koşuları da 300 M'de yürüdü, ama sonuç tohuma göre çok değişti.
+Ara sonuç: domain randomization zayıf motora karşı bilinen çözüm, ama zayıf motorla yürümek daha zor bir problem ve aynı bütçe yetmedi. soyeon24 motoru 1,86'ya **sabitleyip** 300 M step'te yürüyüş buldu (0,130 m/s; kendi çatalı, yalnız sim). Aynı 1,40–1,90 aralığıyla rastgele koşuları da 300 M'de yürüdü, ama sonuç tohuma göre çok değişti.
 
 Dosyalar: [`results/2026-10-27-sim2real/scratch_rand/`](https://github.com/fport/open-duck-mac/tree/main/results/2026-10-27-sim2real/scratch_rand) (log'lar, son checkpoint `onnx/` ve `params/` içinde, checkpoint taraması `eval/` içinde).
 
-### Devam: ~300 M'e
+### Devam: 301 M'e
 
-Aynı koşu, 72,4 M checkpoint'ten; policy, value net ve normalizer geri yüklenerek, tohum 1:
+Aynı koşu, 72,4 M checkpoint'ten; policy, value net ve normalizer geri yüklenerek, tohum 1 (9,2 saat):
 
 ```bash
 .venv/bin/python -I scripts/sim2real/train_sim2real.py external/Open_Duck_Playground runs/scratch_rand_cont \
@@ -118,4 +114,53 @@ Aynı koşu, 72,4 M checkpoint'ten; policy, value net ve normalizer geri yüklen
   --restore_value --step_offset 72437760 --devices 6 --envs_per_dev 256 --num_timesteps 228000000 --num_evals 57 --seed 1
 ```
 
-[`scripts/sim2real/watch_ckpts.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/sim2real/watch_ckpts.py) her yeni checkpoint'i 1,86 N·m'de deniyor ve 10 cm + 4 adımı geçen ilk checkpoint'te duruyor.
+Sonuç: **katalog gücünde yürüdü, sonra unuttu.** 57 checkpoint'in hepsini 1,86 N·m'de denedik:
+
+![Üstte 57 checkpoint'in 1,86 N·m'deki mesafesi: 88,8 M'de 34,8 cm, 137,8–166,4 M arasında beş checkpoint daha yürüyor, 170 M'den sonra hiçbiri; altta eğitim reward'ı aynı aralıkta düşmeden dalgalanıyor](../../assets/continuation.tr.png)
+
+- **88,8 M'de ilk yürüyüş:** 34,8 cm. Ördek 1'in policy'si aynı güçte 13,9 cm gidiyordu; yeni policy 2,5 katı yol alıyor. Hemen sonraki checkpoint yine ayakta duruyor.
+- **137,8–166,4 M:** 8 checkpoint'ten 5'i yürüyor; en iyisi 137,8 M, 37,6 cm.
+- **170 M'den sonra hiçbiri yürümüyor.** Son checkpoint (301,2 M) 1–4 cm'de ayakta duruyor; motoru 3,23'e çıkarınca da (3,9 cm).
+- **Reward bunu göstermiyor.** Eğitimdeki reward ortalaması yürüyüş kaybolurken düşmüyor: 72–95 M'de 53–62, 260–301 M'de 64. Reward eğrisine bakıp "en son checkpoint en iyisi" demek burada yanlış olurdu.
+
+Yürüyen iki checkpoint öteki dünyalarda (deterministik 5 sn, hiçbiri düşmedi):
+
+| Dünya | 88,8 M | 137,8 M | Ördek 1 72,4 M |
+|---|---|---|---|
+| 3,23 N·m (sim) | 49,9 cm | 49,1 cm | 28,8 cm |
+| 2,5 N·m | 40,2 cm | 48,1 cm | 25,3 cm |
+| **1,86 N·m (katalog)** | **34,8 cm** | **37,6 cm** | **13,9 cm** |
+| 1,4 N·m | 20,5 cm | 21,2 cm | 5,8 cm |
+| rastgele 1,40–1,90 (`WSEED=0`) | 28,6 cm | 26,3 cm | – |
+| 1,86 + kütle ×1,2 | 30,8 cm | 28,5 cm | – |
+| 1,86, 6 gürültülü tohum | 14,6–19,7 cm | 15,5–21,0 cm | ort. 9,2 cm (9 tohum) |
+
+### Yürüyor mu, kayıyor mu: adım sayacı yanılıyordu
+
+`eval_world.py`'nin `foot_steps` sayacı bir ayağın en alçak noktasından 4 mm'den fazla kalkıp geri inmesini adım sayıyor. Open Duck yürüyüşünde ayaklar yalnız ~1 cm kalkıyor ve sayaç bunu kaçırıyor: Ördek 1'in yürüyen 72,4 M policy'sini bile 0+2 adım sayıyor. Eğitim sırasında `watch_ckpts.py` "≥ 4 adım" eşiğini bekledi ve yürüyen checkpoint'lerin hiçbirini yakalamadı.
+
+Yerine [`scripts/sim2real/gait.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/sim2real/gait.py): ilk 0,5 sn'den sonra her ayağın yüksekliğinin ortalama etrafında kaç kez salındığına, ne kadar kalktığına ve iki ayağın sırayla mı hareket ettiğine (sol-sağ korelasyonu negatif) bakıyor.
+
+| Policy, 1,86 N·m | Mesafe | Salınım (sol/sağ) | Kalkış (sol/sağ) | Sol-sağ korelasyon |
+|---|---|---|---|---|
+| Ördek 1 72,4 M, 3,23'te (referans yürüyüş) | 28,8 cm | 8 / 8 | 11,0 / 10,8 mm | −0,34 |
+| 88,8 M | 34,8 cm | 7 / 8 | 9,1 / 11,2 mm | −0,33 |
+| 137,8 M | 37,6 cm | 8 / 8 | 9,9 / 8,7 mm | −0,24 |
+| 133,7 M (kayıyor) | 25,1 cm | 8 / 16 | 9,8 / 4,2 mm | 0,03 |
+| 301,2 M | 2,5 cm | 8 / 6 | 1,3 / 4,9 mm | 0,06 |
+
+Kural: 10 cm'den fazla yol ve her iki ayakta en az 4 salınım ile 5 mm kalkış. 133,7 M 25 cm gidiyor ama sağ ayağı yalnız titriyor; bu kurala göre yürümüyor. `watch_ckpts.py` artık bu kuralı kullanıyor ve eğitim bitene kadar her checkpoint'i yazıyor (`--exit_on_walk` ile ilk yürüyende durur).
+
+```bash
+python3 scripts/sim2real/gait.py results/2026-10-27-sim2real/scratch_rand_cont/eval/f186/ckpt_137809920.json
+```
+
+### Ders
+
+1. Zayıf motor için domain randomization işe yaradı, ama 72 M'de değil: sim gücünde 68 M'de bulunan yürüyüş, katalog civarı güçle 88,8 M'de çıktı. Çıkınca da eski policy'den daha uzağa gidiyor.
+2. Daha uzun eğitim daha iyi demek değil. Yürüyüş 170 M'den sonra kayboldu ve geri gelmedi.
+3. Reward ortalaması yürüyüşle ayakta durmayı ayırmıyor. Checkpoint'leri sakla ve her birini kendi testinle ölç; bizim test 1,86 N·m'de 5 sn ve `gait.py`.
+
+Neden unuttuğunu henüz bilmiyoruz; ölçmediğimiz bir şey hakkında tahmin yürütmüyoruz.
+
+Dosyalar: [`results/2026-10-27-sim2real/scratch_rand_cont/`](https://github.com/fport/open-duck-mac/tree/main/results/2026-10-27-sim2real/scratch_rand_cont): log'lar, `onnx/` (88,8 · 137,8 · 166,4 · 301,2 M), `params/` (88,8 · 137,8 · 301,2 M), `eval/checkpoint_scan_f186.csv` (57 checkpoint), `eval/worlds_and_noise.json`, `eval/f186/` (4 checkpoint'in tam ölçümü).

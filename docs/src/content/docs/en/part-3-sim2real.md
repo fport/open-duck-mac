@@ -2,10 +2,6 @@
 title: '3. The motor on the box (sim2real)'
 ---
 
-:::note[In progress]
-Experiments 1 and 2 are done. The first 72 M steps of experiment 3 are done; the same run has been continuing toward ~300 M steps since 27 October 2026. This page will be updated with the result.
-:::
-
 ## The question
 
 In the Open Duck model every joint can produce at most **±3.23 N·m** (`open_duck_mini_v2.xml:49`, class `sts3215`, `forcerange`). That value is not made up: the Open Duck team identifies the motor model from the real STS3215 (7.4 V) servo with [BAM](https://github.com/Rhoban/bam) and takes `forcerange` from it ([Open_Duck_Mini docs/sim2real.md](https://github.com/apirrone/Open_Duck_Mini/blob/v2/docs/sim2real.md)).
@@ -104,13 +100,13 @@ Result (4.7 hours, Mac CPU): **no gait at 72 M steps.**
 
 ![Reward curves of the two trainings: the run with the motor fixed at 3.23 rises to about 80 and takes its first steps at 68.4 M, the run with random motor strength stays flat around 50](../../../assets/reward-curves.en.png)
 
-Lesson: domain randomization is the known fix for a weaker motor, but walking with a weak motor is a harder problem, and the same budget was not enough. soyeon24 **fixed** the motor at 1.86 and found a gait after 300 M steps (0.130 m/s; their own fork, simulation only). Their random runs with the same 1.40–1.90 range also walked at 300 M, but the result varied a lot with the seed.
+Interim result: domain randomization is the known fix for a weaker motor, but walking with a weak motor is a harder problem, and the same budget was not enough. soyeon24 **fixed** the motor at 1.86 and found a gait after 300 M steps (0.130 m/s; their own fork, simulation only). Their random runs with the same 1.40–1.90 range also walked at 300 M, but the result varied a lot with the seed.
 
 Files: [`results/2026-10-27-sim2real/scratch_rand/`](https://github.com/fport/open-duck-mac/tree/main/results/2026-10-27-sim2real/scratch_rand) (logs, the final checkpoint in `onnx/` and `params/`, the checkpoint scan in `eval/`).
 
-### Continuing to ~300 M
+### Continuing to 301 M
 
-The same run, from the 72.4 M checkpoint, restoring policy, value net and normalizer, seed 1:
+The same run, from the 72.4 M checkpoint, restoring policy, value net and normalizer, seed 1 (9.2 hours):
 
 ```bash
 .venv/bin/python -I scripts/sim2real/train_sim2real.py external/Open_Duck_Playground runs/scratch_rand_cont \
@@ -118,4 +114,53 @@ The same run, from the 72.4 M checkpoint, restoring policy, value net and normal
   --restore_value --step_offset 72437760 --devices 6 --envs_per_dev 256 --num_timesteps 228000000 --num_evals 57 --seed 1
 ```
 
-[`scripts/sim2real/watch_ckpts.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/sim2real/watch_ckpts.py) tries every new checkpoint at 1.86 N·m and stops at the first one that passes 10 cm and 4 steps.
+Result: **it walked at the catalog torque, then forgot.** We tried all 57 checkpoints at 1.86 N·m:
+
+![Top: distance of the 57 checkpoints at 1.86 N·m: 34.8 cm at 88.8 M, five more checkpoints walk between 137.8 and 166.4 M, none after 170 M; bottom: the training reward over the same range keeps fluctuating without dropping](../../../assets/continuation.en.png)
+
+- **First gait at 88.8 M:** 34.8 cm. Duck 1's policy covered 13.9 cm at the same torque; the new policy goes 2.5 times as far. The very next checkpoint stands still again.
+- **137.8–166.4 M:** 5 of 8 checkpoints walk; the best is 137.8 M, 37.6 cm.
+- **None walks after 170 M.** The final checkpoint (301.2 M) stands still at 1–4 cm, even with the motor back at 3.23 (3.9 cm).
+- **The reward does not show this.** The mean training reward does not drop while the gait disappears: 53–62 at 72–95 M, 64 at 260–301 M. Reading the reward curve and picking "the latest checkpoint is the best" would be wrong here.
+
+The two walking checkpoints in other worlds (deterministic 5 s, none fell):
+
+| World | 88.8 M | 137.8 M | Duck 1 72.4 M |
+|---|---|---|---|
+| 3.23 N·m (sim) | 49.9 cm | 49.1 cm | 28.8 cm |
+| 2.5 N·m | 40.2 cm | 48.1 cm | 25.3 cm |
+| **1.86 N·m (catalog)** | **34.8 cm** | **37.6 cm** | **13.9 cm** |
+| 1.4 N·m | 20.5 cm | 21.2 cm | 5.8 cm |
+| random 1.40–1.90 (`WSEED=0`) | 28.6 cm | 26.3 cm | – |
+| 1.86 + mass ×1.2 | 30.8 cm | 28.5 cm | – |
+| 1.86, 6 stochastic seeds | 14.6–19.7 cm | 15.5–21.0 cm | mean 9.2 cm (9 seeds) |
+
+### Walking or sliding: the step counter was wrong
+
+The `foot_steps` counter in `eval_world.py` counts a step when a foot rises more than 4 mm above its lowest point and comes back down. In the Open Duck gait the feet rise only ~1 cm, and the counter misses it: it counts even Duck 1's walking 72.4 M policy as 0+2 steps. During training `watch_ckpts.py` waited for "≥ 4 steps" and caught none of the walking checkpoints.
+
+Instead, [`scripts/sim2real/gait.py`](https://github.com/fport/open-duck-mac/blob/main/scripts/sim2real/gait.py) looks, after the first 0.5 s, at how many times each foot's height oscillates around its mean, how high it lifts, and whether the two feet alternate (negative left/right correlation).
+
+| Policy, 1.86 N·m | Distance | Oscillations (L/R) | Lift (L/R) | L/R correlation |
+|---|---|---|---|---|
+| Duck 1 72.4 M at 3.23 (reference gait) | 28.8 cm | 8 / 8 | 11.0 / 10.8 mm | −0.34 |
+| 88.8 M | 34.8 cm | 7 / 8 | 9.1 / 11.2 mm | −0.33 |
+| 137.8 M | 37.6 cm | 8 / 8 | 9.9 / 8.7 mm | −0.24 |
+| 133.7 M (sliding) | 25.1 cm | 8 / 16 | 9.8 / 4.2 mm | 0.03 |
+| 301.2 M | 2.5 cm | 8 / 6 | 1.3 / 4.9 mm | 0.06 |
+
+Rule: more than 10 cm, and at least 4 oscillations and 5 mm of lift on both feet. 133.7 M covers 25 cm, but its right foot only jitters; by this rule it does not walk. `watch_ckpts.py` now uses this rule and logs every checkpoint until training ends (`--exit_on_walk` stops at the first walking one).
+
+```bash
+python3 scripts/sim2real/gait.py results/2026-10-27-sim2real/scratch_rand_cont/eval/f186/ckpt_137809920.json
+```
+
+### Lesson
+
+1. Domain randomization worked for the weaker motor, but not by 72 M: the gait found at 68 M with the sim torque appeared at 88.8 M with torque around the catalog value. Once it appeared, it went further than the old policy.
+2. Longer training is not better training. The gait disappeared after 170 M and did not come back.
+3. The mean reward does not tell walking from standing. Keep your checkpoints and measure each one with your own test; ours is 5 s at 1.86 N·m plus `gait.py`.
+
+We don't know yet why it forgot, and we don't guess about what we have not measured.
+
+Files: [`results/2026-10-27-sim2real/scratch_rand_cont/`](https://github.com/fport/open-duck-mac/tree/main/results/2026-10-27-sim2real/scratch_rand_cont): logs, `onnx/` (88.8 · 137.8 · 166.4 · 301.2 M), `params/` (88.8 · 137.8 · 301.2 M), `eval/checkpoint_scan_f186.csv` (57 checkpoints), `eval/worlds_and_noise.json`, `eval/f186/` (full measurements of 4 checkpoints).

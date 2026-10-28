@@ -38,7 +38,7 @@ Add a line to `VARIANTS` as in [part 2](/open-duck-mac/en/part-2-reward-hacking/
 
 ### 6. Train with a weak motor · 1–2 h
 
-The experiment of [part 3](/open-duck-mac/en/part-3-sim2real/): lower the torque limit to the catalog rating, or randomize it, with `scripts/sim2real/train_sim2real.py --force 1.86` or `--force_rand 1.40 1.90`. For us 72 M steps were not enough; try another seed or a fixed 1.86.
+The experiment of [part 3](/open-duck-mac/en/part-3-sim2real/): lower the torque limit to the catalog rating, or randomize it, with `scripts/sim2real/train_sim2real.py --force 1.86` or `--force_rand 1.40 1.90`. For us 72 M steps were not enough; it walked at 88.8 M and forgot after 170 M. Try another seed or a fixed 1.86, and watch the checkpoints with `watch_ckpts.py`.
 
 ### 7. Rough terrain · a few hours
 

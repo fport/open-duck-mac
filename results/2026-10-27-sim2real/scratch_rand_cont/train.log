@@ -1,0 +1,338 @@
+xml: external/Open_Duck_Playground/playground/open_duck_mini_v2/xmls/scene_flat_terrain.xml
+actuators: ['left_hip_yaw', 'left_hip_roll', 'left_hip_pitch', 'left_knee', 'left_ankle', 'neck_pitch', 'head_pitch', 'head_yaw', 'head_roll', 'right_hip_yaw', 'right_hip_roll', 'right_hip_pitch', 'right_knee', 'right_ankle']
+joints: ['floating_base', 'left_hip_yaw', 'left_hip_roll', 'left_hip_pitch', 'left_knee', 'left_ankle', 'neck_pitch', 'head_pitch', 'head_yaw', 'head_roll', 'right_hip_yaw', 'right_hip_roll', 'right_hip_pitch', 'right_knee', 'right_ankle']
+backlash joints: []
+actuator joints ids: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+actuator joints dict: {'left_hip_yaw': 1, 'left_hip_roll': 2, 'left_hip_pitch': 3, 'left_knee': 4, 'left_ankle': 5, 'neck_pitch': 6, 'head_pitch': 7, 'head_yaw': 8, 'head_roll': 9, 'right_hip_yaw': 10, 'right_hip_roll': 11, 'right_hip_pitch': 12, 'right_knee': 13, 'right_ankle': 14}
+floating qpos addr: 0 qvel addr: 0
+[Poly ref data] Processing ...
+[Poly ref data] Done processing
+PPO params: {'action_repeat': 1, 'batch_size': 48, 'clipping_epsilon': 0.2, 'discounting': 0.97, 'entropy_cost': 0.005, 'episode_length': 1000, 'learning_rate': 0.0003, 'max_grad_norm': 1.0, 'normalize_observations': True, 'num_envs': 1536, 'num_evals': 57, 'num_minibatches': 32, 'num_resets_per_eval': 1, 'num_timesteps': 228000000, 'num_updates_per_batch': 4, 'reward_scaling': 1.0, 'unroll_length': 20, 'run_evals': False, 'log_training_metrics': True, 'training_metrics_steps': 1000000, 'seed': 1} devices: 6
+.venv/lib/python3.12/site-packages/jax/_src/interpreters/xla.py:119: RuntimeWarning: overflow encountered in cast
+  return np.asarray(x, dtypes.canonicalize_dtype(x.dtype))
+xml: external/Open_Duck_Playground/playground/open_duck_mini_v2/xmls/scene_flat_terrain.xml
+actuators: ['left_hip_yaw', 'left_hip_roll', 'left_hip_pitch', 'left_knee', 'left_ankle', 'neck_pitch', 'head_pitch', 'head_yaw', 'head_roll', 'right_hip_yaw', 'right_hip_roll', 'right_hip_pitch', 'right_knee', 'right_ankle']
+joints: ['floating_base', 'left_hip_yaw', 'left_hip_roll', 'left_hip_pitch', 'left_knee', 'left_ankle', 'neck_pitch', 'head_pitch', 'head_yaw', 'head_roll', 'right_hip_yaw', 'right_hip_roll', 'right_hip_pitch', 'right_knee', 'right_ankle']
+backlash joints: []
+actuator joints ids: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+actuator joints dict: {'left_hip_yaw': 1, 'left_hip_roll': 2, 'left_hip_pitch': 3, 'left_knee': 4, 'left_ankle': 5, 'neck_pitch': 6, 'head_pitch': 7, 'head_yaw': 8, 'head_roll': 9, 'right_hip_yaw': 10, 'right_hip_roll': 11, 'right_hip_pitch': 12, 'right_knee': 13, 'right_ankle': 14}
+floating qpos addr: 0 qvel addr: 0
+[Poly ref data] Processing ...
+[Poly ref data] Done processing
+[   0.1 min] CHECKPOINT ckpt_072437760 episodes=0
+[   3.5 min] steps=73,441,280 episodes=6,398 R=45.82 len=108
+[   6.1 min] steps=74,449,920 episodes=13,040 R=63.74 len=147
+[   8.8 min] steps=75,453,440 episodes=19,522 R=87.08 len=199
+[  11.4 min] steps=76,462,080 episodes=26,061 R=86.02 len=172
+[  11.4 min] steps=76,462,080 episodes=26,061 R=76.09 len=172
+[  11.6 min] CHECKPOINT ckpt_076523520 episodes=26,453
+[  14.3 min] steps=77,465,600 episodes=32,675 R=44.40 len=111
+[  17.2 min] steps=78,474,240 episodes=39,517 R=51.05 len=129
+[  20.1 min] steps=79,477,760 episodes=46,306 R=79.47 len=179
+[  22.9 min] steps=80,486,400 episodes=53,136 R=75.94 len=156
+[  23.3 min] CHECKPOINT ckpt_080609280 episodes=53,966
+[  25.7 min] steps=81,489,920 episodes=59,596 R=39.81 len=95
+[  28.2 min] steps=82,493,440 episodes=66,085 R=48.02 len=113
+[  30.9 min] steps=83,496,960 episodes=72,595 R=62.60 len=143
+[  33.5 min] steps=84,500,480 episodes=79,265 R=56.67 len=130
+[  33.9 min] CHECKPOINT ckpt_084695040 episodes=80,505
+[  36.0 min] steps=85,504,000 episodes=86,452 R=53.45 len=122
+[  38.5 min] steps=86,507,520 episodes=93,698 R=30.25 len=76
+[  41.1 min] steps=87,511,040 episodes=100,812 R=68.46 len=156
+[  43.9 min] steps=88,514,560 episodes=108,210 R=62.23 len=142
+[  44.6 min] CHECKPOINT ckpt_088780800 episodes=110,220
+[  46.5 min] steps=89,518,080 episodes=115,283 R=39.93 len=95
+[  49.2 min] steps=90,521,600 episodes=122,143 R=36.84 len=87
+[  51.7 min] steps=91,530,240 episodes=128,962 R=75.26 len=182
+[  54.3 min] steps=92,533,760 episodes=136,131 R=66.45 len=150
+[  55.2 min] CHECKPOINT ckpt_092866560 episodes=138,489
+[  57.0 min] steps=93,537,280 episodes=143,110 R=40.65 len=96
+[  59.8 min] steps=94,540,800 episodes=149,985 R=53.10 len=124
+[  62.3 min] steps=95,544,320 episodes=156,698 R=45.95 len=108
+[  64.8 min] steps=96,547,840 episodes=163,770 R=62.70 len=142
+[  65.8 min] CHECKPOINT ckpt_096952320 episodes=166,595
+[  67.3 min] steps=97,551,360 episodes=170,481 R=38.68 len=92
+[  69.8 min] steps=98,565,120 episodes=177,553 R=59.13 len=135
+[  72.6 min] steps=99,568,640 episodes=184,351 R=56.46 len=129
+[  75.1 min] steps=100,577,280 episodes=191,421 R=72.38 len=149
+[  76.2 min] CHECKPOINT ckpt_101038080 episodes=194,739
+[  77.6 min] steps=101,580,800 episodes=198,197 R=39.74 len=81
+[  80.1 min] steps=102,584,320 episodes=204,887 R=176.65 len=386
+[  82.7 min] steps=103,587,840 episodes=211,530 R=69.23 len=156
+[  82.7 min] steps=103,587,840 episodes=211,530 R=69.23 len=156
+[  85.4 min] steps=104,591,360 episodes=217,992 R=74.13 len=167
+[  86.8 min] CHECKPOINT ckpt_105123840 episodes=221,410
+[  88.0 min] steps=105,594,880 episodes=224,195 R=41.53 len=98
+[  90.5 min] steps=106,598,400 episodes=230,630 R=64.91 len=121
+[  93.0 min] steps=107,607,040 episodes=237,536 R=32.75 len=79
+[  95.6 min] steps=108,610,560 episodes=244,090 R=58.47 len=155
+[  97.0 min] CHECKPOINT ckpt_109209600 episodes=247,994
+[  98.1 min] steps=109,614,080 episodes=250,581 R=15.89 len=43
+[ 100.5 min] steps=110,622,720 episodes=257,216 R=70.15 len=127
+[ 100.5 min] steps=110,622,720 episodes=257,216 R=54.67 len=127
+[ 102.9 min] steps=111,636,480 episodes=264,053 R=48.99 len=165
+[ 102.9 min] steps=111,636,480 episodes=264,053 R=72.16 len=165
+[ 102.9 min] steps=111,636,480 episodes=264,053 R=72.16 len=165
+[ 105.1 min] steps=112,650,240 episodes=270,881 R=39.93 len=95
+[ 106.5 min] CHECKPOINT ckpt_113295360 episodes=275,221
+[ 107.2 min] steps=113,653,760 episodes=277,326 R=14.31 len=40
+[ 109.4 min] steps=114,657,280 episodes=283,735 R=71.24 len=162
+[ 112.0 min] steps=115,660,800 episodes=290,259 R=49.69 len=126
+[ 112.0 min] steps=115,660,800 episodes=290,259 R=54.21 len=126
+[ 112.0 min] steps=115,660,800 episodes=290,259 R=54.21 len=126
+[ 114.8 min] steps=116,664,320 episodes=296,527 R=59.75 len=135
+[ 116.7 min] CHECKPOINT ckpt_117381120 episodes=301,269
+[ 117.6 min] steps=117,667,840 episodes=303,036 R=14.98 len=41
+[ 119.9 min] steps=118,671,360 episodes=309,489 R=57.40 len=155
+[ 122.0 min] steps=119,680,000 episodes=316,510 R=75.63 len=170
+[ 124.1 min] steps=120,683,520 episodes=323,310 R=76.98 len=172
+[ 125.7 min] CHECKPOINT ckpt_121466880 episodes=328,656
+[ 126.2 min] steps=121,687,040 episodes=330,077 R=14.06 len=39
+[ 128.3 min] steps=122,690,560 episodes=336,580 R=58.02 len=131
+[ 130.4 min] steps=123,694,080 episodes=343,271 R=55.06 len=129
+[ 132.5 min] steps=124,697,600 episodes=349,853 R=68.26 len=151
+[ 134.2 min] CHECKPOINT ckpt_125552640 episodes=355,509
+[ 134.5 min] steps=125,706,240 episodes=356,465 R=15.07 len=42
+[ 136.6 min] steps=126,709,760 episodes=362,910 R=31.36 len=82
+[ 136.6 min] steps=126,709,760 episodes=362,910 R=35.16 len=82
+[ 138.8 min] steps=127,713,280 episodes=369,669 R=84.24 len=191
+[ 141.1 min] steps=128,721,920 episodes=376,365 R=66.26 len=149
+[ 143.3 min] CHECKPOINT ckpt_129638400 episodes=382,347
+[ 143.5 min] steps=129,730,560 episodes=382,849 R=16.83 len=46
+[ 143.5 min] steps=129,730,560 episodes=382,849 R=16.57 len=46
+[ 145.9 min] steps=130,734,080 episodes=389,012 R=71.91 len=161
+[ 148.4 min] steps=131,737,600 episodes=395,382 R=76.42 len=178
+[ 150.8 min] steps=132,741,120 episodes=401,617 R=66.60 len=149
+[ 153.2 min] CHECKPOINT ckpt_133724160 episodes=407,727
+[ 153.3 min] steps=133,744,640 episodes=407,729 R=79.27 len=179
+[ 155.7 min] steps=134,748,160 episodes=413,957 R=39.48 len=93
+[ 158.1 min] steps=135,751,680 episodes=420,278 R=56.59 len=131
+[ 160.6 min] steps=136,765,440 episodes=426,635 R=54.58 len=159
+[ 163.0 min] steps=137,768,960 episodes=433,057 R=67.14 len=149
+[ 163.1 min] CHECKPOINT ckpt_137809920 episodes=433,311
+[ 165.5 min] steps=138,772,480 episodes=439,739 R=44.57 len=105
+[ 167.9 min] steps=139,776,000 episodes=446,554 R=44.96 len=105
+[ 170.4 min] steps=140,779,520 episodes=453,274 R=81.70 len=183
+[ 172.8 min] steps=141,783,040 episodes=460,104 R=55.58 len=144
+[ 173.1 min] CHECKPOINT ckpt_141895680 episodes=460,857
+[ 175.2 min] steps=142,786,560 episodes=466,782 R=37.48 len=89
+[ 177.7 min] steps=143,790,080 episodes=473,230 R=65.59 len=132
+[ 180.2 min] steps=144,793,600 episodes=479,951 R=89.03 len=198
+[ 182.6 min] steps=145,797,120 episodes=486,957 R=57.83 len=132
+[ 183.0 min] CHECKPOINT ckpt_145981440 episodes=488,171
+[ 185.0 min] steps=146,800,640 episodes=493,413 R=50.61 len=117
+[ 187.5 min] steps=147,809,280 episodes=499,816 R=50.97 len=94
+[ 190.0 min] steps=148,812,800 episodes=506,511 R=63.74 len=142
+[ 192.4 min] steps=149,816,320 episodes=513,197 R=67.70 len=152
+[ 193.0 min] CHECKPOINT ckpt_150067200 episodes=514,811
+[ 194.8 min] steps=150,819,840 episodes=520,145 R=53.55 len=122
+[ 197.3 min] steps=151,823,360 episodes=527,191 R=44.29 len=103
+[ 199.7 min] steps=152,832,000 episodes=534,036 R=62.79 len=139
+[ 202.2 min] steps=153,840,640 episodes=540,898 R=58.34 len=134
+[ 202.9 min] CHECKPOINT ckpt_154152960 episodes=542,999
+[ 204.6 min] steps=154,844,160 episodes=547,443 R=51.29 len=118
+[ 206.8 min] steps=155,847,680 episodes=554,216 R=33.49 len=81
+[ 208.9 min] steps=156,851,200 episodes=560,592 R=49.44 len=114
+[ 211.0 min] steps=157,854,720 episodes=567,061 R=54.09 len=191
+[ 211.8 min] CHECKPOINT ckpt_158238720 episodes=569,608
+[ 213.1 min] steps=158,858,240 episodes=573,608 R=56.55 len=129
+[ 215.1 min] steps=159,866,880 episodes=580,288 R=88.29 len=195
+[ 217.2 min] steps=160,870,400 episodes=586,933 R=61.10 len=140
+[ 219.3 min] steps=161,873,920 episodes=593,433 R=57.59 len=131
+[ 220.2 min] CHECKPOINT ckpt_162324480 episodes=596,453
+[ 221.4 min] steps=162,877,440 episodes=600,011 R=51.93 len=118
+[ 223.5 min] steps=163,880,960 episodes=606,831 R=50.47 len=117
+[ 225.6 min] steps=164,884,480 episodes=613,376 R=61.56 len=112
+[ 228.0 min] steps=165,888,000 episodes=619,814 R=59.44 len=134
+[ 229.3 min] CHECKPOINT ckpt_166410240 episodes=623,247
+[ 230.5 min] steps=166,891,520 episodes=625,953 R=42.75 len=91
+[ 232.9 min] steps=167,895,040 episodes=631,741 R=79.17 len=178
+[ 235.3 min] steps=168,898,560 episodes=638,047 R=54.89 len=115
+[ 237.8 min] steps=169,902,080 episodes=644,246 R=67.97 len=155
+[ 239.2 min] CHECKPOINT ckpt_170496000 episodes=648,008
+[ 240.3 min] steps=170,905,600 episodes=650,355 R=15.18 len=41
+[ 242.6 min] steps=171,909,120 episodes=656,613 R=60.02 len=134
+[ 245.1 min] steps=172,912,640 episodes=663,063 R=48.83 len=113
+[ 247.6 min] steps=173,921,280 episodes=669,501 R=56.66 len=132
+[ 249.2 min] CHECKPOINT ckpt_174581760 episodes=673,884
+[ 250.0 min] steps=174,924,800 episodes=676,061 R=13.65 len=38
+[ 252.4 min] steps=175,933,440 episodes=682,760 R=67.37 len=115
+[ 254.9 min] steps=176,936,960 episodes=689,655 R=58.61 len=134
+[ 257.4 min] steps=177,940,480 episodes=696,421 R=62.44 len=143
+[ 259.0 min] CHECKPOINT ckpt_178667520 episodes=701,310
+[ 259.6 min] steps=178,944,000 episodes=703,115 R=16.37 len=44
+[ 259.6 min] steps=178,944,000 episodes=703,115 R=16.37 len=44
+[ 261.7 min] steps=179,947,520 episodes=709,745 R=58.10 len=135
+[ 263.9 min] steps=180,951,040 episodes=716,522 R=79.07 len=175
+[ 266.0 min] steps=181,954,560 episodes=723,220 R=33.52 len=80
+[ 267.7 min] CHECKPOINT ckpt_182753280 episodes=728,433
+[ 268.1 min] steps=182,958,080 episodes=729,822 R=15.40 len=42
+[ 268.1 min] steps=182,958,080 episodes=729,822 R=15.40 len=42
+[ 270.3 min] steps=183,961,600 episodes=736,426 R=46.07 len=106
+[ 272.4 min] steps=184,965,120 episodes=743,277 R=74.62 len=142
+[ 274.5 min] steps=185,968,640 episodes=750,243 R=57.86 len=132
+[ 276.6 min] CHECKPOINT ckpt_186839040 episodes=756,398
+[ 276.9 min] steps=186,977,280 episodes=757,195 R=15.74 len=43
+[ 279.4 min] steps=187,980,800 episodes=763,431 R=58.48 len=132
+[ 281.8 min] steps=188,984,320 episodes=770,187 R=60.43 len=137
+[ 284.2 min] steps=189,987,840 episodes=776,822 R=58.25 len=135
+[ 286.5 min] CHECKPOINT ckpt_190924800 episodes=782,940
+[ 286.7 min] steps=190,991,360 episodes=783,181 R=14.03 len=40
+[ 289.0 min] steps=191,994,880 episodes=789,476 R=35.99 len=84
+[ 291.3 min] steps=193,003,520 episodes=795,729 R=92.64 len=206
+[ 293.4 min] steps=194,012,160 episodes=802,272 R=81.01 len=181
+[ 295.5 min] CHECKPOINT ckpt_195010560 episodes=808,643
+[ 295.5 min] steps=195,020,800 episodes=808,644 R=50.26 len=117
+[ 297.6 min] steps=196,024,320 episodes=815,129 R=42.94 len=101
+[ 297.6 min] steps=196,024,320 episodes=815,129 R=42.94 len=101
+[ 299.7 min] steps=197,027,840 episodes=821,561 R=82.32 len=175
+[ 299.7 min] steps=197,027,840 episodes=821,561 R=82.32 len=175
+[ 301.8 min] steps=198,031,360 episodes=828,069 R=62.58 len=141
+[ 303.9 min] steps=199,034,880 episodes=834,596 R=59.03 len=132
+[ 304.0 min] CHECKPOINT ckpt_199096320 episodes=835,004
+[ 306.0 min] steps=200,038,400 episodes=841,330 R=32.75 len=80
+[ 308.1 min] steps=201,047,040 episodes=847,926 R=56.23 len=129
+[ 310.2 min] steps=202,050,560 episodes=854,739 R=69.53 len=161
+[ 312.6 min] steps=203,059,200 episodes=861,731 R=33.59 len=130
+[ 313.0 min] CHECKPOINT ckpt_203182080 episodes=862,561
+[ 315.1 min] steps=204,062,720 episodes=868,105 R=38.20 len=90
+[ 317.6 min] steps=205,071,360 episodes=874,493 R=44.38 len=103
+[ 320.0 min] steps=206,074,880 episodes=880,961 R=85.61 len=193
+[ 322.4 min] steps=207,078,400 episodes=887,672 R=59.23 len=134
+[ 322.9 min] CHECKPOINT ckpt_207267840 episodes=888,895
+[ 324.9 min] steps=208,081,920 episodes=893,989 R=69.66 len=156
+[ 327.3 min] steps=209,090,560 episodes=900,308 R=43.81 len=113
+[ 329.7 min] steps=210,094,080 episodes=906,706 R=69.72 len=177
+[ 332.2 min] steps=211,097,600 episodes=913,203 R=83.57 len=196
+[ 332.8 min] CHECKPOINT ckpt_211353600 episodes=914,830
+[ 334.7 min] steps=212,101,120 episodes=920,090 R=47.17 len=110
+[ 337.2 min] steps=213,109,760 episodes=927,290 R=48.98 len=113
+[ 339.6 min] steps=214,113,280 episodes=934,496 R=65.43 len=147
+[ 342.0 min] steps=215,116,800 episodes=941,658 R=70.33 len=157
+[ 342.8 min] CHECKPOINT ckpt_215439360 episodes=944,035
+[ 344.5 min] steps=216,120,320 episodes=948,811 R=49.47 len=115
+[ 346.9 min] steps=217,123,840 episodes=955,885 R=49.08 len=115
+[ 349.4 min] steps=218,127,360 episodes=962,604 R=40.23 len=95
+[ 351.8 min] steps=219,130,880 episodes=969,475 R=80.60 len=176
+[ 352.8 min] CHECKPOINT ckpt_219525120 episodes=972,147
+[ 354.2 min] steps=220,134,400 episodes=976,095 R=51.48 len=119
+[ 356.7 min] steps=221,143,040 episodes=982,808 R=49.21 len=111
+[ 359.2 min] steps=222,161,920 episodes=989,503 R=56.06 len=114
+[ 361.6 min] steps=223,165,440 episodes=996,303 R=67.35 len=151
+[ 362.7 min] CHECKPOINT ckpt_223610880 episodes=999,293
+[ 364.1 min] steps=224,174,080 episodes=1,002,914 R=53.38 len=119
+[ 366.5 min] steps=225,177,600 episodes=1,009,621 R=49.27 len=113
+[ 369.0 min] steps=226,186,240 episodes=1,016,092 R=64.73 len=147
+[ 371.5 min] steps=227,200,000 episodes=1,022,873 R=64.16 len=143
+[ 371.5 min] steps=227,200,000 episodes=1,022,873 R=63.14 len=143
+[ 371.5 min] steps=227,200,000 episodes=1,022,873 R=64.16 len=143
+[ 371.5 min] steps=227,200,000 episodes=1,022,873 R=63.14 len=143
+[ 372.7 min] CHECKPOINT ckpt_227696640 episodes=1,026,108
+[ 373.9 min] steps=228,203,520 episodes=1,029,203 R=35.56 len=85
+[ 373.9 min] steps=228,203,520 episodes=1,029,203 R=35.09 len=85
+[ 376.4 min] steps=229,207,040 episodes=1,035,810 R=242.66 len=522
+[ 378.7 min] steps=230,210,560 episodes=1,042,518 R=61.30 len=130
+[ 378.7 min] steps=230,210,560 episodes=1,042,518 R=56.99 len=130
+[ 381.0 min] steps=231,219,200 episodes=1,049,239 R=62.03 len=126
+[ 382.2 min] CHECKPOINT ckpt_231782400 episodes=1,053,077
+[ 383.2 min] steps=232,222,720 episodes=1,055,624 R=27.91 len=69
+[ 385.3 min] steps=233,226,240 episodes=1,061,896 R=68.14 len=124
+[ 387.5 min] steps=234,229,760 episodes=1,068,472 R=61.98 len=140
+[ 389.7 min] steps=235,243,520 episodes=1,074,820 R=76.49 len=129
+[ 389.7 min] steps=235,243,520 episodes=1,074,820 R=76.49 len=129
+[ 391.1 min] CHECKPOINT ckpt_235868160 episodes=1,078,801
+[ 391.9 min] steps=236,247,040 episodes=1,080,969 R=16.31 len=44
+[ 394.0 min] steps=237,250,560 episodes=1,086,811 R=81.99 len=186
+[ 396.2 min] steps=238,254,080 episodes=1,093,211 R=57.77 len=135
+[ 398.4 min] steps=239,257,600 episodes=1,099,427 R=60.72 len=139
+[ 400.0 min] CHECKPOINT ckpt_239953920 episodes=1,103,783
+[ 400.7 min] steps=240,261,120 episodes=1,105,692 R=16.19 len=44
+[ 403.2 min] steps=241,264,640 episodes=1,112,039 R=59.80 len=137
+[ 405.7 min] steps=242,268,160 episodes=1,118,871 R=63.18 len=141
+[ 408.1 min] steps=243,271,680 episodes=1,125,611 R=64.44 len=146
+[ 410.0 min] CHECKPOINT ckpt_244039680 episodes=1,130,728
+[ 410.6 min] steps=244,275,200 episodes=1,132,174 R=14.72 len=41
+[ 413.1 min] steps=245,278,720 episodes=1,138,584 R=66.39 len=152
+[ 415.5 min] steps=246,282,240 episodes=1,145,345 R=68.38 len=175
+[ 418.0 min] steps=247,285,760 episodes=1,152,059 R=36.55 len=75
+[ 420.0 min] CHECKPOINT ckpt_248125440 episodes=1,157,771
+[ 420.5 min] steps=248,294,400 episodes=1,158,807 R=15.31 len=41
+[ 422.9 min] steps=249,297,920 episodes=1,165,262 R=64.91 len=147
+[ 425.4 min] steps=250,301,440 episodes=1,171,743 R=61.45 len=160
+[ 427.8 min] steps=251,310,080 episodes=1,178,490 R=56.61 len=129
+[ 430.1 min] CHECKPOINT ckpt_252211200 episodes=1,184,398
+[ 430.3 min] steps=252,323,840 episodes=1,185,038 R=16.62 len=44
+[ 432.8 min] steps=253,327,360 episodes=1,191,390 R=29.49 len=72
+[ 435.2 min] steps=254,330,880 episodes=1,197,888 R=80.91 len=180
+[ 437.7 min] steps=255,339,520 episodes=1,204,487 R=47.75 len=111
+[ 437.7 min] steps=255,339,520 episodes=1,204,487 R=47.75 len=111
+[ 440.1 min] CHECKPOINT ckpt_256296960 episodes=1,210,831
+[ 440.2 min] steps=256,343,040 episodes=1,210,948 R=11.90 len=35
+[ 442.7 min] steps=257,346,560 episodes=1,217,946 R=34.16 len=81
+[ 445.1 min] steps=258,355,200 episodes=1,224,733 R=69.43 len=138
+[ 445.1 min] steps=258,355,200 episodes=1,224,733 R=59.27 len=138
+[ 447.5 min] steps=259,358,720 episodes=1,231,447 R=126.12 len=274
+[ 450.0 min] steps=260,362,240 episodes=1,238,265 R=46.30 len=107
+[ 450.0 min] CHECKPOINT ckpt_260382720 episodes=1,238,394
+[ 452.4 min] steps=261,365,760 episodes=1,245,060 R=28.56 len=73
+[ 452.4 min] steps=261,365,760 episodes=1,245,060 R=28.56 len=73
+[ 454.9 min] steps=262,369,280 episodes=1,251,930 R=60.88 len=140
+[ 457.4 min] steps=263,377,920 episodes=1,258,899 R=58.26 len=126
+[ 459.9 min] steps=264,391,680 episodes=1,265,741 R=70.25 len=130
+[ 460.0 min] CHECKPOINT ckpt_264468480 episodes=1,266,265
+[ 462.4 min] steps=265,395,200 episodes=1,272,173 R=46.68 len=111
+[ 464.8 min] steps=266,403,840 episodes=1,278,540 R=54.31 len=124
+[ 464.8 min] steps=266,403,840 episodes=1,278,540 R=48.28 len=124
+[ 467.2 min] steps=267,407,360 episodes=1,285,016 R=73.58 len=168
+[ 469.7 min] steps=268,410,880 episodes=1,291,674 R=74.48 len=164
+[ 470.1 min] CHECKPOINT ckpt_268554240 episodes=1,292,548
+[ 472.1 min] steps=269,414,400 episodes=1,298,198 R=35.02 len=84
+[ 474.6 min] steps=270,417,920 episodes=1,304,790 R=64.86 len=147
+[ 477.1 min] steps=271,431,680 episodes=1,311,442 R=69.04 len=137
+[ 479.6 min] steps=272,435,200 episodes=1,318,198 R=90.37 len=202
+[ 480.0 min] CHECKPOINT ckpt_272640000 episodes=1,319,528
+[ 482.0 min] steps=273,438,720 episodes=1,324,744 R=54.14 len=123
+[ 484.4 min] steps=274,442,240 episodes=1,331,263 R=51.58 len=119
+[ 486.9 min] steps=275,456,000 episodes=1,338,065 R=72.38 len=155
+[ 486.9 min] steps=275,456,000 episodes=1,338,065 R=70.20 len=142
+[ 489.4 min] steps=276,459,520 episodes=1,344,653 R=98.30 len=216
+[ 490.0 min] CHECKPOINT ckpt_276725760 episodes=1,346,360
+[ 491.8 min] steps=277,463,040 episodes=1,351,321 R=53.55 len=121
+[ 494.3 min] steps=278,471,680 episodes=1,358,253 R=50.91 len=119
+[ 496.8 min] steps=279,475,200 episodes=1,365,063 R=48.67 len=113
+[ 499.2 min] steps=280,478,720 episodes=1,372,014 R=56.89 len=130
+[ 500.0 min] CHECKPOINT ckpt_280811520 episodes=1,374,165
+[ 501.7 min] steps=281,482,240 episodes=1,378,087 R=37.01 len=88
+[ 504.1 min] steps=282,485,760 episodes=1,384,283 R=56.78 len=152
+[ 506.6 min] steps=283,489,280 episodes=1,390,408 R=53.96 len=124
+[ 509.1 min] steps=284,492,800 episodes=1,396,626 R=66.02 len=148
+[ 510.1 min] CHECKPOINT ckpt_284897280 episodes=1,399,064
+[ 511.6 min] steps=285,496,320 episodes=1,402,885 R=47.38 len=109
+[ 511.6 min] steps=285,496,320 episodes=1,402,885 R=47.87 len=109
+[ 514.1 min] steps=286,499,840 episodes=1,409,531 R=61.68 len=141
+[ 516.5 min] steps=287,503,360 episodes=1,416,133 R=42.60 len=99
+[ 519.0 min] steps=288,506,880 episodes=1,422,676 R=80.23 len=191
+[ 520.1 min] CHECKPOINT ckpt_288983040 episodes=1,425,810
+[ 521.4 min] steps=289,510,400 episodes=1,428,812 R=54.80 len=126
+[ 523.8 min] steps=290,519,040 episodes=1,435,173 R=315.07 len=643
+[ 526.3 min] steps=291,522,560 episodes=1,441,393 R=62.48 len=133
+[ 526.3 min] steps=291,522,560 episodes=1,441,393 R=58.40 len=133
+[ 526.3 min] steps=291,522,560 episodes=1,441,393 R=58.40 len=133
+[ 528.8 min] steps=292,526,080 episodes=1,447,395 R=75.32 len=169
+[ 530.1 min] CHECKPOINT ckpt_293068800 episodes=1,450,805
+[ 531.2 min] steps=293,529,600 episodes=1,453,773 R=30.00 len=73
+[ 531.2 min] steps=293,529,600 episodes=1,453,773 R=30.00 len=73
+[ 531.2 min] steps=293,529,600 episodes=1,453,773 R=30.00 len=73
+[ 533.7 min] steps=294,533,120 episodes=1,460,544 R=68.44 len=155
+[ 536.2 min] steps=295,541,760 episodes=1,467,416 R=57.33 len=133
+[ 538.7 min] steps=296,545,280 episodes=1,474,202 R=56.60 len=129
+[ 540.1 min] CHECKPOINT ckpt_297154560 episodes=1,478,487
+[ 541.1 min] steps=297,553,920 episodes=1,481,033 R=13.68 len=41
+[ 541.1 min] steps=297,553,920 episodes=1,481,033 R=15.00 len=41
+[ 543.6 min] steps=298,557,440 episodes=1,487,546 R=75.32 len=167
+[ 546.0 min] steps=299,560,960 episodes=1,494,108 R=40.01 len=94
+[ 548.5 min] steps=300,564,480 episodes=1,500,601 R=78.71 len=171
+[ 548.5 min] steps=300,564,480 episodes=1,500,601 R=77.53 len=171
+[ 548.5 min] steps=300,564,480 episodes=1,500,601 R=77.53 len=171
+[ 550.1 min] CHECKPOINT ckpt_301240320 episodes=1,505,056
+DONE in 9.17 h, episodes=1,505,056

@@ -37,7 +37,7 @@
 |---|---|---|
 | Ördek 1 | [Viral ördeği almadım, kardeşini Mac'imde eğittim](https://youtube.com/shorts/gfCUTIHldt0) | [1. Yürümeyi öğrenmek](https://fport.github.io/open-duck-mac/part-1-walking/) |
 | Ördek 2 | "Ördeğe 'hızlı ol' dedim. Yüzüstü sürünmeyi buldu." (28 Ekim 2026) | [2. Reward hacking](https://fport.github.io/open-duck-mac/part-2-reward-hacking/) |
-| Ördek 3 | yakında: kutudaki motor gücü | [3. Sim2real](https://fport.github.io/open-duck-mac/part-3-sim2real/) (devam ediyor) |
+| Ördek 3 | yakında: kutudaki motor gücü | [3. Sim2real](https://fport.github.io/open-duck-mac/part-3-sim2real/) |
 
 ## Sonuçlar
 
@@ -45,7 +45,7 @@
 |---|---|
 | Yürümeyi öğrenmek | M5 MacBook'ta **3,57 saatte 72,4 M adım** (6 işlemci çekirdeği, 1.536 paralel ördek). ~11 dakikada ayağa kalktı, ~3 saat yerinde saydı, **68,4 M** adımda ilk kez ayaklarını kaldırdı: 5 sn'de 29,8 cm (hazır politika: 58,5 cm). |
 | Reward hacking | Aynı policy, yalnız reward değişti. "Hızlı ol" → yüzüstü sürünüyor (14,9 dk). "Enerji harcama" → donuyor (7,5 dk). "Ayaklarını kaldır" → yere yatıp ayaklarını havaya dikiyor (30 dk). |
-| Sim2real | Simdeki motor sınırı (±3,23 N·m, Open Duck motor modelinden) STS3215 katalog değerinin (19 kg·cm ≈ 1,86 N·m) ~%70 üstünde. Katalog sınırında aynı policy **yarı mesafe** gidiyor; dizleri zamanın %37–39'unda 1,86 N·m'nin üstünde çalışıyor. Motor gücü katalog civarında rastgele seçilerek sıfırdan eğitilen ördek **72 M step'te yürümedi**; koşu devam ediyor. |
+| Sim2real | Simdeki motor sınırı (±3,23 N·m, Open Duck motor modelinden) STS3215 katalog değerinin (19 kg·cm ≈ 1,86 N·m) ~%70 üstünde. Katalog sınırında aynı policy **yarı mesafe** gidiyor; dizleri zamanın %37–39'unda 1,86 N·m'nin üstünde çalışıyor. Motor gücü katalog civarında rastgele seçilerek sıfırdan eğitilen ördek 72 M step'te yürümedi; devam edince **88,8 M'de yürüdü** (1,86 N·m'de 34,8 cm, eski policy'nin 2,5 katı) ve **170 M'den sonra unuttu**; eğitimdeki reward ortalaması bu sırada düşmedi. |
 
 Her biri tek seed, tek koşu; yalnız simülasyon, gerçek robot yok. Mac'in GPU'su MJX'i çalıştıramıyor (`jax-metal`'da `cholesky` yok), bu yüzden her şey işlemcide; işlemciyi tek iş parçacıklı 6 sanal cihaza bölmek hızı iki katına çıkarıyor.
 
@@ -77,10 +77,10 @@ Adım adım kurulum, sorun giderme ve tüm seçenekler: **[doküman](https://fpo
 ```
 scripts/                 train_mac.py, onnx_export.py, eval_checkpoint.py, eval_grid.py, make_log.py, smoke*.py
 scripts/reward_hacking/  2. bölüm: reward dosyası (hile_env.py), eğitim betiği, çarpışma kutusu yaması, değerlendiriciler
-scripts/sim2real/        3. bölüm: eval_world.py (tork, sürtünme, kütle değiştir; torku kaydet), sweep.py, train_sim2real.py, watch_ckpts.py
+scripts/sim2real/        3. bölüm: eval_world.py (tork, sürtünme, kütle değiştir; torku kaydet), sweep.py, train_sim2real.py, watch_ckpts.py, gait.py (yürüyor mu, duruyor mu?)
 results/2026-10-24/      1. bölüm: loglar, checkpoint tablosu, her ölçüm, ONNX policy'leri, warm start parametreleri
 results/2026-10-24-reward-hacking/   2. bölüm: dört varyantın her logu ve ölçümü
-results/2026-10-27-sim2real/         3. bölüm: taramalar, tork kayıtları, warm start ve sıfırdan koşular
+results/2026-10-27-sim2real/         3. bölüm: taramalar, tork kayıtları, warm start, sıfırdan ve 301 M'e devam koşuları
 docs/                    doküman sitesi (Astro Starlight, Türkçe + İngilizce)
 ```
 

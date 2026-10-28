@@ -1,0 +1,591 @@
+{
+ "note": "deterministic 5 s, 0.15 m/s, flat floor, no pushes (eval_world.py). stochastic = actions sampled, seed = noise seed; WSEED picks the random per-joint torque limits.",
+ "stochastic_f186": {
+  "ckpt_088780800": [
+   {
+    "dx_cm": 16.2,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 0
+   },
+   {
+    "dx_cm": 19.6,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 1
+   },
+   {
+    "dx_cm": 14.9,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 2
+   },
+   {
+    "dx_cm": 17.3,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 3
+   },
+   {
+    "dx_cm": 19.7,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 4
+   },
+   {
+    "dx_cm": 14.6,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 5
+   }
+  ],
+  "ckpt_137809920": [
+   {
+    "dx_cm": 21.0,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 0
+   },
+   {
+    "dx_cm": 18.4,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 1
+   },
+   {
+    "dx_cm": 17.2,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 2
+   },
+   {
+    "dx_cm": 17.7,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 3
+   },
+   {
+    "dx_cm": 15.6,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 4
+   },
+   {
+    "dx_cm": 15.5,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 5
+   }
+  ],
+  "ckpt_166410240": [
+   {
+    "dx_cm": 7.1,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 0
+   },
+   {
+    "dx_cm": 7.2,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 1
+   },
+   {
+    "dx_cm": 9.7,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 2
+   },
+   {
+    "dx_cm": 9.6,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 3
+   },
+   {
+    "dx_cm": 11.1,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 4
+   },
+   {
+    "dx_cm": 8.3,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 5
+   }
+  ],
+  "ckpt_301240320": [
+   {
+    "dx_cm": 3.6,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 0
+   },
+   {
+    "dx_cm": 0.8,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 1
+   },
+   {
+    "dx_cm": 1.3,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 2
+   },
+   {
+    "dx_cm": 1.5,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 3
+   },
+   {
+    "dx_cm": 3.0,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 4
+   },
+   {
+    "dx_cm": 2.0,
+    "fell_t": null,
+    "world": {
+     "force": 1.86
+    },
+    "stochastic": true,
+    "seed": 5
+   }
+  ]
+ },
+ "stochastic_final": {
+  "s301_base_0": {
+   "dx_cm": 2.4,
+   "fell_t": null,
+   "world": {},
+   "stochastic": true,
+   "seed": 0
+  },
+  "s301_base_1": {
+   "dx_cm": 1.1,
+   "fell_t": null,
+   "world": {},
+   "stochastic": true,
+   "seed": 1
+  },
+  "s301_base_2": {
+   "dx_cm": 1.0,
+   "fell_t": null,
+   "world": {},
+   "stochastic": true,
+   "seed": 2
+  },
+  "s301_rand_0": {
+   "dx_cm": 0.8,
+   "fell_t": null,
+   "world": {
+    "force_per_joint": [
+     1.718,
+     1.535,
+     1.42,
+     1.408,
+     1.807,
+     1.856,
+     1.703,
+     1.765,
+     1.672,
+     1.868,
+     1.808,
+     1.401,
+     1.829,
+     1.417
+    ]
+   },
+   "stochastic": true,
+   "seed": 0
+  },
+  "s301_rand_1": {
+   "dx_cm": 2.5,
+   "fell_t": null,
+   "world": {
+    "force_per_joint": [
+     1.656,
+     1.875,
+     1.472,
+     1.874,
+     1.556,
+     1.612,
+     1.814,
+     1.605,
+     1.675,
+     1.414,
+     1.777,
+     1.669,
+     1.565,
+     1.794
+    ]
+   },
+   "stochastic": true,
+   "seed": 1
+  },
+  "s301_rand_2": {
+   "dx_cm": 4.0,
+   "fell_t": null,
+   "world": {
+    "force_per_joint": [
+     1.531,
+     1.549,
+     1.807,
+     1.446,
+     1.7,
+     1.764,
+     1.494,
+     1.428,
+     1.537,
+     1.729,
+     1.681,
+     1.475,
+     1.616,
+     1.735
+    ]
+   },
+   "stochastic": true,
+   "seed": 2
+  },
+  "s301_rand_3": {
+   "dx_cm": 1.4,
+   "fell_t": null,
+   "world": {
+    "force_per_joint": [
+     1.443,
+     1.518,
+     1.801,
+     1.691,
+     1.447,
+     1.617,
+     1.64,
+     1.48,
+     1.767,
+     1.457,
+     1.596,
+     1.658,
+     1.615,
+     1.693
+    ]
+   },
+   "stochastic": true,
+   "seed": 3
+  },
+  "s301_rand_4": {
+   "dx_cm": 2.3,
+   "fell_t": null,
+   "world": {
+    "force_per_joint": [
+     1.872,
+     1.656,
+     1.888,
+     1.44,
+     1.704,
+     1.588,
+     1.801,
+     1.487,
+     1.836,
+     1.672,
+     1.851,
+     1.639,
+     1.615,
+     1.794
+    ]
+   },
+   "stochastic": true,
+   "seed": 4
+  },
+  "s301_rand_5": {
+   "dx_cm": 2.7,
+   "fell_t": null,
+   "world": {
+    "force_per_joint": [
+     1.803,
+     1.804,
+     1.658,
+     1.543,
+     1.427,
+     1.592,
+     1.604,
+     1.423,
+     1.424,
+     1.9,
+     1.726,
+     1.517,
+     1.617,
+     1.887
+    ]
+   },
+   "stochastic": true,
+   "seed": 5
+  }
+ },
+ "worlds": {
+  "088780800_base": {
+   "dx_cm": 49.9,
+   "fell_t": null,
+   "world": {},
+   "stochastic": false,
+   "seed": 0
+  },
+  "088780800_f14": {
+   "dx_cm": 20.5,
+   "fell_t": null,
+   "world": {
+    "force": 1.4
+   },
+   "stochastic": false,
+   "seed": 0
+  },
+  "088780800_f25": {
+   "dx_cm": 40.2,
+   "fell_t": null,
+   "world": {
+    "force": 2.5
+   },
+   "stochastic": false,
+   "seed": 0
+  },
+  "088780800_m12": {
+   "dx_cm": 30.8,
+   "fell_t": null,
+   "world": {
+    "force": 1.86,
+    "mass_scale": 1.2
+   },
+   "stochastic": false,
+   "seed": 0
+  },
+  "088780800_r0": {
+   "dx_cm": 28.6,
+   "fell_t": null,
+   "world": {
+    "force_per_joint": [
+     1.718,
+     1.535,
+     1.42,
+     1.408,
+     1.807,
+     1.856,
+     1.703,
+     1.765,
+     1.672,
+     1.868,
+     1.808,
+     1.401,
+     1.829,
+     1.417
+    ]
+   },
+   "stochastic": false,
+   "seed": 0
+  },
+  "137809920_base": {
+   "dx_cm": 49.1,
+   "fell_t": null,
+   "world": {},
+   "stochastic": false,
+   "seed": 0
+  },
+  "137809920_f14": {
+   "dx_cm": 21.2,
+   "fell_t": null,
+   "world": {
+    "force": 1.4
+   },
+   "stochastic": false,
+   "seed": 0
+  },
+  "137809920_f25": {
+   "dx_cm": 48.1,
+   "fell_t": null,
+   "world": {
+    "force": 2.5
+   },
+   "stochastic": false,
+   "seed": 0
+  },
+  "137809920_m12": {
+   "dx_cm": 28.5,
+   "fell_t": null,
+   "world": {
+    "force": 1.86,
+    "mass_scale": 1.2
+   },
+   "stochastic": false,
+   "seed": 0
+  },
+  "137809920_r0": {
+   "dx_cm": 26.3,
+   "fell_t": null,
+   "world": {
+    "force_per_joint": [
+     1.718,
+     1.535,
+     1.42,
+     1.408,
+     1.807,
+     1.856,
+     1.703,
+     1.765,
+     1.672,
+     1.868,
+     1.808,
+     1.401,
+     1.829,
+     1.417
+    ]
+   },
+   "stochastic": false,
+   "seed": 0
+  }
+ },
+ "final_deterministic": {
+  "final_base": {
+   "dx_cm": 3.9,
+   "fell_t": null,
+   "world": {},
+   "stochastic": false,
+   "seed": 0
+  },
+  "final_f14": {
+   "dx_cm": 2.9,
+   "fell_t": null,
+   "world": {
+    "force": 1.4
+   },
+   "stochastic": false,
+   "seed": 0
+  },
+  "final_f186": {
+   "dx_cm": 2.5,
+   "fell_t": null,
+   "world": {
+    "force": 1.86
+   },
+   "stochastic": false,
+   "seed": 0
+  },
+  "final_r0": {
+   "dx_cm": 1.5,
+   "fell_t": null,
+   "world": {
+    "force_per_joint": [
+     1.718,
+     1.535,
+     1.42,
+     1.408,
+     1.807,
+     1.856,
+     1.703,
+     1.765,
+     1.672,
+     1.868,
+     1.808,
+     1.401,
+     1.829,
+     1.417
+    ]
+   },
+   "stochastic": false,
+   "seed": 0
+  },
+  "final_r1": {
+   "dx_cm": 3.2,
+   "fell_t": null,
+   "world": {
+    "force_per_joint": [
+     1.656,
+     1.875,
+     1.472,
+     1.874,
+     1.556,
+     1.612,
+     1.814,
+     1.605,
+     1.675,
+     1.414,
+     1.777,
+     1.669,
+     1.565,
+     1.794
+    ]
+   },
+   "stochastic": false,
+   "seed": 0
+  }
+ }
+}
