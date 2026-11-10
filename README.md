@@ -27,6 +27,8 @@ English · [Türkçe](README.tr.md)
 
 The [documentation](https://fport.github.io/open-duck-mac/en/) (Turkish and English) takes you from an empty Mac to your own experiments: setup, concepts without the maths, every experiment, ideas to try.
 
+**Write-up:** [Teaching a Duck to Walk on a MacBook, CPU Only](https://getporti.com/paper/open-duck-mac) — the three experiments, in prose.
+
 ## Videos
 
 Short videos in Turkish on [YouTube @getporti](https://www.youtube.com/@getporti). Each one is an experiment in this repository.

@@ -29,6 +29,8 @@
 
 [Doküman sitesi](https://fport.github.io/open-duck-mac/) (Türkçe ve İngilizce) seni boş bir Mac'ten kendi deneylerine götürür: kurulum, matematiksiz kavramlar, her deney, deneyebileceğin fikirler.
 
+**Yazı:** [Bir Ördeğe MacBook'ta Yürümeyi Öğretmek](https://getporti.com/tr/paper/open-duck-mac) — üç deney, düz yazıyla.
+
 ## Videolar
 
 [YouTube @getporti](https://www.youtube.com/@getporti)'de Türkçe kısa videolar. Her biri bu depodaki bir deney.
